@@ -10,7 +10,8 @@
  *   TURNSTILE_SECRET   (secret)  Turnstile widget secret key
  *   M365_TENANT_ID              Microsoft Entra tenant ID
  *   M365_CLIENT_ID              App registration (client) ID
- *   M365_CLIENT_SECRET (secret)  App registration client secret
+ *   M365_CERT_PRIVATE_KEY (secret) PKCS#8 PEM private key of the app certificate
+ *   M365_CERT_THUMBPRINT        Base64url SHA-256 thumbprint of that certificate (x5t#S256)
  *   MAIL_FROM                   Mailbox the app sends from, e.g. h@hdaprodz.com
  *   MAIL_TO                     Mailbox that receives requests (can equal MAIL_FROM)
  */
@@ -45,7 +46,7 @@ export async function onRequestPost(context) {
   const wantsJson = (request.headers.get("Accept") || "").includes("application/json");
 
   try {
-    const missing = ["TURNSTILE_SECRET", "M365_TENANT_ID", "M365_CLIENT_ID", "M365_CLIENT_SECRET", "MAIL_FROM", "MAIL_TO"]
+    const missing = ["TURNSTILE_SECRET", "M365_TENANT_ID", "M365_CLIENT_ID", "M365_CERT_PRIVATE_KEY", "M365_CERT_THUMBPRINT", "MAIL_FROM", "MAIL_TO"]
       .filter((k) => !env[k]);
     if (missing.length) {
       console.error("Missing configuration:", missing.join(", "));
@@ -153,13 +154,16 @@ async function verifyTurnstile(secret, token, ip) {
 /* ---------- Microsoft Graph ---------- */
 
 async function getGraphToken(env) {
+  const tokenUrl = `https://login.microsoftonline.com/${encodeURIComponent(env.M365_TENANT_ID)}/oauth2/v2.0/token`;
+  const assertion = await makeClientAssertion(env, tokenUrl);
   const body = new URLSearchParams({
     client_id: env.M365_CLIENT_ID,
-    client_secret: env.M365_CLIENT_SECRET,
+    client_assertion_type: "urn:ietf:params:oauth:client-assertion-type:jwt-bearer",
+    client_assertion: assertion,
     scope: "https://graph.microsoft.com/.default",
     grant_type: "client_credentials",
   });
-  const res = await fetch(`https://login.microsoftonline.com/${encodeURIComponent(env.M365_TENANT_ID)}/oauth2/v2.0/token`, {
+  const res = await fetch(tokenUrl, {
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
     body,
@@ -167,6 +171,45 @@ async function getGraphToken(env) {
   if (!res.ok) throw new Error(`token ${res.status}: ${(await res.text()).slice(0, 300)}`);
   const json = await res.json();
   return json.access_token;
+}
+
+/* Certificate credential (private_key_jwt): a short-lived JWT signed with PS256,
+   as documented for the Microsoft identity platform. */
+async function makeClientAssertion(env, audience) {
+  const der = pemToDer(env.M365_CERT_PRIVATE_KEY);
+  const key = await crypto.subtle.importKey("pkcs8", der, { name: "RSA-PSS", hash: "SHA-256" }, false, ["sign"]);
+  const now = Math.floor(Date.now() / 1000);
+  const header = { alg: "PS256", typ: "JWT", "x5t#S256": env.M365_CERT_THUMBPRINT.trim() };
+  const claims = {
+    aud: audience,
+    iss: env.M365_CLIENT_ID,
+    sub: env.M365_CLIENT_ID,
+    jti: crypto.randomUUID(),
+    iat: now,
+    nbf: now - 30,
+    exp: now + 300,
+  };
+  const input = `${b64urlJson(header)}.${b64urlJson(claims)}`;
+  const sig = await crypto.subtle.sign({ name: "RSA-PSS", saltLength: 32 }, key, new TextEncoder().encode(input));
+  return `${input}.${b64url(new Uint8Array(sig))}`;
+}
+
+function pemToDer(pem) {
+  const b64 = String(pem).replace(/-----[A-Z ]+-----/g, "").replace(/\\n/g, "").replace(/\s+/g, "");
+  const bin = atob(b64);
+  const out = new Uint8Array(bin.length);
+  for (let i = 0; i < bin.length; i++) out[i] = bin.charCodeAt(i);
+  return out.buffer;
+}
+
+function b64url(bytes) {
+  let bin = "";
+  for (const b of bytes) bin += String.fromCharCode(b);
+  return btoa(bin).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+}
+
+function b64urlJson(obj) {
+  return b64url(new TextEncoder().encode(JSON.stringify(obj)));
 }
 
 async function sendMail(env, f, ref) {

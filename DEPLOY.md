@@ -43,7 +43,7 @@ No secret is stored in the code. All secrets live in Cloudflare's encrypted sett
 1. `entra.microsoft.com` → **Applications → App registrations → New registration**.
    - Name: `HDA website contact form` · Accounts in this organizational directory only · no redirect URI.
 2. Note the **Application (client) ID** and **Directory (tenant) ID**.
-3. **Certificates & secrets → New client secret** (e.g. 12 months). Copy the **Value** immediately. Put the expiry date in your calendar: the form stops sending when it expires.
+3. **Certificates & secrets → Certificates → Upload certificate** → `hda-contact-form.cer`. (Client secrets are blocked by the tenant policy; a certificate is the supported, stronger alternative.) It expires on 3 Oct 2028: put that date in your calendar.
 4. **Do not** add `Mail.Send` under API permissions. That would let the app send as *any* mailbox. Step 5 grants it for one mailbox only.
 5. Go to **Enterprise applications** → open `HDA website contact form` → note its **Application ID** and **Object ID** (these are the ones Exchange needs).
 
@@ -80,11 +80,12 @@ Pages project → **Settings → Variables and Secrets** → Production:
 | `TURNSTILE_SECRET` | Turnstile secret key | **Secret** |
 | `M365_TENANT_ID` | Directory (tenant) ID | Text |
 | `M365_CLIENT_ID` | Application (client) ID | Text |
-| `M365_CLIENT_SECRET` | Client secret value | **Secret** |
+| `M365_CERT_PRIVATE_KEY` | Full contents of `hda-contact-form-private-key.pem` | **Secret** |
+| `M365_CERT_THUMBPRINT` | `UolvkwFCNj9ubOz7eK8ZEXJlP0JFqICe4YGso21Gaxk` | Text |
 | `MAIL_FROM` | `h@hdaprodz.com` | Text |
 | `MAIL_TO` | `h@hdaprodz.com` | Text |
 
-Then **Deployments → latest → Retry deployment** so the values apply. Never paste the two secrets into a chat.
+Then **Deployments → latest → Retry deployment** so the values apply. Never paste the secrets into a chat. Delete the private key file from your PC once it is saved in Cloudflare.
 
 ## 7. Test on the `.pages.dev` address
 
