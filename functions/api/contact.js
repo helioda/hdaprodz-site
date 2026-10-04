@@ -235,7 +235,7 @@ async function sendMail(env, f, ref) {
     .map(([k, v]) => `<tr><td style="padding:4px 14px 4px 0;color:#5b6b6a;vertical-align:top">${esc(k)}</td><td style="padding:4px 0"><strong>${esc(v)}</strong></td></tr>`)
     .join("")}</table>
 <h3 style="margin:0 0 6px">Description du projet</h3>
-<div style="white-space:pre-wrap;border-left:3px solid #86e8ff;padding:8px 12px;background:#f5f7fb">${esc(f.description)}</div>
+<p style="white-space:pre-wrap;border-left:3px solid #2b8fd6;padding:4px 0 4px 12px;margin:0">${esc(f.description)}</p>
 <p style="color:#5b6b6a;font-size:12px;margin-top:16px">Envoyé depuis le formulaire www.hdaprodz.com. Répondre à ce message écrit directement au demandeur.</p>
 </div>`;
 
