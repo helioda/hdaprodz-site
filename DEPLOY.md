@@ -78,7 +78,7 @@ Pages project → **Settings → Variables and Secrets** → Production:
 |---|---|---|
 | `TURNSTILE_SITEKEY` | Turnstile site key | Text |
 | `TURNSTILE_SECRET` | Turnstile secret key | **Secret** |
-| `M365_TENANT_ID` | Directory (tenant) ID | Text |
+| `M365_TENANT_ID` | Directory (tenant) ID — `66e7da58-43b4-4b5e-b64e-1744fec89aa9` (not the app Object ID) | Text |
 | `M365_CLIENT_ID` | Application (client) ID | Text |
 | `M365_CERT_PRIVATE_KEY` | Full contents of `hda-contact-form-private-key.pem` | **Secret** |
 | `M365_CERT_THUMBPRINT` | `UolvkwFCNj9ubOz7eK8ZEXJlP0JFqICe4YGso21Gaxk` | Text |

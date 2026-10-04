@@ -40,3 +40,4 @@
 @media(max-width:900px){.p-layout{grid-template-columns:1fr}.p-hero{padding:48px 0 24px}}
 @media(max-width:600px){.p-row{grid-template-columns:1fr;gap:0}.p-form{padding:22px;border-radius:18px}}
 .p-consent + .p-error{display:block;margin:-8px 0 14px 32px}
+.p-form [hidden]{display:none!important}
