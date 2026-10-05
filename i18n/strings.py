@@ -127,12 +127,15 @@ TEXT = {
   "Founderz: Agent Commander (105 h) · Agent Maker · Agent Explorer",
   "Founderz: Agent Commander (105 h) · Agent Maker · Agent Explorer",
   "Founderz: Agent Commander (105 h) · Agent Maker · Agent Explorer"),
- "Certifié Microsoft depuis 1999 · 22 examens": T(
-  "Microsoft certified since 1999 · 22 exams", "Certificado Microsoft desde 1999 · 22 exames", "Certificado por Microsoft desde 1999 · 22 exámenes"),
- "MCSE Windows NT 4.0, 2000 et 2003 · MCTS SharePoint · Azure Infrastructure (70-533).": T(
-  "MCSE Windows NT 4.0, 2000 and 2003 · MCTS SharePoint · Azure Infrastructure (70-533).",
-  "MCSE Windows NT 4.0, 2000 e 2003 · MCTS SharePoint · Azure Infrastructure (70-533).",
-  "MCSE Windows NT 4.0, 2000 y 2003 · MCTS SharePoint · Azure Infrastructure (70-533)."),
+ "Certifié Microsoft depuis 1999 · MCT Alumni · 13 certifications, 21 examens": T(
+  "Microsoft certified since 1999 · MCT Alumni · 13 certifications, 21 exams",
+  "Certificado Microsoft desde 1999 · MCT Alumni · 13 certificações, 21 exames",
+  "Certificado por Microsoft desde 1999 · MCT Alumni · 13 certificaciones, 21 exámenes"),
+ "Ancien formateur certifié Microsoft (MCT), MCT Alumni depuis 2014 · Microsoft 365 Fundamentals · MCSE Windows NT 4.0, 2000 et 2003 · MCTS SharePoint · Azure Infrastructure (70-533).": T(
+  "Former Microsoft Certified Trainer (MCT), MCT Alumni since 2014 · Microsoft 365 Fundamentals · MCSE Windows NT 4.0, 2000 and 2003 · MCTS SharePoint · Azure Infrastructure (70-533).",
+  "Ex-instrutor certificado Microsoft (MCT), MCT Alumni desde 2014 · Microsoft 365 Fundamentals · MCSE Windows NT 4.0, 2000 e 2003 · MCTS SharePoint · Azure Infrastructure (70-533).",
+  "Ex instructor certificado de Microsoft (MCT), MCT Alumni desde 2014 · Microsoft 365 Fundamentals · MCSE Windows NT 4.0, 2000 y 2003 · MCTS SharePoint · Azure Infrastructure (70-533)."),
+ "Badges vérifiables (Credly) ↗": T("Verifiable badges (Credly) ↗", "Badges verificáveis (Credly) ↗", "Insignias verificables (Credly) ↗"),
  "Profil LinkedIn ↗": T("LinkedIn profile ↗", "Perfil no LinkedIn ↗", "Perfil de LinkedIn ↗"),
  "Production musicale & activité professionnelle": T(
   "Music production & professional activity", "Produção musical e atividade profissional", "Producción musical y actividad profesional"),
