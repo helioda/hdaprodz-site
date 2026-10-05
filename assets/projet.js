@@ -2,27 +2,106 @@
 (function () {
   "use strict";
 
-  var MESSAGES = {
-    ok: function (ref) {
-      return "Merci, votre demande a bien été envoyée. Référence : <strong>" + ref + "</strong>. Vous recevrez une réponse par e-mail.";
+  var LANG = (document.documentElement.lang || "fr").slice(0, 2).toLowerCase();
+  var MAIL = '<a href="mailto:h@hdaprodz.com?subject=Projet%20HDA%20Solutions">h@hdaprodz.com</a>';
+  var I18N = {
+    fr: {
+      ok: "Merci, votre demande a bien été envoyée. Référence : <strong>{ref}</strong>. Vous recevrez une réponse par e-mail.",
+      validation: "Certains champs sont à compléter ou à corriger.",
+      captcha: "La vérification anti-robot a échoué. Merci de réessayer.",
+      timing: "Le formulaire a été envoyé trop vite ou a expiré. Rechargez la page et réessayez.",
+      unavailable: "Le formulaire n’est pas disponible pour le moment.",
+      generic: "L’envoi n’a pas abouti. Réessayez dans quelques minutes.",
+      wait: "Merci de patienter pendant la vérification anti-robot, puis réessayez.",
+      sending: "Envoi en cours…", submit: "Envoyer ma demande ↗",
+      fallback: " Vous pouvez aussi écrire à " + MAIL + ".",
+      fields: {
+        name: "Indiquez votre nom (2 caractères minimum).",
+        email: "Indiquez une adresse e-mail valide.",
+        phone: "Ce numéro ne semble pas valide.",
+        projectType: "Choisissez un type de projet.",
+        description: "Décrivez votre projet en quelques phrases (20 caractères minimum).",
+        timeline: "Choisissez un délai dans la liste.",
+        budget: "Choisissez un budget dans la liste.",
+        consent: "Cochez cette case pour que nous puissions traiter votre demande."
+      },
+      turnstile: "fr"
     },
-    validation: "Certains champs sont à compléter ou à corriger.",
-    captcha: "La vérification anti-robot a échoué. Merci de réessayer.",
-    timing: "Le formulaire a été envoyé trop vite ou a expiré. Rechargez la page et réessayez.",
-    unavailable: "Le formulaire n’est pas disponible pour le moment.",
-    generic: "L’envoi n’a pas abouti. Réessayez dans quelques minutes."
+    en: {
+      ok: "Thank you, your request has been sent. Reference: <strong>{ref}</strong>. You will receive a reply by e-mail.",
+      validation: "Some fields need to be completed or corrected.",
+      captcha: "The anti-bot check failed. Please try again.",
+      timing: "The form was sent too quickly or has expired. Reload the page and try again.",
+      unavailable: "The form is not available at the moment.",
+      generic: "Your request could not be sent. Please try again in a few minutes.",
+      wait: "Please wait for the anti-bot check to finish, then try again.",
+      sending: "Sending…", submit: "Send my request ↗",
+      fallback: " You can also write to " + MAIL + ".",
+      fields: {
+        name: "Enter your name (at least 2 characters).",
+        email: "Enter a valid e-mail address.",
+        phone: "This number doesn’t look valid.",
+        projectType: "Choose a project type.",
+        description: "Describe your project in a few sentences (at least 20 characters).",
+        timeline: "Choose a timeframe from the list.",
+        budget: "Choose a budget from the list.",
+        consent: "Tick this box so we can process your request."
+      },
+      turnstile: "en"
+    },
+    pt: {
+      ok: "Obrigado, sua solicitação foi enviada. Referência: <strong>{ref}</strong>. Você receberá uma resposta por e-mail.",
+      validation: "Alguns campos precisam ser preenchidos ou corrigidos.",
+      captcha: "A verificação anti-robô falhou. Tente novamente.",
+      timing: "O formulário foi enviado rápido demais ou expirou. Recarregue a página e tente novamente.",
+      unavailable: "O formulário não está disponível no momento.",
+      generic: "Não foi possível enviar. Tente novamente em alguns minutos.",
+      wait: "Aguarde a verificação anti-robô terminar e tente novamente.",
+      sending: "Enviando…", submit: "Enviar minha solicitação ↗",
+      fallback: " Você também pode escrever para " + MAIL + ".",
+      fields: {
+        name: "Informe seu nome (mínimo de 2 caracteres).",
+        email: "Informe um endereço de e-mail válido.",
+        phone: "Este número não parece válido.",
+        projectType: "Escolha um tipo de projeto.",
+        description: "Descreva seu projeto em algumas frases (mínimo de 20 caracteres).",
+        timeline: "Escolha um prazo da lista.",
+        budget: "Escolha um orçamento da lista.",
+        consent: "Marque esta caixa para que possamos tratar sua solicitação."
+      },
+      turnstile: "pt-br"
+    },
+    es: {
+      ok: "Gracias, su solicitud se ha enviado. Referencia: <strong>{ref}</strong>. Recibirá una respuesta por correo electrónico.",
+      validation: "Algunos campos deben completarse o corregirse.",
+      captcha: "La verificación antirrobot ha fallado. Inténtelo de nuevo.",
+      timing: "El formulario se envió demasiado rápido o ha caducado. Recargue la página e inténtelo de nuevo.",
+      unavailable: "El formulario no está disponible en este momento.",
+      generic: "No se ha podido enviar. Inténtelo de nuevo en unos minutos.",
+      wait: "Espere a que termine la verificación antirrobot e inténtelo de nuevo.",
+      sending: "Enviando…", submit: "Enviar mi solicitud ↗",
+      fallback: " También puede escribir a " + MAIL + ".",
+      fields: {
+        name: "Indique su nombre (mínimo 2 caracteres).",
+        email: "Indique una dirección de correo electrónico válida.",
+        phone: "Este número no parece válido.",
+        projectType: "Elija un tipo de proyecto.",
+        description: "Describa su proyecto en unas frases (mínimo 20 caracteres).",
+        timeline: "Elija un plazo de la lista.",
+        budget: "Elija un presupuesto de la lista.",
+        consent: "Marque esta casilla para que podamos tramitar su solicitud."
+      },
+      turnstile: "es"
+    }
   };
-  var FALLBACK = ' Vous pouvez aussi écrire à <a href="mailto:h@hdaprodz.com?subject=Projet%20HDA%20Solutions">h@hdaprodz.com</a>.';
-  var FIELD_ERRORS = {
-    name: "Indiquez votre nom (2 caractères minimum).",
-    email: "Indiquez une adresse e-mail valide.",
-    phone: "Ce numéro ne semble pas valide.",
-    projectType: "Choisissez un type de projet.",
-    description: "Décrivez votre projet en quelques phrases (20 caractères minimum).",
-    timeline: "Choisissez un délai dans la liste.",
-    budget: "Choisissez un budget dans la liste.",
-    consent: "Cochez cette case pour que nous puissions traiter votre demande."
+  var T = I18N[LANG] || I18N.fr;
+  var MESSAGES = {
+    ok: function (ref) { return T.ok.replace("{ref}", ref); },
+    validation: T.validation, captcha: T.captcha, timing: T.timing,
+    unavailable: T.unavailable, generic: T.generic
   };
+  var FALLBACK = T.fallback;
+  var FIELD_ERRORS = T.fields;
 
   var form, statusBox, submitBtn, widgetId = null, token = "";
 
@@ -75,7 +154,7 @@
     window.onHdaTurnstile = function () {
       widgetId = window.turnstile.render("#turnstile", {
         sitekey: sitekey,
-        language: "fr",
+        language: T.turnstile,
         theme: "dark",
         callback: function (t) { token = t; },
         "expired-callback": function () { token = ""; },
@@ -127,7 +206,7 @@
       return;
     }
     if (!token) {
-      showStatus("err", "Merci de patienter pendant la vérification anti-robot, puis réessayez.");
+      showStatus("err", T.wait);
       return;
     }
 
@@ -137,7 +216,7 @@
     data["cf-turnstile-response"] = token;
 
     submitBtn.disabled = true;
-    submitBtn.textContent = "Envoi en cours…";
+    submitBtn.textContent = T.sending;
 
     fetch("/api/contact", {
       method: "POST",
@@ -164,7 +243,7 @@
       })
       .finally(function () {
         submitBtn.disabled = false;
-        submitBtn.textContent = "Envoyer ma demande ↗";
+        submitBtn.textContent = T.submit;
       });
   }
 

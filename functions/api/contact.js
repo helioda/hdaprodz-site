@@ -38,32 +38,43 @@ const PROJECT_TYPES = [
 const TIMELINES = ["Dès que possible", "Dans 1 à 3 mois", "Dans 3 à 6 mois", "Plus tard / à définir"];
 const BUDGETS = ["Moins de 2 000 €", "2 000 – 5 000 €", "5 000 – 15 000 €", "Plus de 15 000 €", "À définir ensemble"];
 
+// Site languages: form page path and label shown in the e-mail.
+const LANGS = {
+  fr: { page: "/projet.html", label: "Français" },
+  en: { page: "/en/project.html", label: "English" },
+  pt: { page: "/pt/projeto.html", label: "Português" },
+  es: { page: "/es/proyecto.html", label: "Español" },
+};
+
 const MIN_FILL_MS = 3000; // a human needs more than 3 s to fill the form
 const MAX_FILL_MS = 24 * 60 * 60 * 1000;
 
 export async function onRequestPost(context) {
   const { request, env } = context;
   const wantsJson = (request.headers.get("Accept") || "").includes("application/json");
+  let lang = "fr";
+  const out = (status, code, ref = null, fields = []) => reply(wantsJson, lang, status, code, ref, fields);
 
   try {
     const missing = ["TURNSTILE_SECRET", "M365_TENANT_ID", "M365_CLIENT_ID", "M365_CERT_PRIVATE_KEY", "M365_CERT_THUMBPRINT", "MAIL_FROM", "MAIL_TO"]
       .filter((k) => !env[k]);
     if (missing.length) {
       console.error("Missing configuration:", missing.join(", "));
-      return reply(wantsJson, 500, "config");
+      return out(500, "config");
     }
 
     const data = await readBody(request);
-    if (!data) return reply(wantsJson, 400, "invalid");
+    if (!data) return out(400, "invalid");
+    if (Object.hasOwn(LANGS, data.lang)) lang = data.lang;
 
     // Honeypot: real visitors never see or fill this field.
-    if (clean(data.website)) return reply(wantsJson, 200, "ok", fakeRef());
+    if (clean(data.website)) return out(200, "ok", fakeRef());
 
     // Timing check: rejects instant bot submissions.
     const started = Number(data.started);
     const elapsed = Date.now() - started;
     if (!Number.isFinite(started) || elapsed < MIN_FILL_MS || elapsed > MAX_FILL_MS) {
-      return reply(wantsJson, 400, "timing");
+      return out(400, "timing");
     }
 
     const form = {
@@ -76,22 +87,23 @@ export async function onRequestPost(context) {
       timeline: clean(data.timeline, LIMITS.timeline),
       budget: clean(data.budget, LIMITS.budget),
       source: clean(data.source, LIMITS.source),
+      lang,
       consent: data.consent === "on" || data.consent === "true" || data.consent === true,
     };
 
     const errors = validate(form);
-    if (errors.length) return reply(wantsJson, 422, "validation", null, errors);
+    if (errors.length) return out(422, "validation", null, errors);
 
     const ip = request.headers.get("CF-Connecting-IP") || "";
     const human = await verifyTurnstile(env.TURNSTILE_SECRET, data["cf-turnstile-response"], ip);
-    if (!human) return reply(wantsJson, 403, "captcha");
+    if (!human) return out(403, "captcha");
 
     const ref = makeRef();
     await sendMail(env, form, ref);
-    return reply(wantsJson, 200, "ok", ref);
+    return out(200, "ok", ref);
   } catch (err) {
     console.error("Contact form error:", err && err.message ? err.message : err);
-    return reply(wantsJson, 502, "send");
+    return out(502, "send");
   }
 }
 
@@ -214,7 +226,7 @@ function b64urlJson(obj) {
 
 async function sendMail(env, f, ref) {
   const token = await getGraphToken(env);
-  const subject = `[Demande de projet ${ref}] ${f.projectType} — ${f.name}${f.company ? ` (${f.company})` : ""}`;
+  const subject = `[Demande de projet ${ref}]${f.lang !== "fr" ? ` [${f.lang.toUpperCase()}]` : ""} ${f.projectType} — ${f.name}${f.company ? ` (${f.company})` : ""}`;
 
   const rows = [
     ["Référence", ref],
@@ -226,6 +238,7 @@ async function sendMail(env, f, ref) {
     ["Délai souhaité", f.timeline || "—"],
     ["Budget indicatif", f.budget || "—"],
     ["Source", f.source || "—"],
+    ["Langue du site", LANGS[f.lang].label],
     ["Reçu le", new Date().toLocaleString("fr-FR", { timeZone: "Europe/Paris" })],
   ];
 
@@ -256,7 +269,7 @@ async function sendMail(env, f, ref) {
 
 /* ---------- output ---------- */
 
-function reply(wantsJson, status, code, ref = null, fields = []) {
+function reply(wantsJson, lang, status, code, ref = null, fields = []) {
   if (wantsJson) {
     return new Response(JSON.stringify({ ok: code === "ok", code, ref, fields }), {
       status,
@@ -266,7 +279,7 @@ function reply(wantsJson, status, code, ref = null, fields = []) {
   // Without JavaScript: plain form post → redirect back to the page with a status.
   const params = new URLSearchParams({ statut: code === "ok" ? "ok" : "erreur" });
   if (ref) params.set("ref", ref);
-  return new Response(null, { status: 303, headers: { Location: `/projet.html?${params}#formulaire` } });
+  return new Response(null, { status: 303, headers: { Location: `${LANGS[lang].page}?${params}#formulaire` } });
 }
 
 function makeRef() {

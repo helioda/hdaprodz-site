@@ -120,3 +120,24 @@ Then **Deployments → latest → Retry deployment** so the values apply. Never 
 - The exact label of the "Build output directory" field in today's Cloudflare UI (step 2).
 - That `PrimarySmtpAddress` is accepted in the management-scope filter (step 5): the test cmdlet confirms it.
 - App-only sending with **no** Entra `Mail.Send` permission, relying on App RBAC alone (step 5). Step 7's test is the proof.
+
+---
+
+## Languages (FR source, EN / PT / ES generated)
+
+French pages (`index.html`, `projet.html`) are the source. After changing any French text:
+
+```
+python3 i18n/build.py
+```
+
+It regenerates `en/`, `pt/`, `es/` and the translated video posters, and stops with an error if a French text has no translation in `i18n/strings.py` (add it there, then rerun). Commit the regenerated folders.
+
+| Language | Home | Project form |
+|---|---|---|
+| FR | `/` | `/projet.html` |
+| EN | `/en/` | `/en/project.html` |
+| PT (Brazil) | `/pt/` | `/pt/projeto.html` |
+| ES (Spain) | `/es/` | `/es/proyecto.html` |
+
+The form sends a hidden `lang` field: the e-mail shows "Langue du site" and the subject gets `[EN]`, `[PT]` or `[ES]`, so you know which language to reply in. Option values stay in French so the server check is the same for every language.
