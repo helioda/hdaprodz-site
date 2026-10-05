@@ -5,7 +5,7 @@ PAGES = {
     "index.html": {
         "out": {"en": "index.html", "pt": "index.html", "es": "index.html"},
         "must_not_remain": ["Votre expertise", "Parlons de", "Aller au contenu", "Éditeur", "Retour en haut",
-                            "Découvrir", "copropriété.", "Notre assistant", "Comment démarrer", "Références", "Certifié Microsoft", "soumis à"],
+                            "Découvrir", "copropriété.", "Notre assistant", "Comment démarrer", "Références", "16 ans chez", "parcours Copilot", "soumis à"],
     },
     "projet.html": {
         "out": {"en": "project.html", "pt": "projeto.html", "es": "proyecto.html"},
@@ -127,14 +127,12 @@ TEXT = {
   "Founderz: Agent Commander (105 h) · Agent Maker · Agent Explorer",
   "Founderz: Agent Commander (105 h) · Agent Maker · Agent Explorer",
   "Founderz: Agent Commander (105 h) · Agent Maker · Agent Explorer"),
- "Certifié Microsoft depuis 1999 · MCT Alumni · 13 certifications, 21 examens": T(
-  "Microsoft certified since 1999 · MCT Alumni · 13 certifications, 21 exams",
-  "Certificado Microsoft desde 1999 · MCT Alumni · 13 certificações, 21 exames",
-  "Certificado por Microsoft desde 1999 · MCT Alumni · 13 certificaciones, 21 exámenes"),
- "Ancien formateur certifié Microsoft (MCT), MCT Alumni depuis 2014 · Microsoft 365 Fundamentals · MCSE Windows NT 4.0, 2000 et 2003 · MCTS SharePoint · Azure Infrastructure (70-533).": T(
-  "Former Microsoft Certified Trainer (MCT), MCT Alumni since 2014 · Microsoft 365 Fundamentals · MCSE Windows NT 4.0, 2000 and 2003 · MCTS SharePoint · Azure Infrastructure (70-533).",
-  "Ex-instrutor certificado Microsoft (MCT), MCT Alumni desde 2014 · Microsoft 365 Fundamentals · MCSE Windows NT 4.0, 2000 e 2003 · MCTS SharePoint · Azure Infrastructure (70-533).",
-  "Ex instructor certificado de Microsoft (MCT), MCT Alumni desde 2014 · Microsoft 365 Fundamentals · MCSE Windows NT 4.0, 2000 y 2003 · MCTS SharePoint · Azure Infrastructure (70-533)."),
+ "16 ans chez Microsoft (cloud) · MCT Alumni": T(
+  "16 years at Microsoft (cloud) · MCT Alumni", "16 anos na Microsoft (nuvem) · MCT Alumni", "16 años en Microsoft (nube) · MCT Alumni"),
+ "Microsoft Learn : parcours Copilot Studio (2025) · Microsoft 365 Fundamentals · Azure Infrastructure Solutions.": T(
+  "Microsoft Learn: Copilot Studio learning paths (2025) · Microsoft 365 Fundamentals · Azure Infrastructure Solutions.",
+  "Microsoft Learn: trilhas Copilot Studio (2025) · Microsoft 365 Fundamentals · Azure Infrastructure Solutions.",
+  "Microsoft Learn: rutas de Copilot Studio (2025) · Microsoft 365 Fundamentals · Azure Infrastructure Solutions."),
  "Badges vérifiables (Credly) ↗": T("Verifiable badges (Credly) ↗", "Badges verificáveis (Credly) ↗", "Insignias verificables (Credly) ↗"),
  "Profil LinkedIn ↗": T("LinkedIn profile ↗", "Perfil no LinkedIn ↗", "Perfil de LinkedIn ↗"),
  "Production musicale & activité professionnelle": T(
