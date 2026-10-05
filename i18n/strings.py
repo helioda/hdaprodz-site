@@ -5,7 +5,7 @@ PAGES = {
     "index.html": {
         "out": {"en": "index.html", "pt": "index.html", "es": "index.html"},
         "must_not_remain": ["Votre expertise", "Parlons de", "Aller au contenu", "Éditeur", "Retour en haut",
-                            "Découvrir", "copropriété.", "Notre assistant", "Comment démarrer"],
+                            "Découvrir", "copropriété.", "Notre assistant", "Comment démarrer", "Références", "Certifié Microsoft", "soumis à"],
     },
     "projet.html": {
         "out": {"en": "project.html", "pt": "projeto.html", "es": "proyecto.html"},
@@ -116,10 +116,24 @@ TEXT = {
  "Votre navigateur ne permet pas de lire cette vidéo.": T(
   "Your browser can’t play this video.", "Seu navegador não consegue reproduzir este vídeo.", "Su navegador no puede reproducir este vídeo."),
  "Télécharger la présentation": T("Download the presentation", "Baixar a apresentação", "Descargar la presentación"),
- "Syndic Assist – CoproPilot AI · Présentation en anglais · 2 min 49 s": T(
-  "Syndic Assist – CoproPilot AI · Presentation in English · 2 min 49 s",
-  "Syndic Assist – CoproPilot AI · Apresentação em inglês · 2 min 49 s",
-  "Syndic Assist – CoproPilot AI · Presentación en inglés · 2 min 49 s"),
+ "Syndic Assist – CoproPilot AI · Projet soumis à l’Agent-a-thon Microsoft × Founderz · Présentation en anglais · 2 min 49 s": T(
+  "Syndic Assist – CoproPilot AI · Project submitted to the Microsoft × Founderz Agent-a-thon · Presentation in English · 2 min 49 s",
+  "Syndic Assist – CoproPilot AI · Projeto submetido ao Agent-a-thon Microsoft × Founderz · Apresentação em inglês · 2 min 49 s",
+  "Syndic Assist – CoproPilot AI · Proyecto presentado al Agent-a-thon Microsoft × Founderz · Presentación en inglés · 2 min 49 s"),
+ "Références": T("Credentials", "Referências", "Referencias"),
+ "Membre du Microsoft AI Cloud Partner Program": T(
+  "Member of the Microsoft AI Cloud Partner Program", "Membro do Microsoft AI Cloud Partner Program", "Miembro del Microsoft AI Cloud Partner Program"),
+ "Founderz : Agent Commander (105 h) · Agent Maker · Agent Explorer": T(
+  "Founderz: Agent Commander (105 h) · Agent Maker · Agent Explorer",
+  "Founderz: Agent Commander (105 h) · Agent Maker · Agent Explorer",
+  "Founderz: Agent Commander (105 h) · Agent Maker · Agent Explorer"),
+ "Certifié Microsoft depuis 1999 · 22 examens": T(
+  "Microsoft certified since 1999 · 22 exams", "Certificado Microsoft desde 1999 · 22 exames", "Certificado por Microsoft desde 1999 · 22 exámenes"),
+ "MCSE Windows NT 4.0, 2000 et 2003 · MCTS SharePoint · Azure Infrastructure (70-533).": T(
+  "MCSE Windows NT 4.0, 2000 and 2003 · MCTS SharePoint · Azure Infrastructure (70-533).",
+  "MCSE Windows NT 4.0, 2000 e 2003 · MCTS SharePoint · Azure Infrastructure (70-533).",
+  "MCSE Windows NT 4.0, 2000 y 2003 · MCTS SharePoint · Azure Infrastructure (70-533)."),
+ "Profil LinkedIn ↗": T("LinkedIn profile ↗", "Perfil no LinkedIn ↗", "Perfil de LinkedIn ↗"),
  "Production musicale & activité professionnelle": T(
   "Music production & professional activity", "Produção musical e atividade profissional", "Producción musical y actividad profesional"),
  "Notre assistant IA pour accompagner les projets de production musicale, de l’idée à l’organisation.": T(
