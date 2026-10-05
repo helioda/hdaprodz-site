@@ -129,10 +129,10 @@ TEXT = {
   "Founderz: Agent Commander (105 h) · Agent Maker · Agent Explorer"),
  "16 ans chez Microsoft (cloud) · MCT Alumni": T(
   "16 years at Microsoft (cloud) · MCT Alumni", "16 anos na Microsoft (nuvem) · MCT Alumni", "16 años en Microsoft (nube) · MCT Alumni"),
- "Microsoft Learn : parcours Copilot Studio (2025) · Microsoft 365 Fundamentals · Azure Infrastructure Solutions.": T(
-  "Microsoft Learn: Copilot Studio learning paths (2025) · Microsoft 365 Fundamentals · Azure Infrastructure Solutions.",
-  "Microsoft Learn: trilhas Copilot Studio (2025) · Microsoft 365 Fundamentals · Azure Infrastructure Solutions.",
-  "Microsoft Learn: rutas de Copilot Studio (2025) · Microsoft 365 Fundamentals · Azure Infrastructure Solutions."),
+ "Microsoft Learn : parcours Copilot Studio (2025) · Microsoft Specialist : Azure Infrastructure Solutions.": T(
+  "Microsoft Learn: Copilot Studio learning paths (2025) · Microsoft Specialist: Azure Infrastructure Solutions.",
+  "Microsoft Learn: trilhas Copilot Studio (2025) · Microsoft Specialist: Azure Infrastructure Solutions.",
+  "Microsoft Learn: rutas de Copilot Studio (2025) · Microsoft Specialist: Azure Infrastructure Solutions."),
  "Badges vérifiables (Credly) ↗": T("Verifiable badges (Credly) ↗", "Badges verificáveis (Credly) ↗", "Insignias verificables (Credly) ↗"),
  "Profil LinkedIn ↗": T("LinkedIn profile ↗", "Perfil no LinkedIn ↗", "Perfil de LinkedIn ↗"),
  "Production musicale & activité professionnelle": T(
