@@ -152,10 +152,10 @@ TEXT = {
   "Identificar uma tarefa, os usuários envolvidos e o resultado esperado.",
   "Identificar una tarea, los usuarios implicados y el resultado esperado."),
  "Tester une solution": T("Test a solution", "Testar uma solução", "Probar una solución"),
- "Définir le périmètre, connecter les sources nécessaires et évaluer un premier fonctionnement.": T(
-  "Define the scope, connect the necessary sources and evaluate a first version.",
-  "Definir o escopo, conectar as fontes necessárias e avaliar um primeiro funcionamento.",
-  "Definir el alcance, conectar las fuentes necesarias y evaluar un primer funcionamiento."),
+ "Définir le périmètre, connecter les sources nécessaires et évaluer un premier fonctionnement, avec un point d’avancement chaque semaine.": T(
+  "Define the scope, connect the necessary sources and evaluate a first version, with a progress update every week.",
+  "Definir o escopo, conectar as fontes necessárias e avaliar um primeiro funcionamento, com um status de andamento toda semana.",
+  "Definir el alcance, conectar las fuentes necesarias y evaluar un primer funcionamiento, con un seguimiento cada semana."),
  "Ajuster et déployer": T("Adjust and deploy", "Ajustar e implantar", "Ajustar y desplegar"),
  "Vérifier les réponses, les permissions et les validations avant de généraliser l’usage.": T(
   "Check answers, permissions and approvals before rolling it out more widely.",
