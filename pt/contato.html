@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Projeto musical — HDA Productions</title><meta name="description" content="Descreva seu projeto musical ou de conteúdos digitais: necessidades, etapa atual e prazo. Resposta personalizada da HDA Productions."><link rel="stylesheet" href="/assets/site.css"><link rel="stylesheet" href="/assets/projet.css"><script src="/assets/projet.js" defer></script><link rel="alternate" hreflang="fr" href="https://music.hdaprodz.com/contact.html"><link rel="alternate" hreflang="en" href="https://music.hdaprodz.com/en/contact.html"><link rel="alternate" hreflang="pt" href="https://music.hdaprodz.com/pt/contato.html"><link rel="alternate" hreflang="es" href="https://music.hdaprodz.com/es/contacto.html"><link rel="alternate" hreflang="x-default" href="https://music.hdaprodz.com/contact.html"><link rel="stylesheet" href="/assets/chat.css"><script src="/assets/chat.js" defer></script></head><body><a class="skip" href="#formulaire">Ir para o formulário</a><header><div class="wrap"><nav aria-label="Navegação principal"><a class="brand" href="/pt/"><img class="brand-mark" src="/media/HDA.jpg" alt="" width="44" height="44">HDA <span>Productions</span></a><div class="links"><a href="/pt/#assistant">Music Prodz Assist</a><a href="/pt/#ecouter">Ouvir</a><!--lang--><span class="lang-switch" aria-label="Idioma"><a href="/contact.html" hreflang="fr" lang="fr" title="Français">FR</a><a href="/en/contact.html" hreflang="en" lang="en" title="English">EN</a><a href="/pt/contato.html" hreflang="pt" lang="pt" title="Português" aria-current="true">PT</a><a href="/es/contacto.html" hreflang="es" lang="es" title="Español">ES</a></span><!--/lang--><a class="button" href="#formulaire">Descrever meu projeto ↗</a></div></nav></div></header>
+<main id="main"><div class="wrap">
+<section class="p-hero"><div class="eyebrow">Projeto musical</div><h1 class="p-title">Fale-nos do <em>seu projeto.</em></h1><p class="intro">Algumas informações bastam para preparar uma primeira conversa: seu projeto, suas necessidades e o prazo desejado. Você recebe uma resposta personalizada, sem compromisso.</p></section>
+
+<div class="p-layout">
+<form id="formulaire" class="p-form" action="/api/contact" method="post" novalidate>
+  <div class="p-status" id="status" role="status" aria-live="polite" tabindex="-1" hidden></div>
+  <fieldset><legend>Você</legend>
+    <div class="p-row">
+      <label><span>Nome completo <abbr title="obrigatório">*</abbr></span><input name="name" autocomplete="name" required minlength="2" maxlength="100"></label>
+      <label><span>Artista, banda ou estrutura</span><input name="company" autocomplete="organization" maxlength="120"></label>
+    </div>
+    <div class="p-row">
+      <label><span>E-mail <abbr title="obrigatório">*</abbr></span><input type="email" name="email" autocomplete="email" required maxlength="254"></label>
+      <label><span>Telefone</span><input type="tel" name="phone" autocomplete="tel" maxlength="40" pattern="[+()0-9 .\-]{6,40}"></label>
+    </div>
+  </fieldset>
+  <fieldset><legend>Seu projeto</legend>
+    <label><span>Tipo de projeto <abbr title="obrigatório">*</abbr></span><select name="projectType" required><option value="">Escolher…</option><option value="Production musicale">Produção musical</option><option value="Contenus numériques">Conteúdos digitais</option><option value="Music Prodz Assist (assistant IA)">Music Prodz Assist (assistente de IA)</option><option value="Autre">Outro</option></select></label>
+    <label><span>Descrição <abbr title="obrigatório">*</abbr></span><span class="p-hint">O projeto (título, estilo, etapa atual), o que você precisa e o resultado esperado.</span><textarea name="description" rows="7" required minlength="20" maxlength="5000"></textarea><span class="p-count" aria-hidden="true"><span id="count">0</span> / 5000</span></label>
+    <div class="p-row">
+      <label><span>Prazo desejado</span><select name="timeline"><option value="">Escolher…</option><option value="Dès que possible">O quanto antes</option><option value="Dans 1 à 3 mois">Em 1 a 3 meses</option><option value="Dans 3 à 6 mois">Em 3 a 6 meses</option><option value="Plus tard / à définir">Mais tarde / a definir</option></select></label>
+      
+    </div>
+    <label><span>Como nos conheceu?</span><input name="source" maxlength="120"></label>
+  </fieldset>
+  <div class="p-hp" aria-hidden="true"><label><span>Não preencher</span><input name="website" tabindex="-1" autocomplete="off"></label></div>
+  <input type="hidden" name="started" value=""><input type="hidden" name="lang" value="pt">
+  <label class="p-consent"><input type="checkbox" name="consent" required><span>Concordo que minhas informações sejam usadas para tratar minha solicitação e entrar em contato comigo, conforme o <a href="#confidentialite">aviso de privacidade</a>. <abbr title="obrigatório">*</abbr></span></label>
+  <div id="turnstile" class="p-turnstile"></div>
+  <div class="p-actions"><button class="button" type="submit" id="submit">Enviar minha solicitação ↗</button><span class="p-hint">* campos obrigatórios</span></div>
+  <noscript><p class="p-hint">O formulário requer JavaScript. Você também pode escrever para <a href="mailto:h@hdaprodz.com?subject=Projeto%20musical%20HDA%20Productions">h@hdaprodz.com</a>.</p></noscript>
+</form>
+
+<aside class="p-side">
+  <div class="card"><span class="number">O QUE ACONTECE DEPOIS</span><ol class="p-steps"><li><strong>Leitura da sua solicitação</strong> e primeiras perguntas, se necessário.</li><li><strong>Uma conversa</strong> para detalhar a necessidade, as ferramentas e as restrições.</li><li><strong>Uma proposta</strong> de primeira etapa, com escopo e estimativa.</li></ol></div>
+  <div class="card"><span class="number">PREFERE E-MAIL?</span><p>Escreva diretamente para <a href="mailto:h@hdaprodz.com?subject=Projeto%20musical%20HDA%20Productions">h@hdaprodz.com</a>.</p></div>
+</aside>
+</div>
+
+<section class="p-privacy" id="confidentialite"><h2>Aviso de privacidade</h2><p><strong>Responsável pelo tratamento:</strong> Hélio Abreu de Andrade, empresário individual (HDA PRODZ), 10 rue Jean Rostand, 91300 Massy, França. Contato: <a href="mailto:h@hdaprodz.com">h@hdaprodz.com</a>.</p><p><strong>Dados e finalidade:</strong> as informações fornecidas servem apenas para tratar sua solicitação, entrar em contato com você e preparar uma eventual proposta (base legal: medidas pré-contratuais tomadas a seu pedido). Elas não são vendidas nem usadas para fins publicitários.</p><p><strong>Destinatários e subcontratados:</strong> a solicitação é enviada por e-mail para a caixa de correio profissional Microsoft 365 da HDA PRODZ. O site é hospedado pela Cloudflare, que também fornece o Turnstile, uma verificação anti-robô que trata dados técnicos de conexão.</p><p><strong>Prazo de conservação:</strong> 3 anos a partir do último contato, salvo relação contratual posterior.</p><p><strong>Seus direitos:</strong> acesso, retificação, exclusão, limitação e oposição, escrevendo para o endereço acima. Também pode apresentar uma reclamação à CNIL, autoridade francesa de proteção de dados (www.cnil.fr).</p></section>
+</div></main>
+<footer><div class="wrap"><div class="row"><span>© 2026 HDA PRODZ · HDA Productions</span><span>Massy, France · SIRET 910 349 968 00016</span><a href="/pt/">Voltar à página inicial</a></div></div></footer></body></html>
