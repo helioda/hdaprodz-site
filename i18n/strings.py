@@ -85,13 +85,14 @@ TEXT = {
   "Preparar respostas, organizar solicitações e conectar etapas repetitivas, com os controles adequados a cada uso.",
   "Preparar respuestas, organizar solicitudes y conectar los pasos repetitivos, con los controles adecuados a cada uso."),
  "Applications métier": T("Business apps", "Aplicativos de negócio", "Aplicaciones de negocio"),
- "Domaines d’application": T("Use cases", "Áreas de aplicação", "Ámbitos de aplicación"),
- "Des besoins différents.": T("Different needs.", "Necessidades diferentes.", "Necesidades distintas."),
- "Une approche concrète.": T("A practical approach.", "Uma abordagem concreta.", "Un enfoque concreto."),
- "Quelques usages autour desquels nous développons nos assistants.": T(
-  "A few uses we build our assistants around.",
-  "Alguns usos em torno dos quais desenvolvemos nossos assistentes.",
-  "Algunos usos en torno a los cuales desarrollamos nuestros asistentes."),
+ "Cas concret": T("Case study", "Caso concreto", "Caso concreto"),
+ "Un assistant conçu": T("An assistant built", "Um assistente criado", "Un asistente diseñado"),
+ "pour un vrai métier.": T("for a real profession.", "para uma profissão real.", "para un oficio real."),
+ "Notre premier assistant, développé pour la gestion de copropriété. La même démarche s’adapte à d’autres métiers.": T(
+  "Our first assistant, developed for condominium management. The same approach adapts to other professions.",
+  "Nosso primeiro assistente, desenvolvido para a gestão de condomínios. A mesma abordagem se adapta a outras profissões.",
+  "Nuestro primer asistente, desarrollado para la gestión de comunidades de propietarios. El mismo enfoque se adapta a otros oficios."),
+ "Volet musical : HDA Productions ↗": T("Music side: HDA Productions ↗", "Lado musical: HDA Productions ↗", "Faceta musical: HDA Productions ↗"),
  "Immobilier & copropriété": T("Real estate & co-ownership", "Imóveis e condomínios", "Inmobiliaria y comunidades de propietarios"),
  "Notre assistant IA pour faciliter la gestion de copropriété et l’accès aux documents.": T(
   "Our AI assistant to simplify co-ownership (condominium) management and access to documents.",
@@ -135,30 +136,6 @@ TEXT = {
   "Microsoft Learn: rutas de Copilot Studio (2025) · Microsoft Specialist: Azure Infrastructure Solutions."),
  "Badges vérifiables (Credly) ↗": T("Verifiable badges (Credly) ↗", "Badges verificáveis (Credly) ↗", "Insignias verificables (Credly) ↗"),
  "Profil LinkedIn ↗": T("LinkedIn profile ↗", "Perfil no LinkedIn ↗", "Perfil de LinkedIn ↗"),
- "Production musicale & activité professionnelle": T(
-  "Music production & professional activity", "Produção musical e atividade profissional", "Producción musical y actividad profesional"),
- "Notre assistant IA pour accompagner les projets de production musicale, de l’idée à l’organisation.": T(
-  "Our AI assistant to support music production projects, from idea to organisation.",
-  "Nosso assistente de IA para acompanhar projetos de produção musical, da ideia à organização.",
-  "Nuestro asistente de IA para acompañar los proyectos de producción musical, de la idea a la organización."),
- "Structurer les étapes d’un projet créatif.": T(
-  "Structure the stages of a creative project.", "Estruturar as etapas de um projeto criativo.", "Estructurar las etapas de un proyecto creativo."),
- "Préparer des contenus et des ressources de travail.": T(
-  "Prepare content and working resources.", "Preparar conteúdos e recursos de trabalho.", "Preparar contenidos y recursos de trabajo."),
- "Adapter les assistants aux opérations et au service client.": T(
-  "Adapt assistants to operations and customer service.", "Adaptar os assistentes às operações e ao atendimento ao cliente.", "Adaptar los asistentes a las operaciones y a la atención al cliente."),
- "Studio de production musicale éclairé en bleu et cyan, avec écrans et console de mixage": T(
-  "Music production studio lit in blue and cyan, with screens and a mixing console",
-  "Estúdio de produção musical iluminado em azul e ciano, com telas e mesa de mixagem",
-  "Estudio de producción musical iluminado en azul y cian, con pantallas y mesa de mezclas"),
- "HDA Productions · La technologie au service de la création.": T(
-  "HDA Productions · Technology serving creativity.", "HDA Productions · A tecnologia a serviço da criação.", "HDA Productions · La tecnología al servicio de la creación."),
- "· HDA Prodz · extrait (1 min 06)": T("· HDA Prodz · excerpt (1 min 06)", "· HDA Prodz · trecho (1 min 06)", "· HDA Prodz · fragmento (1 min 06)"),
- "Écouter un extrait de Burst Ya Cherry, HDA Prodz": T(
-  "Listen to an excerpt of Burst Ya Cherry, HDA Prodz", "Ouvir um trecho de Burst Ya Cherry, HDA Prodz", "Escuchar un fragmento de Burst Ya Cherry, HDA Prodz"),
- "Votre navigateur ne permet pas de lire cet extrait.": T(
-  "Your browser can’t play this excerpt.", "Seu navegador não consegue reproduzir este trecho.", "Su navegador no puede reproducir este fragmento."),
- "Télécharger l’extrait": T("Download the excerpt", "Baixar o trecho", "Descargar el fragmento"),
  "Comment démarrer": T("How to start", "Como começar", "Cómo empezar"),
  "Commencer petit. Construire utile.": T("Start small. Build what’s useful.", "Começar pequeno. Construir o que é útil.", "Empezar poco a poco. Construir algo útil."),
  "Choisir un besoin": T("Choose a need", "Escolher uma necessidade", "Elegir una necesidad"),
@@ -176,11 +153,6 @@ TEXT = {
   "Check answers, permissions and approvals before rolling it out more widely.",
   "Verificar as respostas, as permissões e as validações antes de ampliar o uso.",
   "Verificar las respuestas, los permisos y las validaciones antes de generalizar su uso."),
- "Notre volet créatif": T("Our creative side", "Nosso lado criativo", "Nuestra faceta creativa"),
- "La création fait aussi partie de notre activité : production musicale et contenus numériques sous le nom HDA Prodz. Une même entreprise, des outils au service du travail et de la créativité.": T(
-  "Creativity is also part of what we do: music production and digital content under the name HDA Prodz. One company, with tools serving both work and creativity.",
-  "A criação também faz parte da nossa atividade: produção musical e conteúdos digitais com o nome HDA Prodz. Uma mesma empresa, ferramentas a serviço do trabalho e da criatividade.",
-  "La creación también forma parte de nuestra actividad: producción musical y contenidos digitales con el nombre HDA Prodz. Una misma empresa, herramientas al servicio del trabajo y de la creatividad."),
  "Parlons de votre projet": T("Let’s talk about your project", "Vamos falar do seu projeto", "Hablemos de su proyecto"),
  "Quel travail aimeriez-vous simplifier ?": T("What work would you like to simplify?", "Que trabalho você gostaria de simplificar?", "¿Qué trabajo le gustaría simplificar?"),
  "Décrivez votre besoin, vos outils actuels et les tâches qui vous prennent du temps. Nous pourrons définir ensemble une première étape.": T(
@@ -248,7 +220,6 @@ TEXT = {
  "Agent ou copilote IA": T("AI agent or copilot", "Agente ou copiloto de IA", "Agente o copiloto de IA"),
  "Automatisation de processus": T("Process automation", "Automação de processos", "Automatización de procesos"),
  "Accès aux documents et à la connaissance": T("Access to documents and knowledge", "Acesso a documentos e ao conhecimento", "Acceso a documentos y al conocimiento"),
- "Production musicale ou audio": T("Music or audio production", "Produção musical ou de áudio", "Producción musical o de audio"),
  "Autre": T("Other", "Outro", "Otro"),
  "Description": T("Description", "Descrição", "Descripción"),
  "Le besoin, les utilisateurs concernés, les outils actuels (Microsoft 365, SharePoint…) et le résultat attendu.": T(
