@@ -3,7 +3,7 @@
 // loaded from Microsoft (and no conversation or credit is used) before that.
 (function () {
   // Set SRC to the public web chat URL of the music agent (Copilot Studio). Empty = no button.
-  var SRC = "";
+  var SRC = "https://copilotstudio.microsoft.com/environments/bb2bce61-d4d6-eef1-aecc-de974fa7f543/bots/cr371_MusicProdzAssist/webchat?__version__=2";
   var LANG = (document.documentElement.lang || "fr").slice(0, 2).toLowerCase();
   var I18N = {
     fr: { btn: "Une question ? Assistant IA", title: "Assistant IA · HDA Productions", close: "Fermer l’assistant",
