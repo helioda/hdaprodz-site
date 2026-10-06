@@ -85,6 +85,11 @@ TEXT = {
   "Preparar respostas, organizar solicitações e conectar etapas repetitivas, com os controles adequados a cada uso.",
   "Preparar respuestas, organizar solicitudes y conectar los pasos repetitivos, con los controles adecuados a cada uso."),
  "Applications métier": T("Business apps", "Aplicativos de negócio", "Aplicaciones de negocio"),
+ "Essayer la démo ↗": T("Try the demo ↗", "Experimentar a demo ↗", "Probar la demo ↗"),
+ "Copropriété fictive, données de démonstration · réponses générées par IA": T(
+  "Fictional condominium, demo data · AI-generated answers",
+  "Condomínio fictício, dados de demonstração · respostas geradas por IA",
+  "Comunidad ficticia, datos de demostración · respuestas generadas por IA"),
  "Cas concret": T("Case study", "Caso concreto", "Caso concreto"),
  "Un assistant conçu": T("An assistant built", "Um assistente criado", "Un asistente diseñado"),
  "pour un vrai métier.": T("for a real profession.", "para uma profissão real.", "para un oficio real."),
