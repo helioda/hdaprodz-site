@@ -139,6 +139,7 @@ TEXT = {
   "Microsoft Learn: Copilot Studio learning paths (2025) · Microsoft Specialist: Azure Infrastructure Solutions.",
   "Microsoft Learn: trilhas Copilot Studio (2025) · Microsoft Specialist: Azure Infrastructure Solutions.",
   "Microsoft Learn: rutas de Copilot Studio (2025) · Microsoft Specialist: Azure Infrastructure Solutions."),
+ "Fiche partenaire Microsoft Marketplace ↗": T("Microsoft Marketplace partner listing ↗", "Perfil de parceiro no Microsoft Marketplace ↗", "Ficha de partner en Microsoft Marketplace ↗"),
  "Badges vérifiables (Credly) ↗": T("Verifiable badges (Credly) ↗", "Badges verificáveis (Credly) ↗", "Insignias verificables (Credly) ↗"),
  "Profil LinkedIn ↗": T("LinkedIn profile ↗", "Perfil no LinkedIn ↗", "Perfil de LinkedIn ↗"),
  "Comment démarrer": T("How to start", "Como começar", "Cómo empezar"),
