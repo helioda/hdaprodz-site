@@ -86,6 +86,10 @@ TEXT = {
   "Preparar respuestas, organizar solicitudes y conectar los pasos repetitivos, con los controles adecuados a cada uso."),
  "Applications métier": T("Business apps", "Aplicativos de negócio", "Aplicaciones de negocio"),
  "Essayer la démo ↗": T("Try the demo ↗", "Experimentar a demo ↗", "Probar la demo ↗"),
+ "Voir le tableau de bord du conseil syndical ↗": T(
+  "See the owners’ council dashboard (in French) ↗",
+  "Ver o painel do conselho do condomínio (em francês) ↗",
+  "Ver el panel del consejo de propietarios (en francés) ↗"),
  "Copropriété fictive, données de démonstration · réponses générées par IA": T(
   "Fictional condominium, demo data · AI-generated answers",
   "Condomínio fictício, dados de demonstração · respostas geradas por IA",
