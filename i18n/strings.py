@@ -119,17 +119,21 @@ TEXT = {
   "Help track actions and deadlines.",
   "Ajudar a acompanhar as ações e os prazos.",
   "Ayudar a seguir las acciones y los plazos."),
- "Présentation de Syndic Assist – CoproPilot AI": T(
-  "Syndic Assist – CoproPilot AI presentation",
-  "Apresentação do Syndic Assist – CoproPilot AI",
-  "Presentación de Syndic Assist – CoproPilot AI"),
+ "Présentation de CoproSens": T(
+  "CoproSens presentation",
+  "Apresentação do CoproSens",
+  "Presentación de CoproSens"),
+ "– l’assistant documentaire de votre copropriété": T(
+  "– the document assistant for your condominium",
+  "– o assistente de documentos do seu condomínio",
+  "– el asistente documental de su comunidad de propietarios"),
  "Votre navigateur ne permet pas de lire cette vidéo.": T(
   "Your browser can’t play this video.", "Seu navegador não consegue reproduzir este vídeo.", "Su navegador no puede reproducir este vídeo."),
  "Télécharger la présentation": T("Download the presentation", "Baixar a apresentação", "Descargar la presentación"),
- "Syndic Assist – CoproPilot AI · Projet soumis à l’Agent-a-thon Microsoft × Founderz · Présentation en anglais · 2 min 49 s": T(
-  "Syndic Assist – CoproPilot AI · Project submitted to the Microsoft × Founderz Agent-a-thon · Presentation in English · 2 min 49 s",
-  "Syndic Assist – CoproPilot AI · Projeto submetido ao Agent-a-thon Microsoft × Founderz · Apresentação em inglês · 2 min 49 s",
-  "Syndic Assist – CoproPilot AI · Proyecto presentado al Agent-a-thon Microsoft × Founderz · Presentación en inglés · 2 min 49 s"),
+ "CoproSens · Projet soumis à l’Agent-a-thon Microsoft × Founderz sous son ancien nom · Présentation en anglais · 2 min 49 s": T(
+  "CoproSens · Project submitted to the Microsoft × Founderz Agent-a-thon under its former name · Presentation in English · 2 min 49 s",
+  "CoproSens · Projeto submetido ao Agent-a-thon Microsoft × Founderz com seu nome anterior · Apresentação em inglês · 2 min 49 s",
+  "CoproSens · Proyecto presentado al Agent-a-thon Microsoft × Founderz con su nombre anterior · Presentación en inglés · 2 min 49 s"),
  "Références": T("Credentials", "Referências", "Referencias"),
  "Membre du Microsoft AI Cloud Partner Program": T(
   "Member of the Microsoft AI Cloud Partner Program", "Membro do Microsoft AI Cloud Partner Program", "Miembro del Microsoft AI Cloud Partner Program"),
