@@ -196,3 +196,19 @@ h3{font-weight:700;letter-spacing:-.4px}
  .audience-grid{grid-template-columns:1fr}
 }
 @media(prefers-reduced-motion:reduce){.browser,.scene-chip{transform:none}}
+
+/* ===== Hybrid (26 Oct): original immersive hero restored, product scene on top; light sections below ===== */
+header{background:#090e22;border-color:#ffffff12}
+.hero:before{background:linear-gradient(90deg,#090e22f0 0%,#090e2299 50%,#090e2230),linear-gradient(0deg,#090e22 0%,transparent 35%),url('/media/agentic-hero.png') center/cover no-repeat!important}
+.hero{color:#f2f5ff}
+.hero h1{color:#f2f5ff}
+.hero h1 em{background:linear-gradient(100deg,#86e8ff,#a69bff,#efb3ec);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .intro{color:#d0d9eb}
+.hero .eyebrow{color:#97e5f4}
+.hero .textlink{color:#d9e3ff}
+.scene-blob{display:none}
+.browser{box-shadow:0 30px 80px #000a,0 0 0 1px #86e8ff40}
+.chat-card{box-shadow:0 24px 70px #0009}
+/* Smooth hand-over from the dark hero to the light page */
+.ribbon{background:#f8fafc}
+@media(max-width:800px){.hero:before{background-position:65% center!important}}
