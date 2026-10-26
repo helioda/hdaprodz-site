@@ -35,8 +35,8 @@ h3{font-weight:700;letter-spacing:-.4px}
 .button:hover{filter:brightness(1.07)}
 
 /* Hero: original city image, a little brighter */
-.hero:before{background:linear-gradient(90deg,#141d45e0 0%,#141d4580 42%,#141d4500 62%),linear-gradient(0deg,#141d45 0%,transparent 26%),url('/media/hero-city-layer.svg') center 12%/cover no-repeat,url('/media/hero-city.webp') center 12%/cover no-repeat!important}
-@media(prefers-reduced-motion:reduce){.hero:before{background:linear-gradient(90deg,#141d45e0 0%,#141d4580 42%,#141d4500 62%),linear-gradient(0deg,#141d45 0%,transparent 26%),url('/media/hero-city-layer-static.svg') center 12%/cover no-repeat,url('/media/hero-city.webp') center 12%/cover no-repeat!important}}
+.hero:before{background:linear-gradient(0deg,#141d45 0%,transparent 24%),url('/media/hero-city-layer.svg') right top/auto 100% no-repeat,url('/media/hero-city-right.webp') right top/auto 100% no-repeat,linear-gradient(90deg,#141d45e6 0%,#141d45b3 45%,#141d4599 100%),url('/media/hero-city.webp') left 12%/cover no-repeat!important}
+@media(prefers-reduced-motion:reduce){.hero:before{background:linear-gradient(0deg,#141d45 0%,transparent 24%),url('/media/hero-city-layer-static.svg') right top/auto 100% no-repeat,url('/media/hero-city-right.webp') right top/auto 100% no-repeat,linear-gradient(90deg,#141d45e6 0%,#141d45b3 45%,#141d4599 100%),url('/media/hero-city.webp') left 12%/cover no-repeat!important}}
 .hero{grid-template-columns:1fr 1.05fr!important;align-items:center}
 h1 em{background:linear-gradient(100deg,#86e8ff,#a69bff,#efb3ec);-webkit-background-clip:text;background-clip:text;color:transparent}
 
