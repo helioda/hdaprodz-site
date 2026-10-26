@@ -3,7 +3,7 @@
   "use strict";
 
   var LANG = (document.documentElement.lang || "fr").slice(0, 2).toLowerCase();
-  var MAIL = '<a href="mailto:h@hdaprodz.com?subject=Projet%20HDA%20Solutions">h@hdaprodz.com</a>';
+  var MAIL = '<a href="mailto:contact@hdaprodz.com?subject=Projet%20HDA%20Solutions">contact@hdaprodz.com</a>';
   var I18N = {
     fr: {
       ok: "Merci, votre demande a bien été envoyée. Référence : <strong>{ref}</strong>. Vous recevrez une réponse par e-mail.",

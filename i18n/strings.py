@@ -174,7 +174,7 @@ TEXT = {
   "Descreva sua necessidade, suas ferramentas atuais e as tarefas que tomam seu tempo. Juntos, podemos definir um primeiro passo.",
   "Describa su necesidad, sus herramientas actuales y las tareas que le quitan tiempo. Juntos podremos definir un primer paso."),
  "Décrire mon projet ↗": T("Describe my project ↗", "Descrever meu projeto ↗", "Describir mi proyecto ↗"),
- "ou écrire à h@hdaprodz.com": T("or write to h@hdaprodz.com", "ou escrever para h@hdaprodz.com", "o escribir a h@hdaprodz.com"),
+ "ou écrire à contact@hdaprodz.com": T("or write to contact@hdaprodz.com", "ou escrever para contact@hdaprodz.com", "o escribir a contact@hdaprodz.com"),
  "Retour en haut ↑": T("Back to top ↑", "Voltar ao topo ↑", "Volver arriba ↑"),
  "Éditeur et confidentialité": T("Publisher and privacy", "Editor e privacidade", "Editor y privacidad"),
  "Éditeur :": T("Publisher:", "Editor:", "Editor:"),
