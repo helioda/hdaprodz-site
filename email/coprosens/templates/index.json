@@ -50,5 +50,21 @@
  "es-ar": {
   "subject": "PUBLICIDAD – CoproSens: los documentos de sus consorcios responden en segundos",
   "relance_subject": "PUBLICIDAD – RE: CoproSens: los documentos de sus consorcios responden en segundos"
+ },
+ "en-ca": {
+  "subject": "CoproSens – your condo corporations' documents answer in seconds",
+  "relance_subject": "RE: CoproSens – your condo corporations' documents answer in seconds"
+ },
+ "en-au": {
+  "subject": "CoproSens – your strata schemes' documents answer in seconds",
+  "relance_subject": "RE: CoproSens – your strata schemes' documents answer in seconds"
+ },
+ "en-ie": {
+  "subject": "CoproSens – your OMCs' documents answer in seconds",
+  "relance_subject": "RE: CoproSens – your OMCs' documents answer in seconds"
+ },
+ "en-nz": {
+  "subject": "CoproSens – your bodies corporate's documents answer in seconds",
+  "relance_subject": "RE: CoproSens – your bodies corporate's documents answer in seconds"
  }
 }
