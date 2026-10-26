@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="712" height="941" viewBox="960 0 712 941">
+<!-- Motion layer for media/hero-city-right.webp: pulses on the painted links and pings on the painted nodes. -->
+<defs><filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="1.4"/></filter></defs>
+<style>.ring{fill:none;stroke:#ffb98a;stroke-width:1.8;transform-box:fill-box;transform-origin:center;animation:ping 3.4s ease-out infinite}.lk{fill:none;stroke:none}@keyframes ping{0%{transform:scale(.7);opacity:.9}80%,100%{transform:scale(2.8);opacity:0}}</style>
+<path id="l0" class="lk" d="M884 220 L1108 52"/>
+<path id="l1" class="lk" d="M1108 52 L1232 290"/>
+<path id="l2" class="lk" d="M1232 290 L1448 348"/>
+<path id="l3" class="lk" d="M1448 348 L1556 458"/>
+<path id="l4" class="lk" d="M1232 290 L1330 412"/>
+<path id="l5" class="lk" d="M1330 412 L1292 523"/>
+<path id="l6" class="lk" d="M780 410 L884 220"/>
+<path id="l7" class="lk" d="M1292 523 L1573 670"/>
+<path id="l8" class="lk" d="M1007 520 L780 410"/>
+<g filter="url(#soft)">
+<circle r="3.4" fill="#fff"><animateMotion dur="3.4s" begin="0.0s" repeatCount="indefinite"><mpath href="#l0"/></animateMotion></circle>
+<circle r="3.4" fill="#ffd2ad"><animateMotion dur="3.8s" begin="0.7s" repeatCount="indefinite"><mpath href="#l1"/></animateMotion></circle>
+<circle r="3.4" fill="#bdf1ff"><animateMotion dur="4.2s" begin="1.4s" repeatCount="indefinite"><mpath href="#l2"/></animateMotion></circle>
+<circle r="3.4" fill="#fff"><animateMotion dur="4.6s" begin="2.1s" repeatCount="indefinite"><mpath href="#l3"/></animateMotion></circle>
+<circle r="3.4" fill="#ffd2ad"><animateMotion dur="5.0s" begin="2.8s" repeatCount="indefinite"><mpath href="#l4"/></animateMotion></circle>
+<circle r="3.4" fill="#bdf1ff"><animateMotion dur="5.4s" begin="0.5s" repeatCount="indefinite"><mpath href="#l5"/></animateMotion></circle>
+<circle r="3.4" fill="#fff"><animateMotion dur="5.8s" begin="1.2s" repeatCount="indefinite"><mpath href="#l6"/></animateMotion></circle>
+<circle r="3.4" fill="#ffd2ad"><animateMotion dur="6.2s" begin="1.9s" repeatCount="indefinite"><mpath href="#l7"/></animateMotion></circle>
+<circle r="3.4" fill="#bdf1ff"><animateMotion dur="6.6s" begin="2.6s" repeatCount="indefinite"><mpath href="#l8"/></animateMotion></circle>
+</g>
+<circle class="ring" cx="1108" cy="52" r="7" style="animation-delay:0.00s"/>
+<circle class="ring" cx="884" cy="220" r="7" style="animation-delay:0.55s"/>
+<circle class="ring" cx="780" cy="410" r="7" style="animation-delay:1.10s"/>
+<circle class="ring" cx="1232" cy="290" r="7" style="animation-delay:1.65s"/>
+<circle class="ring" cx="1448" cy="348" r="7" style="animation-delay:2.20s"/>
+<circle class="ring" cx="1330" cy="412" r="7" style="animation-delay:2.75s"/>
+<circle class="ring" cx="1556" cy="458" r="7" style="animation-delay:0.30s"/>
+<circle class="ring" cx="1292" cy="523" r="7" style="animation-delay:0.85s"/>
+<circle class="ring" cx="1007" cy="520" r="7" style="animation-delay:1.40s"/>
+<circle class="ring" cx="1573" cy="670" r="7" style="animation-delay:1.95s"/>
+</svg>
