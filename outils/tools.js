@@ -43,10 +43,12 @@
     var budget = g + a + e + h, ft = Math.round(budget * ftPct) / 100;
     var tant = lots.map(function (l) { return l.tantiemes; });
     var sGen = split(g, tant);
-    var sAsc = split(a, lots.map(function (l) { return l.etage > 0 ? l.tantiemes : 0; }));
-    var sEau = split(e, lots.map(function (l) { return l.eau; }));
-    var hConso = Math.round(h * chPct) / 100, hFixe = Math.round((h - hConso) * 100) / 100;
-    var sChC = split(hConso, lots.map(function (l) { return l.chauffage; })), sChF = split(hFixe, tant);
+    var simple = $("#m-simple").checked;
+    $("#p-ch").disabled = simple;
+    var sAsc = simple ? split(a, tant) : split(a, lots.map(function (l) { return l.etage > 0 ? l.tantiemes : 0; }));
+    var sEau = simple ? split(e, tant) : split(e, lots.map(function (l) { return l.eau; }));
+    var hConso = simple ? 0 : Math.round(h * chPct) / 100, hFixe = Math.round((h - hConso) * 100) / 100;
+    var sChC = simple ? lots.map(function () { return 0; }) : split(hConso, lots.map(function (l) { return l.chauffage; })), sChF = split(hFixe, tant);
     var sFt = split(ft, tant);
     lastRows = lots.map(function (l, i) {
       var annual = sGen[i] + sAsc[i] + sEau[i] + sChC[i] + sChF[i] + sFt[i];
