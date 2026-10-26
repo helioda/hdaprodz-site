@@ -30,5 +30,25 @@
  "pt-pt": {
   "subject": "CoproSens – os documentos dos seus condomínios respondem em segundos",
   "relance_subject": "RE: CoproSens – os documentos dos seus condomínios respondem em segundos"
+ },
+ "pt-br": {
+  "subject": "CoproSens – os documentos dos seus condomínios respondem em segundos",
+  "relance_subject": "RE: CoproSens – os documentos dos seus condomínios respondem em segundos"
+ },
+ "es-mx": {
+  "subject": "PUBLICIDAD – CoproSens: los documentos de sus condominios responden en segundos",
+  "relance_subject": "PUBLICIDAD – RE: CoproSens: los documentos de sus condominios responden en segundos"
+ },
+ "es-co": {
+  "subject": "PUBLICIDAD – CoproSens: los documentos de sus copropiedades responden en segundos",
+  "relance_subject": "PUBLICIDAD – RE: CoproSens: los documentos de sus copropiedades responden en segundos"
+ },
+ "es-cl": {
+  "subject": "PUBLICIDAD – CoproSens: los documentos de sus condominios responden en segundos",
+  "relance_subject": "PUBLICIDAD – RE: CoproSens: los documentos de sus condominios responden en segundos"
+ },
+ "es-ar": {
+  "subject": "PUBLICIDAD – CoproSens: los documentos de sus consorcios responden en segundos",
+  "relance_subject": "PUBLICIDAD – RE: CoproSens: los documentos de sus consorcios responden en segundos"
  }
 }
