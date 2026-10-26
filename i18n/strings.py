@@ -103,6 +103,11 @@ TEXT = {
   "Try the property-manager tools: service-charge calls and meeting documents (in French) ↗",
   "Experimentar as ferramentas da administradora: chamadas de cotas e documentos de assembleia (em francês) ↗",
   "Probar las herramientas del administrador: cuotas y documentos de junta (en francés) ↗"),
+ "Démarrer un pilote sur vos documents": T("Start a pilot on your documents", "Iniciar um piloto com os seus documentos", "Iniciar un piloto con sus documentos"),
+ "Le pilote : CoproSens installé dans votre propre Microsoft 365, sur les documents de vos immeubles.": T(
+  "The pilot: CoproSens set up in your own Microsoft 365, on your buildings’ documents.",
+  "O piloto: o CoproSens instalado no seu próprio Microsoft 365, com os documentos dos seus condomínios.",
+  "El piloto: CoproSens instalado en su propio Microsoft 365, con los documentos de sus edificios."),
  "Essayer la démo ↗": T("Try the demo ↗", "Experimentar a demo ↗", "Probar la demo ↗"),
  "Voir le tableau de bord du conseil syndical ↗": T(
   "See the owners’ council dashboard ↗",
@@ -252,6 +257,7 @@ TEXT = {
  "Agent ou copilote IA": T("AI agent or copilot", "Agente ou copiloto de IA", "Agente o copiloto de IA"),
  "Automatisation de processus": T("Process automation", "Automação de processos", "Automatización de procesos"),
  "Accès aux documents et à la connaissance": T("Access to documents and knowledge", "Acesso a documentos e ao conhecimento", "Acceso a documentos y al conocimiento"),
+ "Pilote CoproSens sur vos documents": T("CoproSens pilot on your documents", "Piloto do CoproSens com os seus documentos", "Piloto de CoproSens con sus documentos"),
  "Autre": T("Other", "Outro", "Otro"),
  "Description": T("Description", "Descrição", "Descripción"),
  "Le besoin, les utilisateurs concernés, les outils actuels (Microsoft 365, SharePoint…) et le résultat attendu.": T(
