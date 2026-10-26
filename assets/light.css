@@ -1,0 +1,105 @@
+/* HDA Solutions — light edition (Oct 2026). Loaded last: overrides the dark "immersive" theme.
+   Palette shared with the CoproSens email: navy #0B1330, teal #0E7C86, coral #F97362, amber #F59E0B. */
+:root{--bg:#ffffff;--ink:#0b1330;--green:#0e7c86;--line:#e2e8f0;--muted:#475569;--teal:#0e7c86;--teal-soft:#e6f7f6;--coral:#f97362;--amber:#f59e0b;--navy:#0b1330}
+body{background:#ffffff;color:var(--ink)}
+
+/* Header: navy band for a solid, premium frame */
+header{background:var(--navy);border-color:#0b1330;color:#fff}
+header a{color:#fff}
+.brand-mark{background:#fff;border-radius:10px!important;padding:3px}
+nav .links a:not(.button){color:#dbe4f3}
+nav .links a:not(.button):hover{color:#fff}
+.lang-switch a{color:#dbe4f3}
+
+/* Buttons: coral primary, teal secondary */
+.button{background:var(--coral);color:#fff;border:0;border-radius:10px;box-shadow:0 6px 18px #f9736240}
+.button:hover{filter:brightness(1.06)}
+header .button{background:var(--coral)}
+.textlink{color:var(--teal)}
+.eyebrow{color:var(--teal)}
+
+/* Hero: light gradient instead of the dark city image */
+.hero:before{background:linear-gradient(135deg,#e6f7f6 0%,#f0fbff 45%,#fff7ed 100%)!important}
+h1{color:var(--navy)}
+h1 em{background:linear-gradient(100deg,#0e7c86,#14b8a6 55%,#f97362);background-clip:text;-webkit-background-clip:text;color:transparent}
+.intro{color:var(--muted)}
+.system{background:#ffffff;border:1px solid var(--line);box-shadow:0 18px 50px #0b133018;color:var(--ink);backdrop-filter:none}
+.system-top{border-color:var(--line);color:var(--muted)}
+.dot,.arrow{color:var(--teal)}
+.flow-item{background:#f8fafc;border:1px solid var(--line)}
+.flow-item small,.system-note{color:var(--muted)}
+.flow-item.last{background:linear-gradient(105deg,#0e7c86,#14b8a6);color:#fff;border-color:transparent}
+.flow-item.last small{color:#e6fffb}
+
+.ribbon{border-color:var(--line);color:var(--muted);background:#f8fafc}
+.sectionhead p,.card p,.creative p,.creds-note{color:var(--muted)}
+
+/* Cards: white with coloured accent bars, alternating teal / amber / coral */
+.card{background:#ffffff;border:1px solid var(--line);box-shadow:0 6px 24px #0b13300d}
+.card:hover{border-color:#14b8a680}
+.card:before{background:linear-gradient(90deg,#0e7c86,#14b8a6)}
+.grid .card:nth-child(2):before{background:linear-gradient(90deg,#f59e0b,#fbbf24)}
+.grid .card:nth-child(3):before{background:linear-gradient(90deg,#f97362,#fb923c)}
+.number{color:var(--teal)}
+.tag{border-color:#cbd5e1;color:var(--muted);background:#f8fafc}
+.steps .card{background:#ffffff}
+
+/* "Cas concret" band: soft teal instead of dark */
+.dark{background:linear-gradient(140deg,#e6f7f6,#f0fbff 60%,#fff7ed);color:var(--ink);border-color:var(--line)}
+.dark p,.case ul{color:var(--muted)}
+.case{background:#ffffff;border:1px solid var(--line);box-shadow:0 10px 30px #0b133012}
+.case figcaption,.case .demo-cta span[style]{color:var(--muted)!important}
+video{box-shadow:0 12px 34px #0b133026}
+.demo-thumb{background:#fff;border-color:var(--line)}
+
+.creative{border-color:var(--line)}
+.studio-visual figcaption{color:var(--muted)}
+
+/* Contact block: teal gradient (same as the email hero) */
+.contact{background:linear-gradient(135deg,#0e7c86 0%,#14b8a6 60%,#22d3ee 100%);border:0;color:#fff;box-shadow:0 20px 50px #0e7c8633}
+.contact p{color:#e6fffb}
+.contact .button{background:#fff;color:var(--teal);box-shadow:none}
+
+/* Footer: navy, like the header */
+footer{background:var(--navy);border-color:var(--navy);color:#cbd5e1}
+footer a{color:#fff}
+.legal{color:#cbd5e1}
+.skip:focus{color:#0b1330}
+a:focus-visible,summary:focus-visible{outline-color:var(--coral)}
+
+/* Project form page (projet.html) */
+.form-card,.panel,form{color:var(--ink)}
+input,select,textarea{background:#fff;color:var(--ink);border:1px solid #cbd5e1}
+input:focus,select:focus,textarea:focus{border-color:var(--teal);outline:2px solid #14b8a640}
+label,legend{color:var(--ink)}
+.hint,.help,small{color:var(--muted)}
+
+/* Website assistant button */
+.hda-chat-btn{background:linear-gradient(135deg,#0e7c86,#14b8a6);border-color:transparent;color:#fff;box-shadow:0 10px 30px #0e7c8644}
+.hda-chat-btn:hover{background:linear-gradient(135deg,#0c6c75,#10a294)}
+
+/* Project form page specifics (overrides assets/projet.css) */
+.p-form{background:#ffffff;border:1px solid var(--line);box-shadow:0 10px 30px #0b133012}
+.p-form legend{color:var(--teal)}
+.p-form label{color:var(--ink)}
+.p-form abbr{color:var(--coral)}
+.p-form input,.p-form select,.p-form textarea{color:var(--ink);background:#f8fafc;border:1px solid #cbd5e1}
+.p-form select{background-image:linear-gradient(45deg,transparent 50%,#0e7c86 50%),linear-gradient(135deg,#0e7c86 50%,transparent 50%)}
+.p-form select option{background:#fff;color:var(--ink)}
+.p-form input:focus-visible,.p-form select:focus-visible,.p-form textarea:focus-visible{outline:3px solid #14b8a640;border-color:var(--teal)}
+.p-form [aria-invalid="true"]{border-color:#e5484d}
+.p-error{color:#c0262d}
+.p-hint{color:var(--muted)}
+.p-count{color:#64748b}
+.p-consent input{accent-color:var(--teal)}
+.p-consent a,.p-side a,.p-privacy a{color:var(--teal)}
+.p-status.ok{background:#e6f7f6;border:1px solid #14b8a6;color:var(--ink)}
+.p-status.err{background:#fdecec;border:1px solid #e5484d;color:var(--ink)}
+.p-steps{color:var(--muted)}
+.p-steps strong,.p-privacy h2{color:var(--ink)}
+.p-privacy{border-color:var(--line);color:var(--muted)}
+
+/* Contact block: keep text readable on the teal gradient */
+.contact .eyebrow,.contact .textlink,.contact a:not(.button){color:#ffffff}
+.contact h2{color:#ffffff}
+.p-form select{background-color:#f8fafc;background-position:calc(100% - 20px) 52%,calc(100% - 14px) 52%;background-size:6px 6px;background-repeat:no-repeat}
