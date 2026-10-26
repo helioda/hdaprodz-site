@@ -179,6 +179,18 @@
 
     // Result of a plain (no-JS) post, if any.
     var q = new URLSearchParams(location.search);
+    if (q.get("type") === "pilote") {
+      var sel = form.elements.projectType;
+      if (sel && sel.querySelector('option[value="Pilote CoproSens"]')) sel.value = "Pilote CoproSens";
+      var tpl = {
+        fr: "Nous souhaitons démarrer un pilote CoproSens sur nos documents.\n\nNombre d'immeubles gérés :\nMicrosoft 365 (oui / non, offre) :\nOù sont nos documents aujourd'hui :\nContact informatique :",
+        en: "We would like to start a CoproSens pilot on our documents.\n\nNumber of buildings or associations managed:\nMicrosoft 365 (yes / no, plan):\nWhere our documents are stored today:\nIT contact:",
+        pt: "Gostaríamos de iniciar um piloto do CoproSens com os nossos documentos.\n\nNúmero de condomínios geridos:\nMicrosoft 365 (sim / não, plano):\nOnde estão hoje os nossos documentos:\nContacto de informática:",
+        es: "Nos gustaría iniciar un piloto de CoproSens con nuestros documentos.\n\nNúmero de edificios administrados:\nMicrosoft 365 (sí / no, plan):\nDónde están hoy nuestros documentos:\nContacto de informática:"
+      };
+      var lg = (document.documentElement.lang || "fr").slice(0, 2);
+      if (!desc.value) { desc.value = tpl[lg] || tpl.fr; count.textContent = desc.value.length; }
+    }
     if (q.get("statut") === "ok" && q.get("ref")) showStatus("ok", MESSAGES.ok(q.get("ref").replace(/[^A-Z0-9-]/gi, "")));
     else if (q.get("statut") === "erreur") showStatus("err", MESSAGES.generic + FALLBACK);
 

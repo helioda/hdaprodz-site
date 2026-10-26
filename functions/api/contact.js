@@ -33,6 +33,7 @@ const PROJECT_TYPES = [
   "Automatisation de processus",
   "Accès aux documents et à la connaissance",
   "Production musicale ou audio",
+  "Pilote CoproSens",
   "Autre",
 ];
 const TIMELINES = ["Dès que possible", "Dans 1 à 3 mois", "Dans 3 à 6 mois", "Plus tard / à définir"];
