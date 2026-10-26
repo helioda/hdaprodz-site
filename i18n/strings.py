@@ -148,10 +148,10 @@ TEXT = {
  "Votre navigateur ne permet pas de lire cette vidéo.": T(
   "Your browser can’t play this video.", "Seu navegador não consegue reproduzir este vídeo.", "Su navegador no puede reproducir este vídeo."),
  "Télécharger la présentation": T("Download the presentation", "Baixar a apresentação", "Descargar la presentación"),
- "CoproSens · Projet soumis à l’Agent-a-thon Microsoft × Founderz sous son ancien nom · Présentation en anglais · 2 min 49 s": T(
-  "CoproSens · Project submitted to the Microsoft × Founderz Agent-a-thon under its former name · Presentation in English · 2 min 49 s",
-  "CoproSens · Projeto submetido ao Agent-a-thon Microsoft × Founderz com seu nome anterior · Apresentação em inglês · 2 min 49 s",
-  "CoproSens · Proyecto presentado al Agent-a-thon Microsoft × Founderz con su nombre anterior · Presentación en inglés · 2 min 49 s"),
+ "CoproSens en 1 min 18 s · présentation en français, voix de synthèse": T(
+  "CoproSens in 1 min 18 s · presentation in French, synthetic voice",
+  "CoproSens em 1 min 18 s · apresentação em francês, voz sintética",
+  "CoproSens en 1 min 18 s · presentación en francés, voz sintética"),
  "Références": T("Credentials", "Referências", "Referencias"),
  "Membre du Microsoft AI Cloud Partner Program": T(
   "Member of the Microsoft AI Cloud Partner Program", "Membro do Microsoft AI Cloud Partner Program", "Miembro del Microsoft AI Cloud Partner Program"),
