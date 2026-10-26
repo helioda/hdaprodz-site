@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1672" height="941" viewBox="0 0 1672 941">
+<!-- AI layer drawn over media/agentic-hero.png (same size, same background position).
+     Agent nodes on tower tops, network links, pulses riding the glass roads, glass sheen and circuit traces.
+     Static twin: hero-ai-layer-static.svg (used when the visitor prefers reduced motion). -->
+<defs>
+  <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+    <stop offset=".44" stop-color="#fff" stop-opacity="0"/>
+    <stop offset=".5" stop-color="#eef4ff" stop-opacity=".25"/>
+    <stop offset=".57" stop-color="#fff" stop-opacity="0"/>
+    <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    
+  </linearGradient>
+  <radialGradient id="halo"><stop offset="0" stop-color="#ffd9b8" stop-opacity=".9"/><stop offset="1" stop-color="#ffd9b8" stop-opacity="0"/></radialGradient>
+  <filter id="edge" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="2.2"/></filter>
+  <!-- glass roads already in the picture -->
+  <path id="road1" d="M1235 478 C1150 500 960 515 925 540 C900 565 1000 585 1150 590 C1300 595 1450 625 1672 690"/>
+  <path id="road2" d="M1330 378 C1400 342 1480 302 1545 286"/>
+  <path id="road3" d="M1170 568 C1300 560 1440 552 1545 548"/>
+  <path id="road4" d="M590 562 C640 578 690 584 738 578"/>
+</defs>
+<style>
+  .outline path{fill:none;stroke:#bfefff;stroke-width:2;stroke-opacity:.85;stroke-linejoin:round;filter:url(#edge)}
+  .outline{opacity:.9}
+  @keyframes glow{0%,100%{opacity:.75}50%{opacity:1}}
+  .edge{fill:none;stroke:#c9d6ff;stroke-width:1.3;stroke-opacity:.5;stroke-dasharray:4 6;}
+  .trace{fill:none;stroke:#86e8ff;stroke-width:1.4;stroke-opacity:.45}
+  .via{fill:#86e8ff;fill-opacity:.7}
+  .core{fill:#fff}
+  .ring{fill:none;stroke:#ffb98a;stroke-width:2;transform-box:fill-box;transform-origin:center;opacity:.6}
+  @keyframes dash{to{stroke-dashoffset:-200}}
+  @keyframes ping{0%{transform:scale(.6);opacity:.9}80%,100%{transform:scale(2.8);opacity:0}}
+</style>
+
+
+<!-- neon outlines that delineate the crystal towers -->
+<g class="outline">
+  <path d="M1148 500 V96 L1240 42 L1262 48 L1262 62 L1330 88 L1382 110 L1388 120 V475"/>
+  <path d="M1245 46 V485 M1262 62 V480"/>
+  <path d="M975 465 V300 L1012 290 L1028 284 V465 M1003 292 V465"/>
+  <path d="M1078 495 V352 L1100 347 L1138 358 V495"/>
+  <path d="M1397 400 V212 L1450 203 L1475 215 V420"/>
+  <path d="M868 520 V420 L893 413 L918 420 V520"/>
+  <path d="M1535 495 V0 M1602 0 V230"/>
+  <path d="M553 555 V472 L572 465 L588 470 V555"/>
+</g>
+
+<!-- glass sheen on the main tower -->
+<polygon points="1148,96 1240,42 1388,110 1388,482 1150,500" fill="url(#sheen)" style="mix-blend-mode:screen"/>
+
+<!-- circuit traces on the main tower's front face -->
+<path class="trace" d="M1165 160 H1205 V230 H1180 V300 M1218 140 V200 H1238 M1170 360 H1214 V420 M1190 260 H1230"/>
+<circle class="via" cx="1165" cy="160" r="3"/><circle class="via" cx="1180" cy="300" r="3"/><circle class="via" cx="1238" cy="200" r="3"/><circle class="via" cx="1214" cy="420" r="3"/><circle class="via" cx="1230" cy="260" r="3"/>
+
+<!-- agent network between the towers -->
+<path id="e1" class="edge" d="M570 468 L892 416"/>
+<path id="e2" class="edge" d="M892 416 L1003 292"/>
+<path id="e3" class="edge" d="M1003 292 L1268 50"/>
+<path id="e4" class="edge" d="M1268 50 L1435 206"/>
+<path id="e5" class="edge" d="M1435 206 L1545 286"/>
+<path id="e6" class="edge" d="M1003 292 L1105 350"/>
+<path id="e7" class="edge" d="M1105 350 L1268 50"/>
+
+<!-- pulses: along the links and along the existing glass roads -->
+
+
+<!-- agent nodes on tower tops -->
+<g>
+  <circle cx="1268" cy="50" r="22" fill="url(#halo)"/>
+  <circle class="ring" cx="1268" cy="50" r="9"/><circle class="core" cx="1268" cy="50" r="4.5"/>
+  <circle class="ring" cx="1003" cy="292" r="8"/><circle class="core" cx="1003" cy="292" r="4"/>
+  <circle class="ring" cx="1105" cy="350" r="8"/><circle class="core" cx="1105" cy="350" r="4"/>
+  <circle class="ring" cx="1435" cy="206" r="8"/><circle class="core" cx="1435" cy="206" r="4"/>
+  <circle class="ring" cx="1545" cy="286" r="8"/><circle class="core" cx="1545" cy="286" r="4"/>
+  <circle class="ring" cx="892" cy="416" r="7"/><circle class="core" cx="892" cy="416" r="3.5"/>
+  <circle class="ring" cx="570" cy="468" r="6"/><circle class="core" cx="570" cy="468" r="3"/>
+</g>
+</svg>

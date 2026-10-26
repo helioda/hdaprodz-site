@@ -35,7 +35,8 @@ h3{font-weight:700;letter-spacing:-.4px}
 .button:hover{filter:brightness(1.07)}
 
 /* Hero: original city image, a little brighter */
-.hero:before{background:linear-gradient(90deg,#141d45e0 0%,#141d4588 50%,#141d4520),linear-gradient(0deg,#141d45 0%,transparent 30%),url('/media/agentic-hero.png') center/cover no-repeat!important}
+.hero:before{background:linear-gradient(90deg,#141d45e0 0%,#141d4588 50%,#141d4520),linear-gradient(0deg,#141d45 0%,transparent 30%),url('/media/hero-ai-layer.svg') center/cover no-repeat,url('/media/agentic-hero.png') center/cover no-repeat!important}
+@media(prefers-reduced-motion:reduce){.hero:before{background:linear-gradient(90deg,#141d45e0 0%,#141d4588 50%,#141d4520),linear-gradient(0deg,#141d45 0%,transparent 30%),url('/media/hero-ai-layer-static.svg') center/cover no-repeat,url('/media/agentic-hero.png') center/cover no-repeat!important}}
 .hero{grid-template-columns:1fr 1.05fr!important;align-items:center}
 h1 em{background:linear-gradient(100deg,#86e8ff,#a69bff,#efb3ec);-webkit-background-clip:text;background-clip:text;color:transparent}
 
