@@ -1,214 +1,127 @@
-/* HDA Solutions — light edition (Oct 2026). Loaded last: overrides the dark "immersive" theme.
-   Palette shared with the CoproSens email: navy #0B1330, teal #0E7C86, coral #F97362, amber #F59E0B. */
-:root{--bg:#ffffff;--ink:#0b1330;--green:#0e7c86;--line:#e2e8f0;--muted:#475569;--teal:#0e7c86;--teal-soft:#e6f7f6;--coral:#f97362;--amber:#f59e0b;--navy:#0b1330}
-body{background:#ffffff;color:var(--ink)}
+/* HDA Solutions — "Luminous" edition (26 Oct 2026).
+   Keeps the original immersive, modern style (glass, glow, gradients) but lifts it from near-black
+   to luminous indigo/teal mid-tones, with brighter text. Adds: display type, product hero scene,
+   service icons, audience band, coloured step discs. Loaded last, after the original styles. */
 
-/* Header: navy band for a solid, premium frame */
-header{background:var(--navy);border-color:#0b1330;color:#fff}
-header a{color:#fff}
-.brand-mark{background:#fff;border-radius:10px!important;padding:3px}
-nav .links a:not(.button){color:#dbe4f3}
-nav .links a:not(.button):hover{color:#fff}
-.lang-switch a{color:#dbe4f3}
-
-/* Buttons: coral primary, teal secondary */
-.button{background:var(--coral);color:#fff;border:0;border-radius:10px;box-shadow:0 6px 18px #f9736240}
-.button:hover{filter:brightness(1.06)}
-header .button{background:var(--coral)}
-.textlink{color:var(--teal)}
-.eyebrow{color:var(--teal)}
-
-/* Hero: light gradient instead of the dark city image */
-.hero:before{background:linear-gradient(135deg,#e6f7f6 0%,#f0fbff 45%,#fff7ed 100%)!important}
-h1{color:var(--navy)}
-h1 em{background:linear-gradient(100deg,#0e7c86,#14b8a6 55%,#f97362);background-clip:text;-webkit-background-clip:text;color:transparent}
-.intro{color:var(--muted)}
-.system{background:#ffffff;border:1px solid var(--line);box-shadow:0 18px 50px #0b133018;color:var(--ink);backdrop-filter:none}
-.system-top{border-color:var(--line);color:var(--muted)}
-.dot,.arrow{color:var(--teal)}
-.flow-item{background:#f8fafc;border:1px solid var(--line)}
-.flow-item small,.system-note{color:var(--muted)}
-.flow-item.last{background:linear-gradient(105deg,#0e7c86,#14b8a6);color:#fff;border-color:transparent}
-.flow-item.last small{color:#e6fffb}
-
-.ribbon{border-color:var(--line);color:var(--muted);background:#f8fafc}
-.sectionhead p,.card p,.creative p,.creds-note{color:var(--muted)}
-
-/* Cards: white with coloured accent bars, alternating teal / amber / coral */
-.card{background:#ffffff;border:1px solid var(--line);box-shadow:0 6px 24px #0b13300d}
-.card:hover{border-color:#14b8a680}
-.card:before{background:linear-gradient(90deg,#0e7c86,#14b8a6)}
-.grid .card:nth-child(2):before{background:linear-gradient(90deg,#f59e0b,#fbbf24)}
-.grid .card:nth-child(3):before{background:linear-gradient(90deg,#f97362,#fb923c)}
-.number{color:var(--teal)}
-.tag{border-color:#cbd5e1;color:var(--muted);background:#f8fafc}
-.steps .card{background:#ffffff}
-
-/* "Cas concret" band: soft teal instead of dark */
-.dark{background:linear-gradient(140deg,#e6f7f6,#f0fbff 60%,#fff7ed);color:var(--ink);border-color:var(--line)}
-.dark p,.case ul{color:var(--muted)}
-.case{background:#ffffff;border:1px solid var(--line);box-shadow:0 10px 30px #0b133012}
-.case figcaption,.case .demo-cta span[style]{color:var(--muted)!important}
-video{box-shadow:0 12px 34px #0b133026}
-.demo-thumb{background:#fff;border-color:var(--line)}
-
-.creative{border-color:var(--line)}
-.studio-visual figcaption{color:var(--muted)}
-
-/* Contact block: teal gradient (same as the email hero) */
-.contact{background:linear-gradient(135deg,#0e7c86 0%,#14b8a6 60%,#22d3ee 100%);border:0;color:#fff;box-shadow:0 20px 50px #0e7c8633}
-.contact p{color:#e6fffb}
-.contact .button{background:#fff;color:var(--teal);box-shadow:none}
-
-/* Footer: navy, like the header */
-footer{background:var(--navy);border-color:var(--navy);color:#cbd5e1}
-footer a{color:#fff}
-.legal{color:#cbd5e1}
-.skip:focus{color:#0b1330}
-a:focus-visible,summary:focus-visible{outline-color:var(--coral)}
-
-/* Project form page (projet.html) */
-.form-card,.panel,form{color:var(--ink)}
-input,select,textarea{background:#fff;color:var(--ink);border:1px solid #cbd5e1}
-input:focus,select:focus,textarea:focus{border-color:var(--teal);outline:2px solid #14b8a640}
-label,legend{color:var(--ink)}
-.hint,.help,small{color:var(--muted)}
-
-/* Website assistant button */
-.hda-chat-btn{background:linear-gradient(135deg,#0e7c86,#14b8a6);border-color:transparent;color:#fff;box-shadow:0 10px 30px #0e7c8644}
-.hda-chat-btn:hover{background:linear-gradient(135deg,#0c6c75,#10a294)}
-
-/* Project form page specifics (overrides assets/projet.css) */
-.p-form{background:#ffffff;border:1px solid var(--line);box-shadow:0 10px 30px #0b133012}
-.p-form legend{color:var(--teal)}
-.p-form label{color:var(--ink)}
-.p-form abbr{color:var(--coral)}
-.p-form input,.p-form select,.p-form textarea{color:var(--ink);background:#f8fafc;border:1px solid #cbd5e1}
-.p-form select{background-image:linear-gradient(45deg,transparent 50%,#0e7c86 50%),linear-gradient(135deg,#0e7c86 50%,transparent 50%)}
-.p-form select option{background:#fff;color:var(--ink)}
-.p-form input:focus-visible,.p-form select:focus-visible,.p-form textarea:focus-visible{outline:3px solid #14b8a640;border-color:var(--teal)}
-.p-form [aria-invalid="true"]{border-color:#e5484d}
-.p-error{color:#c0262d}
-.p-hint{color:var(--muted)}
-.p-count{color:#64748b}
-.p-consent input{accent-color:var(--teal)}
-.p-consent a,.p-side a,.p-privacy a{color:var(--teal)}
-.p-status.ok{background:#e6f7f6;border:1px solid #14b8a6;color:var(--ink)}
-.p-status.err{background:#fdecec;border:1px solid #e5484d;color:var(--ink)}
-.p-steps{color:var(--muted)}
-.p-steps strong,.p-privacy h2{color:var(--ink)}
-.p-privacy{border-color:var(--line);color:var(--muted)}
-
-/* Contact block: keep text readable on the teal gradient */
-.contact .eyebrow,.contact .textlink,.contact a:not(.button){color:#ffffff}
-.contact h2{color:#ffffff}
-.p-form select{background-color:#f8fafc;background-position:calc(100% - 20px) 52%,calc(100% - 14px) 52%;background-size:6px 6px;background-repeat:no-repeat}
-
-/* ===== Colour edition: display type, hero product scene, icons, audience band ===== */
 @font-face{font-family:"Bricolage Grotesque";src:url("/assets/fonts/bricolage-grotesque-latin-600-normal.woff2") format("woff2");font-weight:600;font-display:swap}
 @font-face{font-family:"Bricolage Grotesque";src:url("/assets/fonts/bricolage-grotesque-latin-700-normal.woff2") format("woff2");font-weight:700;font-display:swap}
 @font-face{font-family:"Bricolage Grotesque";src:url("/assets/fonts/bricolage-grotesque-latin-800-normal.woff2") format("woff2");font-weight:800;font-display:swap}
-:root{--aqua:#22d3ee;--mist:#eef6f8;--display:"Bricolage Grotesque",Arial,Helvetica,sans-serif}
+
+:root{
+  --ink:#f5f7ff;--muted:#d3dcf0;--soft:#aebde0;
+  --teal:#2dd4bf;--aqua:#67e8f9;--coral:#fb8a72;--amber:#fbbf24;--violet:#a5b4fc;
+  --display:"Bricolage Grotesque",Arial,Helvetica,sans-serif;
+}
+
+/* Page base: luminous indigo → teal instead of near-black */
+body{color:var(--ink);background:
+  radial-gradient(60% 40% at 100% 18%,#3b4fb855,transparent 70%),
+  radial-gradient(50% 35% at 0% 55%,#0e8a9455,transparent 70%),
+  radial-gradient(60% 40% at 100% 90%,#7c3aed40,transparent 70%),
+  linear-gradient(180deg,#141d45 0%,#1a2a5c 35%,#173f63 70%,#1a2e5e 100%)}
+header{background:#141d45e6;border-color:#ffffff1a;backdrop-filter:blur(10px)}
+
 h1,h2,h3,h4,.brand,.p-title{font-family:var(--display)}
 h1{font-weight:800;letter-spacing:-2.4px;line-height:1.02}
-h1 em{background:none;-webkit-background-clip:initial;background-clip:initial;color:var(--teal)}
 h2{font-weight:700;letter-spacing:-1.2px}
 h3{font-weight:700;letter-spacing:-.4px}
-.eyebrow{text-transform:none;letter-spacing:.2px;font-size:14px;font-weight:700}
+.eyebrow{text-transform:none;letter-spacing:.2px;font-size:14px;font-weight:700;color:var(--aqua)}
+.sectionhead p,.card p,.creative p,.creds-note,.dark p,.case ul,.intro{color:var(--muted)}
+.ribbon{color:var(--soft);border-color:#ffffff22;background:transparent}
+.textlink{color:#e0e8ff}
 
-/* Hero: colour wash behind the whole band */
-.hero:before{background:
-  radial-gradient(38% 55% at 88% 30%,#22d3ee55,transparent 70%),
-  radial-gradient(30% 45% at 70% 85%,#f9736250,transparent 70%),
-  radial-gradient(28% 40% at 98% 90%,#f59e0b45,transparent 70%),
-  linear-gradient(180deg,#f3fbfc,#ffffff)!important}
+/* Buttons: coral, warm and visible on the cool background */
+.button{background:linear-gradient(110deg,#fb8a72,#f9736a);color:#fff;border:0;border-radius:12px;box-shadow:0 10px 30px #f9736244}
+.button:hover{filter:brightness(1.07)}
+
+/* Hero: original city image, a little brighter */
+.hero:before{background:linear-gradient(90deg,#141d45e0 0%,#141d4588 50%,#141d4520),linear-gradient(0deg,#141d45 0%,transparent 30%),url('/media/agentic-hero.png') center/cover no-repeat!important}
 .hero{grid-template-columns:1fr 1.05fr!important;align-items:center}
+h1 em{background:linear-gradient(100deg,#86e8ff,#a69bff,#efb3ec);-webkit-background-clip:text;background-clip:text;color:transparent}
 
 /* Product scene */
 .scene{position:relative;min-height:440px;width:100%;max-width:600px;justify-self:end}
-.scene-blob{position:absolute;border-radius:50%;filter:blur(2px);z-index:0}
-.scene-blob.b1{width:260px;height:260px;right:-30px;top:-20px;background:radial-gradient(circle at 30% 30%,#5eead4,#0e7c86)}
-.scene-blob.b2{width:150px;height:150px;left:6%;bottom:6px;background:radial-gradient(circle at 30% 30%,#fdba74,#f97362)}
-.scene-blob.b3{width:90px;height:90px;right:30%;bottom:-18px;background:radial-gradient(circle at 30% 30%,#fde68a,#f59e0b)}
-.browser{position:relative;z-index:1;margin:22px 0 0 0;width:92%;background:#0b1330;border-radius:14px;overflow:hidden;box-shadow:0 30px 70px #0b133040,0 0 0 1px #0b133012;transform:rotate(-2.5deg)}
+.scene-blob{display:none}
+.browser{position:relative;z-index:1;margin-top:22px;width:92%;background:#0b1330;border-radius:14px;overflow:hidden;box-shadow:0 30px 80px #000a,0 0 0 1px #86e8ff40;transform:rotate(-2.5deg)}
 .browser-bar{display:flex;align-items:center;gap:6px;padding:9px 12px;background:#141d3d}
 .browser-bar i{width:10px;height:10px;border-radius:50%;background:#f97362}
 .browser-bar i:nth-child(2){background:#f59e0b}.browser-bar i:nth-child(3){background:#22c55e}
 .browser-bar span{margin-left:10px;font-size:11px;color:#a5b4cf;background:#0b1330;padding:3px 10px;border-radius:6px}
 .browser img{display:block;width:100%;height:auto}
-.chat-card{position:absolute;z-index:2;right:-4%;bottom:-6px;width:min(320px,74%);background:#fff;border-radius:16px;padding:14px 16px 12px;box-shadow:0 24px 60px #0b133033;border:1px solid #e2e8f0}
-.chat-head{display:flex;align-items:center;gap:8px;font:700 13px/1.2 var(--display);color:var(--navy);margin-bottom:10px}
+.chat-card{position:absolute;z-index:2;right:-4%;bottom:-6px;width:min(320px,74%);background:#fff;color:#0b1330;border-radius:16px;padding:14px 16px 12px;box-shadow:0 24px 70px #0009}
+.chat-head{display:flex;align-items:center;gap:8px;font:700 13px/1.2 var(--display);color:#0b1330;margin-bottom:10px}
 .chat-dot{width:9px;height:9px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 4px #22c55e30}
-.chat-q{margin:0 0 8px auto;width:fit-content;max-width:90%;background:var(--teal);color:#fff;font-size:13px;padding:8px 11px;border-radius:12px 12px 3px 12px}
-.chat-a{margin:0 0 8px;background:#f1f5f9;color:var(--navy);font-size:13px;padding:8px 11px;border-radius:12px 12px 12px 3px}
+.chat-q{margin:0 0 8px auto;width:fit-content;max-width:90%;background:#0e7c86;color:#fff;font-size:13px;padding:8px 11px;border-radius:12px 12px 3px 12px}
+.chat-a{margin:0 0 8px;background:#f1f5f9;color:#0b1330;font-size:13px;padding:8px 11px;border-radius:12px 12px 12px 3px}
 .chat-a b{color:#e5484d}
-.chat-src{margin:0;font-size:11.5px;color:#92400e;background:#fff4e5;border-left:3px solid var(--amber);padding:5px 8px;border-radius:4px}
+.chat-src{margin:0;font-size:11.5px;color:#92400e;background:#fff4e5;border-left:3px solid #f59e0b;padding:5px 8px;border-radius:4px}
 .scene-chip{position:absolute;z-index:3;left:2%;top:0;background:var(--amber);color:#3b2600;font:700 13px/1 var(--display);padding:9px 14px;border-radius:999px;box-shadow:0 10px 24px #f59e0b55;transform:rotate(-4deg)}
 
-/* Service cards: one colour each, icon tiles */
+/* Cards: frosted glass, one accent colour each */
+.card{background:linear-gradient(145deg,#ffffff1c,#ffffff0a);border:1px solid #ffffff2a;backdrop-filter:blur(8px);box-shadow:0 20px 50px #0a102a40}
 .card:before{display:none}
-.icon{display:inline-grid;place-items:center;width:52px;height:52px;border-radius:14px;margin-bottom:18px;color:#fff}
+.card:hover{border-color:#ffffff55}
+.icon{display:inline-grid;place-items:center;width:52px;height:52px;border-radius:14px;margin-bottom:18px;color:#fff;box-shadow:0 10px 24px #0005}
 .icon svg{width:26px;height:26px}
-.ic-teal{background:linear-gradient(135deg,#14b8a6,#0e7c86)}
-.ic-amber{background:linear-gradient(135deg,#fbbf24,#f59e0b)}
-.ic-coral{background:linear-gradient(135deg,#fb923c,#f97362)}
-#solutions .grid .card{border-top:4px solid #14b8a6}
-#solutions .grid .card:nth-child(2){border-top-color:#f59e0b}
-#solutions .grid .card:nth-child(3){border-top-color:#f97362}
-#solutions .grid .card:nth-child(1){background:linear-gradient(180deg,#ecfdfb,#fff 55%)}
-#solutions .grid .card:nth-child(2){background:linear-gradient(180deg,#fff8e7,#fff 55%)}
-#solutions .grid .card:nth-child(3){background:linear-gradient(180deg,#fff1ee,#fff 55%)}
-.number{display:block;font-size:13px}
+.ic-teal{background:linear-gradient(135deg,#2dd4bf,#0e7c86)}
+.ic-amber{background:linear-gradient(135deg,#fcd34d,#f59e0b)}
+.ic-coral{background:linear-gradient(135deg,#fdba74,#f97362)}
+#solutions .grid .card{border-top:3px solid var(--teal)}
+#solutions .grid .card:nth-child(2){border-top-color:var(--amber)}
+#solutions .grid .card:nth-child(3){border-top-color:var(--coral)}
+.number{display:block;font-size:13px;color:var(--aqua)}
+.tag{border-color:#ffffff33;color:var(--muted);background:#ffffff0d}
 
-/* CoproSens band: richer colour */
+/* CoproSens band: violet → teal glow instead of near-black */
 .dark{background:
-  radial-gradient(40% 60% at 0% 0%,#22d3ee33,transparent 70%),
-  radial-gradient(35% 55% at 100% 100%,#f9736233,transparent 70%),
-  linear-gradient(140deg,#e6f7f6,#f5fbff 60%,#fff7ed)}
+  radial-gradient(45% 60% at 0% 0%,#2dd4bf30,transparent 70%),
+  radial-gradient(40% 60% at 100% 100%,#fb8a7230,transparent 70%),
+  linear-gradient(140deg,#24306e,#2a2470 55%,#165067);border-color:#ffffff14;color:var(--ink)}
+.case{background:linear-gradient(145deg,#ffffff18,#ffffff08);border:1px solid #ffffff26;border-radius:22px;backdrop-filter:blur(8px)}
+.case figcaption,.case .demo-cta span[style]{color:var(--soft)!important}
 
 /* Audience band */
 .audience{margin-top:36px}
 .audience-title{font-size:26px;margin:0 0 16px}
 .audience-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.aud{background:#fff;border-radius:16px;padding:22px 22px 18px;border:1px solid #e2e8f0;border-left:6px solid}
+.aud{background:linear-gradient(145deg,#ffffff1f,#ffffff0b);border:1px solid #ffffff26;border-left:5px solid;border-radius:16px;padding:22px 22px 18px}
 .aud h4{margin:0 0 6px;font-size:20px}
 .aud p{margin:0;color:var(--muted)}
-.aud-teal{border-left-color:#0e7c86}.aud-teal h4{color:#0e7c86}
-.aud-amber{border-left-color:#f59e0b}.aud-amber h4{color:#b45309}
-.aud-coral{border-left-color:#f97362}.aud-coral h4{color:#e5484d}
+.aud-teal{border-left-color:var(--teal)}.aud-teal h4{color:var(--teal)}
+.aud-amber{border-left-color:var(--amber)}.aud-amber h4{color:var(--amber)}
+.aud-coral{border-left-color:var(--coral)}.aud-coral h4{color:var(--coral)}
 
-/* Steps: genuinely sequential, so keep numbers, as coloured discs */
-.steps .number{display:inline-grid;place-items:center;width:40px;height:40px;border-radius:50%;color:#fff;font:800 16px/1 var(--display);background:#0e7c86;margin-bottom:6px}
-.steps .card:nth-child(2) .number{background:#f59e0b}
-.steps .card:nth-child(3) .number{background:#f97362}
-.steps .card:before{display:none}
+/* Steps: a real sequence, coloured discs */
+.steps .card{background:linear-gradient(145deg,#ffffff1c,#ffffff0a)}
+.steps .number{display:inline-grid;place-items:center;width:40px;height:40px;border-radius:50%;color:#0b1330;font:800 16px/1 var(--display);background:var(--teal);margin-bottom:6px}
+.steps .card:nth-child(2) .number{background:var(--amber)}
+.steps .card:nth-child(3) .number{background:var(--coral)}
 
-/* Contact block: stronger gradient + decorative rings */
-.contact{position:relative;overflow:hidden;background:linear-gradient(120deg,#0b1330 0%,#0e7c86 55%,#22d3ee 100%)}
-.contact:after{content:"";position:absolute;right:-80px;top:-80px;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,#f9736299,#f9736200 70%);pointer-events:none}
-.contact .button{background:var(--coral);color:#fff}
+/* Contact: bright teal → indigo glow */
+.contact{position:relative;overflow:hidden;background:radial-gradient(ellipse at 100% 0,#fb8a7266,transparent 60%),linear-gradient(115deg,#0e8a94,#2b4bc4 70%,#5b3fd0);border:1px solid #ffffff30;color:#fff}
+.contact p{color:#eaf2ff}
+.contact .eyebrow,.contact .textlink,.contact a:not(.button){color:#fff}
+
+footer{background:#121a3f;border-color:#ffffff1a;color:var(--soft)}
+footer a{color:#fff}
+.legal{color:var(--soft)}
+.demo-thumb{background:#141d45;border-color:#86e8ff60}
+
+/* Project form page */
+.p-form{background:linear-gradient(145deg,#ffffff1c,#ffffff0a);border:1px solid #ffffff2a;backdrop-filter:blur(8px)}
+.p-form label{color:#f0f4ff}
+.p-form input,.p-form select,.p-form textarea{background-color:#101a44;border-color:#4b5a92;color:#f5f7ff}
+.p-hint,.p-steps,.p-privacy{color:var(--muted)}
+
+/* Assistant button */
+.hda-chat-btn{background:linear-gradient(135deg,#0e8a94,#2dd4bf);border-color:transparent;color:#fff;box-shadow:0 10px 30px #0e8a9455}
 
 @media(max-width:800px){
  .hero{grid-template-columns:1fr!important}
+ .hero:before{background-position:65% center!important}
  .scene{min-height:0;justify-self:stretch;max-width:none;padding-bottom:150px}
  .browser{width:100%;transform:none}
  .chat-card{right:0;bottom:0;width:86%}
  .audience-grid{grid-template-columns:1fr}
 }
 @media(prefers-reduced-motion:reduce){.browser,.scene-chip{transform:none}}
-
-/* ===== Hybrid (26 Oct): original immersive hero restored, product scene on top; light sections below ===== */
-header{background:#090e22;border-color:#ffffff12}
-.hero:before{background:linear-gradient(90deg,#090e22f0 0%,#090e2299 50%,#090e2230),linear-gradient(0deg,#090e22 0%,transparent 35%),url('/media/agentic-hero.png') center/cover no-repeat!important}
-.hero{color:#f2f5ff}
-.hero h1{color:#f2f5ff}
-.hero h1 em{background:linear-gradient(100deg,#86e8ff,#a69bff,#efb3ec);-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero .intro{color:#d0d9eb}
-.hero .eyebrow{color:#97e5f4}
-.hero .textlink{color:#d9e3ff}
-.scene-blob{display:none}
-.browser{box-shadow:0 30px 80px #000a,0 0 0 1px #86e8ff40}
-.chat-card{box-shadow:0 24px 70px #0009}
-/* Smooth hand-over from the dark hero to the light page */
-.ribbon{background:#f8fafc}
-@media(max-width:800px){.hero:before{background-position:65% center!important}}
