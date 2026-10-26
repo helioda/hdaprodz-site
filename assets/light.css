@@ -36,9 +36,9 @@ h3{font-weight:700;letter-spacing:-.4px}
 
 /* Hero: original city image, a little brighter */
 .hero:before{background:linear-gradient(0deg,#141d45 0%,transparent 24%),url('/media/hero-city-right-layer.svg') right top/auto 100% no-repeat,url('/media/hero-city-right.webp') right top/auto 100% no-repeat,linear-gradient(90deg,#141d45cc 0%,#141d45b3 30%,#141d45f2 48%,#141d45f2 100%),url('/media/hero-city.webp') left 12%/cover no-repeat!important}
-@media(prefers-reduced-motion:reduce){.hero:before{background:linear-gradient(0deg,#141d45 0%,transparent 24%),url('/media/hero-city-right.webp') right top/auto 100% no-repeat,linear-gradient(90deg,#141d45cc 0%,#141d45b3 30%,#141d45f2 48%,#141d45f2 100%),url('/media/hero-city.webp') left 12%/cover no-repeat!important}}
+@media(prefers-reduced-motion:reduce){.hero:before{background:linear-gradient(0deg,#141d45 0%,transparent 24%),url('/media/hero-city-right-layer-static.svg') right top/auto 100% no-repeat,url('/media/hero-city-right.webp') right top/auto 100% no-repeat,linear-gradient(90deg,#141d45cc 0%,#141d45b3 30%,#141d45f2 48%,#141d45f2 100%),url('/media/hero-city.webp') left 12%/cover no-repeat!important}}
 @media(min-width:801px) and (max-width:2199px){.hero:before{background-position:0 0,left calc(50vw + 590px) top,left calc(50vw + 590px) top,0 0,left 12%!important}}
-@media(min-width:801px) and (max-width:2199px) and (prefers-reduced-motion:reduce){.hero:before{background-position:0 0,left calc(50vw + 590px) top,0 0,left 12%!important}}
+
 .hero{grid-template-columns:1fr 1.05fr!important;align-items:center}
 h1 em{background:linear-gradient(100deg,#86e8ff,#a69bff,#efb3ec);-webkit-background-clip:text;background-clip:text;color:transparent}
 
