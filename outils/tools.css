@@ -1,0 +1,70 @@
+/* CoproSens tools page — builds on site.css + light.css (luminous edition) */
+.tools{padding-bottom:60px}
+.tools-hero{padding:56px 0 18px;max-width:820px}
+.tools-hero h1{font-size:clamp(36px,4.4vw,58px);margin:10px 0 14px}
+.tabs{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+.tab{font:700 15px/1 var(--display);padding:12px 18px;border-radius:999px;border:1px solid #ffffff33;background:#ffffff10;color:#e8eeff;cursor:pointer}
+.tab[aria-selected="true"]{background:linear-gradient(110deg,#0e8a94,#2dd4bf);border-color:transparent;color:#fff}
+.tab:focus-visible,.doc-tab:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #fbbf24;outline-offset:2px}
+.panel{margin-top:22px}
+.panel[hidden],[hidden]{display:none!important}
+.tool-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:20px;align-items:start}
+.tool-grid.ag{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)}
+.tool-card{background:linear-gradient(145deg,#ffffff1c,#ffffff0a);border:1px solid #ffffff2a;border-radius:20px;padding:24px;backdrop-filter:blur(8px)}
+.tool-card h2{font-size:24px;margin:0 0 14px}
+.tool-card h3{font-size:18px;margin:22px 0 10px;color:var(--aqua)}
+.tool-card label{display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:700;color:#eef2ff;margin-bottom:12px}
+.tool-card input[type=number],.tool-card input[type=text],.tool-card input[type=date],.tool-card input[type=time],.tool-card select,.res-list input,.vote input{font:inherit;font-weight:400;font-size:15px;color:#f5f7ff;background:#101a44;border:1px solid #4b5a92;border-radius:10px;padding:10px 12px;width:100%}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.check-line{flex-direction:row!important;align-items:center;gap:10px!important;font-weight:400!important}
+.hint{font-size:13px;color:var(--soft);margin:6px 0 0}
+.kpis{display:grid;gap:14px}
+.kpis div:not(.actions){display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #ffffff1f;padding-bottom:10px}
+.kpis span{color:var(--muted)}
+.kpis b{font:800 24px/1 var(--display)}
+.check{margin:0;color:#5eead4;font-weight:700}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.actions .button,.ghost{font:700 14px/1 Arial,Helvetica,sans-serif;padding:12px 16px;border-radius:12px;cursor:pointer}
+.ghost{background:#ffffff12;border:1px solid #ffffff40;color:#fff}
+.table-wrap{margin-top:20px;overflow-x:auto;padding:0}
+table.calc{width:100%;border-collapse:collapse;font-size:13.5px;min-width:900px}
+table.calc caption{text-align:left;font:700 18px var(--display);padding:18px 20px 8px}
+table.calc th,table.calc td{padding:9px 12px;text-align:right;border-bottom:1px solid #ffffff14;white-space:nowrap}
+table.calc th:first-child{text-align:left}
+table.calc thead th{color:var(--aqua);font-size:12.5px;position:sticky;top:0;background:#1c2a5e}
+table.calc small{display:block;color:var(--soft);font-size:11px}
+table.calc .strong{font-weight:700}
+table.calc .accent{color:#fbbf24}
+table.calc tfoot td,table.calc tfoot th{font-weight:800;border-top:2px solid #ffffff40;background:#ffffff0d}
+table.calc tbody tr:hover{background:#ffffff0a}
+.res-list{padding-left:20px;margin:0 0 12px;display:grid;gap:8px}
+.res-list li{display:grid;grid-template-columns:1fr 92px 34px;gap:6px;align-items:center}
+.mini{background:#ffffff10;border:1px solid #ffffff33;color:#fff;border-radius:8px;height:38px;cursor:pointer}
+.vote{border:1px solid #ffffff22;border-radius:12px;padding:10px 12px;margin-bottom:8px;background:#ffffff08}
+.vote summary{display:flex;justify-content:space-between;gap:10px;cursor:pointer;font-size:14px}
+.vote .ok{color:#5eead4}.vote .ko{color:#fb8a72}
+.vote label{margin:8px 0 0}
+.doc-tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
+.doc-tab{font:700 13px/1 Arial,Helvetica,sans-serif;padding:10px 12px;border-radius:10px;border:1px solid #ffffff33;background:#ffffff10;color:#e8eeff;cursor:pointer}
+.doc-tab[aria-pressed="true"]{background:#fbbf24;color:#3b2600;border-color:transparent}
+.doc-view{background:#fff;color:#1e293b;border-radius:12px;padding:28px 30px;font:14px/1.6 Georgia,"Times New Roman",serif;max-height:640px;overflow:auto;box-shadow:inset 0 0 0 1px #e2e8f0}
+.doc-view h2{font:700 20px Arial,Helvetica,sans-serif;color:#0e7c86;margin:0 0 12px}
+.doc-view h3{font:700 15px Arial,Helvetica,sans-serif;color:#0b1330;margin:18px 0 4px}
+.doc-view .right{text-align:right}
+.doc-view .warn{background:#fdecec;color:#b91c1c;border-radius:8px;padding:8px 10px;font-family:Arial,Helvetica,sans-serif}
+.doc-view .note{font-size:13px;color:#475569;border-top:1px solid #e2e8f0;padding-top:10px}
+.doc-view .stamp{font:700 12px Arial,Helvetica,sans-serif;color:#92400e;background:#fff4e5;border-left:3px solid #f59e0b;padding:6px 10px;margin-bottom:16px;border-radius:4px}
+.doc-table{width:100%;border-collapse:collapse;font-family:Arial,Helvetica,sans-serif;font-size:13px}
+.doc-table th,.doc-table td{border:1px solid #cbd5e1;padding:6px 8px;text-align:left}
+.send{color:#fde68a}
+.disclaimer{font-size:12.5px;color:var(--soft);margin:26px 0 0;max-width:860px}
+@media(max-width:900px){.tool-grid,.tool-grid.ag{grid-template-columns:1fr}.row2{grid-template-columns:1fr}}
+@media print{
+ header,footer,.tools-hero,.tabs,.actions,.disclaimer,.hda-chat-btn,#calc-form,.kpis .hint{display:none!important}
+ body{background:#fff!important;color:#000}
+ .tool-card{background:#fff!important;border:0;backdrop-filter:none}
+ table.calc th,table.calc td{color:#000;border-color:#ccc}
+ table.calc thead th{background:#fff}
+ body.print-doc .tool-grid.ag>.tool-card:first-child,body.print-doc #p-calc{display:none!important}
+ body.print-doc .doc-view{max-height:none;box-shadow:none;padding:0}
+}
