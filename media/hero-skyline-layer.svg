@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1350" viewBox="0 0 2400 1350">
+<!-- AI layer for media/hero-skyline.webp (same size). Original artwork drawn in code. -->
+<defs>
+<linearGradient id="rib" x1="0" x2="1"><stop offset="0" stop-color="#7a5cff" stop-opacity="0"/><stop offset=".25" stop-color="#7a5cff"/><stop offset=".6" stop-color="#d08bff"/><stop offset="1" stop-color="#ffb27a"/></linearGradient>
+<linearGradient id="rib2" x1="0" x2="1"><stop offset="0" stop-color="#ffb27a" stop-opacity="0"/><stop offset=".3" stop-color="#ffb27a"/><stop offset=".6" stop-color="#c98bff"/><stop offset="1" stop-color="#7fe3ff"/></linearGradient>
+<linearGradient id="sheen" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".45" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#eef4ff" stop-opacity=".4"/><stop offset=".56" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+ <animateTransform attributeName="gradientTransform" type="translate" values="-1 -1;1 1;1 1" keyTimes="0;.55;1" dur="8s" repeatCount="indefinite"/></linearGradient>
+<filter id="blur" x="-10%" y="-80%" width="120%" height="260%"><feGaussianBlur stdDeviation="9"/></filter>
+<filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="2"/></filter>
+</defs>
+<style>
+.glow{fill:none;stroke-width:22;opacity:.32;filter:url(#blur)}
+.core{fill:none;stroke-width:2.6;stroke-linecap:round;opacity:.9}
+.flow{fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-dasharray:2 52;opacity:.8;animation:flow 7s linear infinite}
+.edge{fill:none;stroke:#d7ccff;stroke-width:1.4;stroke-opacity:.5;stroke-dasharray:4 6;animation:dash 14s linear infinite}
+.ring{fill:none;stroke:#ffb98a;stroke-width:2.2;transform-box:fill-box;transform-origin:center;animation:ping 3.4s ease-out infinite}
+.dot{fill:#fff}
+@keyframes flow{to{stroke-dashoffset:-540}}
+@keyframes dash{to{stroke-dashoffset:-200}}
+@keyframes ping{0%{transform:scale(.6);opacity:.9}80%,100%{transform:scale(2.8);opacity:0}}
+</style>
+<rect x="1654" y="265" width="96" height="640" fill="url(#sheen)" style="mix-blend-mode:screen"/>
+<path class="glow" stroke="url(#rib)" d="M1150 655 C1350 575 1500 705 1700 605 S2050 485 2400 575"/><path id="r0" class="core" stroke="url(#rib)" d="M1150 655 C1350 575 1500 705 1700 605 S2050 485 2400 575"/><path class="flow" style="animation-duration:7s" d="M1150 655 C1350 575 1500 705 1700 605 S2050 485 2400 575"/>
+<path class="glow" stroke="url(#rib2)" d="M1250 845 C1450 765 1650 865 1850 795 S2200 735 2400 805"/><path id="r1" class="core" stroke="url(#rib2)" d="M1250 845 C1450 765 1650 865 1850 795 S2200 735 2400 805"/><path class="flow" style="animation-duration:9s" d="M1250 845 C1450 765 1650 865 1850 795 S2200 735 2400 805"/>
+<path id="e0" class="edge" d="M1402 455 L1533 325"/>
+<path id="e1" class="edge" d="M1533 325 L1702 115"/>
+<path id="e2" class="edge" d="M1702 115 L1876 371"/>
+<path id="e3" class="edge" d="M1876 371 L2014 275"/>
+<path id="e4" class="edge" d="M2014 275 L2160 455"/>
+<path id="e5" class="edge" d="M2160 455 L2330 311"/>
+<path id="e6" class="edge" d="M1702 115 L2014 275"/>
+<path id="e7" class="edge" d="M1533 325 L1876 371"/>
+<g class="pulses" filter="url(#soft)">
+<circle r="4.5" fill="#fff"><animateMotion dur="3.6s" begin="0.0s" repeatCount="indefinite"><mpath href="#e0"/></animateMotion></circle>
+<circle r="4.5" fill="#ffd2ad"><animateMotion dur="4.0s" begin="0.7s" repeatCount="indefinite"><mpath href="#e1"/></animateMotion></circle>
+<circle r="4.5" fill="#bdf1ff"><animateMotion dur="4.5s" begin="1.4s" repeatCount="indefinite"><mpath href="#e2"/></animateMotion></circle>
+<circle r="4.5" fill="#fff"><animateMotion dur="5.0s" begin="2.1s" repeatCount="indefinite"><mpath href="#e3"/></animateMotion></circle>
+<circle r="4.5" fill="#ffd2ad"><animateMotion dur="5.4s" begin="2.8s" repeatCount="indefinite"><mpath href="#e4"/></animateMotion></circle>
+<circle r="4.5" fill="#bdf1ff"><animateMotion dur="5.8s" begin="0.5s" repeatCount="indefinite"><mpath href="#e5"/></animateMotion></circle>
+<circle r="4.5" fill="#fff"><animateMotion dur="6.3s" begin="1.2s" repeatCount="indefinite"><mpath href="#e6"/></animateMotion></circle>
+<circle r="4.5" fill="#ffd2ad"><animateMotion dur="6.8s" begin="1.9s" repeatCount="indefinite"><mpath href="#e7"/></animateMotion></circle>
+<circle r="6" fill="#fff"><animateMotion dur="10s" repeatCount="indefinite"><mpath href="#r0"/></animateMotion></circle>
+<circle r="6" fill="#ffe0c4"><animateMotion dur="12s" begin="4s" repeatCount="indefinite"><mpath href="#r1"/></animateMotion></circle>
+</g>
+<circle class="ring" cx="1402" cy="455" r="8" style="animation-delay:0.00s"/><circle class="dot" cx="1402" cy="455" r="4.0"/>
+<circle class="ring" cx="1533" cy="325" r="8" style="animation-delay:0.55s"/><circle class="dot" cx="1533" cy="325" r="4.0"/>
+<circle class="ring" cx="1702" cy="115" r="11" style="animation-delay:1.10s"/><circle class="dot" cx="1702" cy="115" r="5.5"/>
+<circle class="ring" cx="1876" cy="371" r="8" style="animation-delay:1.65s"/><circle class="dot" cx="1876" cy="371" r="4.0"/>
+<circle class="ring" cx="2014" cy="275" r="8" style="animation-delay:2.20s"/><circle class="dot" cx="2014" cy="275" r="4.0"/>
+<circle class="ring" cx="2160" cy="455" r="8" style="animation-delay:2.75s"/><circle class="dot" cx="2160" cy="455" r="4.0"/>
+<circle class="ring" cx="2330" cy="311" r="8" style="animation-delay:0.30s"/><circle class="dot" cx="2330" cy="311" r="4.0"/>
+</svg>
