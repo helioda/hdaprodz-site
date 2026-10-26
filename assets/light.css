@@ -125,3 +125,11 @@ footer a{color:#fff}
  .audience-grid{grid-template-columns:1fr}
 }
 @media(prefers-reduced-motion:reduce){.browser,.scene-chip{transform:none}}
+
+/* Hero chat card: frosted glass instead of pure white (26 Oct) */
+.chat-card{background:linear-gradient(150deg,#26346ecc,#1a2556d9);color:#f5f7ff;border:1px solid #86e8ff55;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 24px 70px #0008,0 0 40px #2dd4bf22}
+.chat-head{color:#f5f7ff}
+.chat-q{background:linear-gradient(110deg,#0e8a94,#14b8a6)}
+.chat-a{background:#ffffff14;color:#f5f7ff;border:1px solid #ffffff1f}
+.chat-a b{color:#fb8a72}
+.chat-src{background:#fbbf2420;color:#fde68a;border-left-color:#fbbf24}
