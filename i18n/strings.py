@@ -41,21 +41,35 @@ TEXT = {
   "Agentes de IA, copilotos y automatizaciones para encontrar la información, simplificar sus procesos y avanzar en su trabajo."),
  "Discuter de mon besoin ↗": T("Discuss my needs ↗", "Falar sobre minha necessidade ↗", "Hablar de mi necesidad ↗"),
  "Découvrir les solutions": T("Explore the solutions", "Conhecer as soluções", "Descubrir las soluciones"),
- "Principe d’une solution : relier vos connaissances à un assistant IA pour préparer des réponses et actions, avec validation humaine.": T(
-  "How a solution works: connect your knowledge to an AI assistant to prepare answers and actions, with human validation.",
-  "Princípio de uma solução: conectar seu conhecimento a um assistente de IA para preparar respostas e ações, com validação humana.",
-  "Principio de una solución: conectar su conocimiento a un asistente de IA para preparar respuestas y acciones, con validación humana."),
- "VOTRE TRAVAIL, CONNECTÉ": T("YOUR WORK, CONNECTED", "SEU TRABALHO, CONECTADO", "SU TRABAJO, CONECTADO"),
- "01 / LA CONNAISSANCE": T("01 / KNOWLEDGE", "01 / O CONHECIMENTO", "01 / EL CONOCIMIENTO"),
- "Vos documents et vos outils": T("Your documents and tools", "Seus documentos e ferramentas", "Sus documentos y herramientas"),
- "02 / L’ASSISTANT": T("02 / THE ASSISTANT", "02 / O ASSISTENTE", "02 / EL ASISTENTE"),
- "Comprendre. Retrouver. Préparer.": T("Understand. Find. Prepare.", "Entender. Encontrar. Preparar.", "Entender. Encontrar. Preparar."),
- "03 / VOTRE DÉCISION": T("03 / YOUR DECISION", "03 / SUA DECISÃO", "03 / SU DECISIÓN"),
- "Une prochaine étape plus claire": T("A clearer next step", "Um próximo passo mais claro", "Un siguiente paso más claro"),
- "Une illustration de notre approche · validation humaine des actions sensibles.": T(
-  "An illustration of our approach · human validation of sensitive actions.",
-  "Uma ilustração da nossa abordagem · validação humana das ações sensíveis.",
-  "Una ilustración de nuestro enfoque · validación humana de las acciones sensibles."),
+ "Aperçu de CoproSens : le tableau de bord du conseil syndical et une réponse de l’assistant avec sa source.": T(
+  "CoproSens preview: the board dashboard and an assistant answer with its source.",
+  "Prévia do CoproSens: o painel do conselho e uma resposta do assistente com sua fonte.",
+  "Vista previa de CoproSens: el panel del consejo y una respuesta del asistente con su fuente."),
+ "Assistant CoproSens": T("CoproSens assistant", "Assistente CoproSens", "Asistente CoproSens"),
+ "Quels lots sont en retard de paiement ?": T("Which units are behind on payments?", "Quais unidades estão com pagamento atrasado?", "¿Qué lotes van atrasados en sus pagos?"),
+ "3 lots en retard, <b>16 729,60 €</b> au total, hors pénalités.": T(
+  "3 units behind, <b>€16,729.60</b> in total, excluding penalties.",
+  "3 unidades atrasadas, <b>16 729,60 €</b> no total, sem multas.",
+  "3 lotes atrasados, <b>16 729,60 €</b> en total, sin penalizaciones."),
+ "Source : tableau de bord du conseil syndical, 8 octobre 2026": T(
+  "Source: board dashboard, 8 October 2026", "Fonte: painel do conselho, 8 de outubro de 2026", "Fuente: panel del consejo, 8 de octubre de 2026"),
+ "Réponse sourcée": T("Sourced answer", "Resposta com fonte", "Respuesta con fuente"),
+ "Pour chaque acteur de la copropriété": T("For everyone in the building", "Para cada ator do condomínio", "Para cada actor de la comunidad"),
+ "Syndics": T("Property managers", "Administradoras", "Administradores de fincas"),
+ "Retrouver une décision d’AG ou un devis en quelques secondes, préparer les appels de fonds et les documents d’AG.": T(
+  "Find a general-meeting decision or a quote in seconds; prepare service-charge calls and meeting documents.",
+  "Encontrar uma decisão de assembleia ou um orçamento em segundos; preparar chamadas de cotas e documentos de assembleia.",
+  "Encontrar un acuerdo de junta o un presupuesto en segundos; preparar cuotas y documentos de junta."),
+ "Conseils syndicaux": T("Owners’ boards", "Conselhos do condomínio", "Juntas de propietarios"),
+ "Suivre les impayés, les travaux et l’exécution des décisions d’AG.": T(
+  "Track unpaid charges, works and how meeting decisions are carried out.",
+  "Acompanhar inadimplências, obras e a execução das decisões de assembleia.",
+  "Seguir impagos, obras y la ejecución de los acuerdos de junta."),
+ "Copropriétaires": T("Owners", "Condôminos", "Propietarios"),
+ "Des réponses claires sur leurs appels de fonds et les travaux votés, à toute heure.": T(
+  "Clear answers about their charges and approved works, at any time.",
+  "Respostas claras sobre suas cotas e as obras aprovadas, a qualquer hora.",
+  "Respuestas claras sobre sus derramas y las obras aprobadas, a cualquier hora."),
  "Assistants & agents IA": T("AI assistants & agents", "Assistentes e agentes de IA", "Asistentes y agentes de IA"),
  "France · Solutions sur mesure": T("France · Tailor-made solutions", "França · Soluções sob medida", "Francia · Soluciones a medida"),
  "Ce que nous développons": T("What we build", "O que desenvolvemos", "Lo que desarrollamos"),
@@ -85,6 +99,10 @@ TEXT = {
   "Preparar respostas, organizar solicitações e conectar etapas repetitivas, com os controles adequados a cada uso.",
   "Preparar respuestas, organizar solicitudes y conectar los pasos repetitivos, con los controles adecuados a cada uso."),
  "Applications métier": T("Business apps", "Aplicativos de negócio", "Aplicaciones de negocio"),
+ "Essayer les outils du syndic : appels de fonds et documents d’AG ↗": T(
+  "Try the property-manager tools: service-charge calls and meeting documents (in French) ↗",
+  "Experimentar as ferramentas da administradora: chamadas de cotas e documentos de assembleia (em francês) ↗",
+  "Probar las herramientas del administrador: cuotas y documentos de junta (en francés) ↗"),
  "Essayer la démo ↗": T("Try the demo ↗", "Experimentar a demo ↗", "Probar la demo ↗"),
  "Voir le tableau de bord du conseil syndical ↗": T(
   "See the owners’ council dashboard ↗",
@@ -103,22 +121,22 @@ TEXT = {
   "Nuestro primer asistente, desarrollado para la gestión de comunidades de propietarios. El mismo enfoque se adapta a otros oficios."),
  "Volet musical : HDA Productions ↗": T("Music side: HDA Productions ↗", "Lado musical: HDA Productions ↗", "Faceta musical: HDA Productions ↗"),
  "Immobilier & copropriété": T("Real estate & co-ownership", "Imóveis e condomínios", "Inmobiliaria y comunidades de propietarios"),
- "Notre assistant IA pour faciliter la gestion de copropriété et l’accès aux documents.": T(
-  "Our AI assistant to simplify co-ownership (condominium) management and access to documents.",
-  "Nosso assistente de IA para facilitar a gestão de condomínios e o acesso aos documentos.",
-  "Nuestro asistente de IA para facilitar la gestión de comunidades de propietarios y el acceso a los documentos."),
- "Retrouver une information dans les documents de la copropriété.": T(
-  "Find information in the building’s documents.",
-  "Encontrar uma informação nos documentos do condomínio.",
-  "Encontrar información en los documentos de la comunidad."),
- "Préparer des communications et organiser les demandes.": T(
-  "Prepare communications and organise requests.",
-  "Preparar comunicados e organizar as solicitações.",
-  "Preparar comunicaciones y organizar las solicitudes."),
- "Aider à suivre les actions et les échéances.": T(
-  "Help track actions and deadlines.",
-  "Ajudar a acompanhar as ações e os prazos.",
-  "Ayudar a seguir las acciones y los plazos."),
+ "Notre assistant IA pour la gestion de copropriété : documents, appels de fonds et assemblées générales.": T(
+  "Our AI assistant for co-ownership management: documents, service-charge calls and general meetings.",
+  "Nosso assistente de IA para a gestão de condomínios: documentos, chamadas de cotas e assembleias gerais.",
+  "Nuestro asistente de IA para la gestión de comunidades: documentos, derramas y cuotas, y juntas generales."),
+ "Retrouver une information dans les documents de la copropriété, avec sa source.": T(
+  "Find information in the building’s documents, with its source.",
+  "Encontrar uma informação nos documentos do condomínio, com a fonte.",
+  "Encontrar información en los documentos de la comunidad, con su fuente."),
+ "Calculer les appels de fonds de chaque lot : tantièmes, charges spéciales et consommations individuelles d’eau et de chauffage.": T(
+  "Calculate each unit’s service-charge call: ownership shares, special charges and individual water and heating consumption.",
+  "Calcular a chamada de cotas de cada unidade: frações ideais, encargos especiais e consumos individuais de água e aquecimento.",
+  "Calcular la cuota de cada vivienda: coeficientes, gastos especiales y consumos individuales de agua y calefacción."),
+ "Préparer l’ordre du jour, la convocation, le formulaire de vote par correspondance et le procès-verbal d’AG, validés par le syndic avant envoi.": T(
+  "Draft the agenda, the notice of meeting, the postal-vote form and the general-meeting minutes, approved by the property manager before sending.",
+  "Preparar a ordem do dia, a convocação, o formulário de voto por correspondência e a ata da assembleia, validados pela administradora antes do envio.",
+  "Preparar el orden del día, la convocatoria, el formulario de voto por correo y el acta de la junta, validados por el administrador antes del envío."),
  "Présentation de CoproSens": T(
   "CoproSens presentation",
   "Apresentação do CoproSens",
