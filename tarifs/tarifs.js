@@ -4,10 +4,9 @@
   var DAY = 550, PILOT = 2500, PILOT_FOUNDER = 1750, DASH = 750, LICENCE_MONTH = 7.8, FOUNDER_MAX = 32;
   // Tiers by number of main lots (housing, shops, offices).
   var TIERS = [
-    { max: 32,  label: "Petite copropriété (jusqu’à 32 lots)", setup: 2 * DAY, maint: 175 },
-    { max: 66,  label: "Copropriété moyenne (33 à 66 lots)",    setup: 3 * DAY, maint: 350 },
-    { max: 100, label: "Copropriété moyenne (67 à 100 lots)",   setup: 4 * DAY, maint: 350 },
-    { max: 200, label: "Grande copropriété (101 à 200 lots)",   setup: 3000,    maint: 550 }
+    { max: 32,  label: "Petite copropriété (jusqu’à 32 lots)",   setup: 3 * DAY, maint: 175 },
+    { max: 100, label: "Copropriété moyenne (33 à 100 lots)",    setup: 5 * DAY, maint: 350 },
+    { max: 200, label: "Grande copropriété (101 à 200 lots)",    setup: 8 * DAY, maint: 550 }
   ];
   var $ = function (id) { return document.getElementById(id); };
   var fmt = new Intl.NumberFormat("fr-FR", { style: "currency", currency: "EUR", maximumFractionDigits: 0 });
@@ -33,8 +32,8 @@
     for (var i = 0; i < TIERS.length; i++) { if (lots <= TIERS[i].max) { tier = TIERS[i]; break; } }
     var rows = ["k-pilot", "k-setup", "k-dash", "k-lic", "k-y1", "k-y1m", "k-y2m", "k-maint"];
     if (!tier) {
-      set("k-tier", "Très grande copropriété (plus de 200 lots)");
-      rows.forEach(function (r) { set(r, "Sur devis"); });
+      set("k-tier", "Très grande copropriété (plus de 200 lots) : devis personnalisé");
+      rows.forEach(function (r) { set(r, "Devis personnalisé"); });
       $("k-quote").hidden = false;
       return;
     }
