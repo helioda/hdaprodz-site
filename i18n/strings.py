@@ -152,7 +152,7 @@ TEXT = {
  "Votre navigateur ne permet pas de lire cette vidéo.": T(
   "Your browser can’t play this video.", "Seu navegador não consegue reproduzir este vídeo.", "Su navegador no puede reproducir este vídeo."),
  "Télécharger la présentation": T("Download the presentation", "Baixar a apresentação", "Descargar la presentación"),
- "CoproSens en 1 min 18 s": T(
+ "CoproSens en 1 min 33 s": T(
   "CoproSens in 1 min 22 s",
   "CoproSens em 1 min 32 s",
   "CoproSens en 1 min 31 s"),
