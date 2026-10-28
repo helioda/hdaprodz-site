@@ -90,6 +90,9 @@
 
   D.pt = {
     locale: "pt-BR",
+    // Brazilian page: demo amounts in reais, converted from the euro demo at the ECB rate of 26 Oct 2026 (1 € = 6,2523 R$), rounded to R$ 100.
+    currency: "BRL",
+    budget: { generales: 612700, ascenseur: 53100, eau: 112500, chauffage: 200100 },
     lot: function (n) { return "Unidade " + pad(n); },
     owner: function (n) { return "Condômino da unidade " + pad(n); },
     floor: function (e) { return " · " + e + "º andar"; },
@@ -98,7 +101,7 @@
     balanced: "Totais conferidos ao centavo ✓",
     gap: "Diferença de ",
     total: "Total",
-    csvHead: ["Unidade", "Tipo", "Andar", "Fração", "Despesas gerais", "Elevador", "Água (m³)", "Água (€)", "Aquecimento (unidades)", "Aquecimento (€)", "Fundo de reserva", "Total anual", "Cota trimestral"],
+    csvHead: ["Unidade", "Tipo", "Andar", "Fração", "Despesas gerais", "Elevador", "Água (m³)", "Água (R$)", "Aquecimento (unidades)", "Aquecimento (R$)", "Fundo de reserva", "Total anual", "Cota trimestral"],
     csvName: "rateio-clos-des-mesanges.csv",
     csvSep: ";",
     csvDec: ",",
@@ -115,7 +118,7 @@
       { k: "scr", t: "Eleição do(s) escrutinador(es)", m: "24" },
       { k: "acc", t: "Aprovação das contas do exercício de 2026", m: "24" },
       { k: "quitus", t: "Quitação à administradora pela gestão do exercício de 2026", m: "24" },
-      { k: "budget", t: "Votação da previsão orçamentária do exercício de 2027 (€ 156.500)", m: "24" },
+      { k: "budget", t: "Votação da previsão orçamentária do exercício de 2027 (R$ 978.400)", m: "24" },
       { k: "ft", t: "Valor da contribuição anual ao fundo de reserva (5% da previsão orçamentária)", m: "25" },
       { k: "roof", t: "Obras de impermeabilização da laje de cobertura: escolha da empresa com base em dois orçamentos", m: "24" },
       { k: "syndic", t: "Nomeação da administradora e aprovação do seu contrato", m: "25" }

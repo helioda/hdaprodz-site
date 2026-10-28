@@ -49,7 +49,7 @@ TEXT = {
  "Quels lots sont en retard de paiement ?": T("Which units are behind on payments?", "Quais unidades estão com pagamento atrasado?", "¿Qué lotes van atrasados en sus pagos?"),
  "3 lots en retard, <b>16 729,60 €</b> au total, hors pénalités.": T(
   "3 units behind, <b>$16,729.60</b> in total, excluding penalties.",
-  "3 unidades atrasadas, <b>16 729,60 €</b> no total, sem multas.",
+  "3 unidades atrasadas, <b>R$ 104.598,48</b> no total, sem multas.",
   "3 lotes atrasados, <b>16 729,60 €</b> en total, sin penalizaciones."),
  "Source : tableau de bord du conseil syndical, 8 octobre 2026": T(
   "Source: board dashboard, 8 October 2026", "Fonte: painel do conselho, 8 de outubro de 2026", "Fuente: panel del consejo, 8 de octubre de 2026"),
@@ -154,7 +154,7 @@ TEXT = {
  "Télécharger la présentation": T("Download the presentation", "Baixar a apresentação", "Descargar la presentación"),
  "CoproSens en 1 min 33 s": T(
   "CoproSens in 1 min 22 s",
-  "CoproSens em 1 min 32 s",
+  "CoproSens em 1 min 33 s",
   "CoproSens en 1 min 31 s"),
  "Références": T("Credentials", "Referências", "Referencias"),
  "Membre du Microsoft AI Cloud Partner Program": T(
@@ -397,7 +397,7 @@ TEXT["outils/index.html"] = {
  "tableau de bord de démonstration": T("demo dashboard", "painel de demonstração", "panel de demostración"),
  "(lot 01 : 796,98 € par trimestre). Le mode détaillé applique l’ascenseur aux seuls lots en étage et les consommations réelles d’eau et de chauffage.": T(
   "(unit 01: €796.98 per quarter). Detailed mode charges the lift to upper-floor units only and uses actual water and heating consumption.",
-  "(unidade 01: € 796,98 por trimestre). O modo detalhado cobra o elevador apenas das unidades nos andares e usa os consumos reais de água e aquecimento.",
+  "(unidade 01: R$ 4.982,50 por trimestre). O modo detalhado cobra o elevador apenas das unidades nos andares e usa os consumos reais de água e aquecimento.",
   "(vivienda 01: 796,98 € por trimestre). El modo detallado imputa el ascensor solo a las viviendas de plantas superiores y aplica los consumos reales de agua y calefacción."),
  "Fonds de travaux": T("Reserve fund", "Fundo de reserva", "Fondo de reserva"),
  "Total à appeler sur l’année": T("Total to collect for the year", "Total a arrecadar no ano", "Total a recaudar en el año"),

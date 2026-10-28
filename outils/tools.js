@@ -94,7 +94,9 @@
   if (L && L.manager) C.syndic = L.manager;
   var $ = function (s, r) { return (r || document).querySelector(s); };
   var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
-  var eur = new Intl.NumberFormat(S.locale, { style: "currency", currency: "EUR" });
+  // Some languages show the fictitious demo in their own currency, with the budget converted at the ECB rate (see l10n.js).
+  if (L && L.budget) C.budget = L.budget;
+  var eur = new Intl.NumberFormat(S.locale, { style: "currency", currency: (L && L.currency) || "EUR" });
   var num = new Intl.NumberFormat(S.locale);
   var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
   var fmtDate = function (d) { return d ? new Date(d + "T12:00:00").toLocaleDateString(S.locale, { weekday: "long", day: "numeric", month: "long", year: "numeric" }) : "…"; };
