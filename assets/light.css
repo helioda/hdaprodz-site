@@ -146,3 +146,7 @@ footer a{color:#fff}
 .button.price{background:linear-gradient(110deg,#fbbf24,#f59e0b);color:#0b1330;font-weight:800}
 nav .links a.nav-price{background:#fbbf24;color:#0b1330;font-weight:800;padding:8px 14px;border-radius:999px}
 nav .links a.nav-price:hover{background:#fcd34d}
+
+/* Secondary CTA buttons (dashboard, tools) */
+.button.alt{display:flex;width:fit-content;max-width:100%;background:#ffffff;color:#0b1330;border:2px solid #67e8f9;font-weight:800;box-shadow:0 8px 22px #67e8f933}
+.button.alt:hover{background:#e0fbff}

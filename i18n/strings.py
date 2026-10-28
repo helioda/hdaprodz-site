@@ -99,10 +99,7 @@ TEXT = {
   "Preparar respostas, organizar solicitações e conectar etapas repetitivas, com os controles adequados a cada uso.",
   "Preparar respuestas, organizar solicitudes y conectar los pasos repetitivos, con los controles adecuados a cada uso."),
  "Applications métier": T("Business apps", "Aplicativos de negócio", "Aplicaciones de negocio"),
- "Essayer les outils du syndic : appels de fonds et documents d’AG ↗": T(
-  "Try the property-manager tools: service-charge calls and meeting documents (in French) ↗",
-  "Experimentar as ferramentas da administradora: chamadas de cotas e documentos de assembleia (em francês) ↗",
-  "Probar las herramientas del administrador: cuotas y documentos de junta (en francés) ↗"),
+ "🧮 Outils du syndic : appels de fonds et AG ↗": T("🧮 Manager tools: service charges and meetings (in French) ↗", "🧮 Ferramentas da administradora: cotas e assembleias (em francês) ↗", "🧮 Herramientas del administrador: cuotas y juntas (en francés) ↗"),
  "💶 Estimer le coût pour ma copropriété": T("💶 Estimate the cost for my property (in euros)", "💶 Estimar o custo para o meu condomínio (em euros)", "💶 Estimar el coste para mi comunidad (en euros)"),
  "💶 Tarifs": T("💶 Pricing", "💶 Preços", "💶 Precios"),
  "Démarrer un pilote sur vos documents": T("Start a pilot on your documents", "Iniciar um piloto com os seus documentos", "Iniciar un piloto con sus documentos"),
@@ -111,10 +108,10 @@ TEXT = {
   "O piloto: o CoproSens instalado no seu próprio Microsoft 365, com os documentos dos seus condomínios.",
   "El piloto: CoproSens instalado en su propio Microsoft 365, con los documentos de sus edificios."),
  "Essayer la démo ↗": T("Try the demo ↗", "Experimentar a demo ↗", "Probar la demo ↗"),
- "Voir le tableau de bord du conseil syndical ↗": T(
-  "See the owners’ council dashboard ↗",
-  "Ver o painel do conselho do condomínio ↗",
-  "Ver el panel del consejo de copropietarios ↗"),
+ "📊 Voir le tableau de bord du conseil syndical ↗": T(
+  "📊 See the owners’ council dashboard ↗",
+  "📊 Ver o painel do conselho do condomínio ↗",
+  "📊 Ver el panel del consejo de copropietarios ↗"),
  "Copropriété fictive, données de démonstration · réponses générées par IA": T(
   "Fictional condominium, demo data · AI-generated answers",
   "Condomínio fictício, dados de demonstração · respostas geradas por IA",
