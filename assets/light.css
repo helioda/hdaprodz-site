@@ -355,3 +355,4 @@ html[lang="en"] .role-q li:after,html[lang="pt-BR"] .role-q li:after{content:"â€
 @media(max-width:1000px){.platform-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:560px){.platform-grid{grid-template-columns:1fr}}
 #applications + .wrap > .section:first-child{padding-top:40px}#applications{padding-bottom:44px}
+#applications + .wrap > .section:first-child{padding-top:14px}#applications{padding-bottom:28px}
