@@ -48,7 +48,7 @@ TEXT = {
  "Assistant CoproSens": T("CoproSens assistant", "Assistente CoproSens", "Asistente CoproSens"),
  "Quels lots sont en retard de paiement ?": T("Which units are behind on payments?", "Quais unidades estão com pagamento atrasado?", "¿Qué lotes van atrasados en sus pagos?"),
  "3 lots en retard, <b>16 729,60 €</b> au total, hors pénalités.": T(
-  "3 units behind, <b>€16,729.60</b> in total, excluding penalties.",
+  "3 units behind, <b>$16,729.60</b> in total, excluding penalties.",
   "3 unidades atrasadas, <b>16 729,60 €</b> no total, sem multas.",
   "3 lotes atrasados, <b>16 729,60 €</b> en total, sin penalizaciones."),
  "Source : tableau de bord du conseil syndical, 8 octobre 2026": T(
