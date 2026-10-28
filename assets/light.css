@@ -281,3 +281,17 @@ nav .links a.nav-price{background:linear-gradient(180deg,rgba(224,106,168,.8),rg
 @keyframes glow{0%,100%{filter:brightness(1)}50%{filter:brightness(1.12) saturate(1.1)}}
 .act:hover,.button:hover{filter:brightness(1.18) saturate(1.15)}
 @media(prefers-reduced-motion:reduce){.act::before,.button::before,nav .links a.nav-price::before,.act,.button{animation:none}}
+/* Refined cyberpunk: neon edges and glows echoing the city at night, text kept calm and readable */
+:root{--neon-c:#38bdf8;--neon-v:#8466f2;--neon-m:#d946ef;--neon-o:#f59e5b}
+.eyebrow{color:#7dd3fc;text-shadow:0 0 12px #38bdf866}
+h2{text-shadow:0 0 28px #8466f240}
+.ribbon{border-image:linear-gradient(90deg,transparent,var(--neon-c),var(--neon-v),var(--neon-m),transparent) 1;border-top:1px solid;border-bottom:1px solid}
+.card,.case,.audience-grid>*,.creds .ribbon{position:relative}
+.card,.case,.audience-grid>*{background:linear-gradient(160deg,#ffffff14,#ffffff05 60%),#121845cc!important;box-shadow:0 0 0 1px #8466f233,0 0 26px #38bdf81a,0 18px 40px #05081f80!important}
+.card::after,.case::after,.audience-grid>*::after{content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;pointer-events:none;
+ background:linear-gradient(120deg,var(--neon-c),transparent 30%,transparent 70%,var(--neon-m));
+ -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:.55}
+.card:hover::after,.audience-grid>*:hover::after{opacity:.9}
+.contact{box-shadow:0 0 0 1px #d946ef55,0 0 40px #8466f240,0 20px 50px #05081f99!important}
+.steps .card>.number,#solutions .icon{box-shadow:0 0 14px currentColor}
+footer{border-top:1px solid;border-image:linear-gradient(90deg,transparent,var(--neon-v),var(--neon-c),transparent) 1}
