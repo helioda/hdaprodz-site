@@ -244,6 +244,15 @@
         desc.value = lines.join("\n");
       }
     }
+    if (!kind && !desc.value) {
+      var gen = {
+        fr: "Notre besoin :\nUtilisateurs concernés :\nOutils actuels (Microsoft 365, SharePoint…) :\nRésultat attendu :",
+        en: "Our need:\nUsers involved:\nCurrent tools (Microsoft 365, SharePoint…):\nExpected result:",
+        pt: "Nossa necessidade:\nUsuários envolvidos:\nFerramentas atuais (Microsoft 365, SharePoint…):\nResultado esperado:",
+        es: "Nuestra necesidad:\nUsuarios implicados:\nHerramientas actuales (Microsoft 365, SharePoint…):\nResultado esperado:"
+      };
+      desc.value = gen[lg] || gen.fr;
+    }
     count.textContent = desc.value.length;
     if (q.get("statut") === "ok" && q.get("ref")) showStatus("ok", MESSAGES.ok(q.get("ref").replace(/[^A-Z0-9-]/gi, "")));
     else if (q.get("statut") === "erreur") showStatus("err", MESSAGES.generic + FALLBACK);

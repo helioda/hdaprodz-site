@@ -19,11 +19,30 @@ def T(en, pt, es):
 
 TEXT = {
 "index.html": {
+ "Des assistants et des agents IA, dont les agents Frontier de Microsoft 365 Copilot, qui retrouvent l’information, préparent des contenus et accomplissent des tâches pour vos équipes.": T(
+  "Assistants and AI agents, including Microsoft 365 Copilot’s Frontier agents, that find information, prepare content and carry out tasks for your teams.",
+  "Assistentes e agentes de IA, incluindo os agentes Frontier do Microsoft 365 Copilot, que encontram informações, preparam conteúdos e executam tarefas para suas equipes.",
+  "Asistentes y agentes de IA, incluidos los agentes Frontier de Microsoft 365 Copilot, que encuentran información, preparan contenidos y realizan tareas para sus equipos."),
+ "Agents Frontier": T("Frontier agents", "Agentes Frontier", "Agentes Frontier"),
+ "Vos documents reliés à l’assistant, sans perdre le contrôle : chacun ne voit que ce que ses droits Microsoft 365 autorisent, avec la protection et la gouvernance des données de Microsoft Entra ID et Microsoft Purview.": T(
+  "Your documents connected to the assistant without losing control: each person sees only what their Microsoft 365 rights allow, with data protection and governance from Microsoft Entra ID and Microsoft Purview.",
+  "Seus documentos ligados ao assistente sem perder o controle: cada um vê apenas o que seus acessos no Microsoft 365 permitem, com a proteção e a governança de dados do Microsoft Entra ID e do Microsoft Purview.",
+  "Sus documentos conectados al asistente sin perder el control: cada persona solo ve lo que sus permisos de Microsoft 365 autorizan, con la protección y la gobernanza de datos de Microsoft Entra ID y Microsoft Purview."),
+ "Des flux Power Automate qui préparent les réponses, organisent les demandes et enchaînent les étapes répétitives, avec les validations humaines nécessaires.": T(
+  "Power Automate flows that prepare answers, organise requests and chain repetitive steps, with the human approvals each use needs.",
+  "Fluxos do Power Automate que preparam respostas, organizam solicitações e encadeiam as etapas repetitivas, com as validações humanas necessárias.",
+  "Flujos de Power Automate que preparan respuestas, organizan solicitudes y encadenan los pasos repetitivos, con las validaciones humanas necesarias."),
+ "Choisir la solution adaptée à vos besoins": T("Choose the right solution for your needs", "Escolher a solução certa para suas necessidades", "Elegir la solución adecuada para sus necesidades"),
+ "Décrivez la tâche, les utilisateurs concernés et le résultat attendu : nous vous proposons la solution adaptée.": T(
+  "Describe the task, the users involved and the result you expect: we propose the right solution.",
+  "Descreva a tarefa, os usuários envolvidos e o resultado esperado: propomos a solução adequada.",
+  "Describa la tarea, los usuarios implicados y el resultado esperado: le proponemos la solución adecuada."),
+ "Essayer les outils du syndic": T("Try the manager tools", "Experimentar as ferramentas da administradora", "Probar las herramientas del administrador"),
+ "Essayer l’assistant": T("Try the assistant", "Experimentar o assistente", "Probar el asistente"),
  "Voir comment CoproSens les aide": T("See how CoproSens helps them", "Ver como o CoproSens ajuda", "Ver cómo les ayuda CoproSens"),
  "Configurer et estimer mon déploiement": T("Configure and estimate my deployment", "Configurar e estimar minha implantação", "Configurar y estimar mi despliegue"),
  "Outils": T("Tools", "Ferramentas", "Herramientas"),
  "Décrire mon projet": T("Describe my project", "Descrever meu projeto", "Describir mi proyecto"),
- "Outils du syndic": T("Manager tools", "Ferramentas da administradora", "Herramientas del administrador"),
  "Décrire mon projet →": T("Describe my project →", "Descrever meu projeto →", "Describir mi proyecto →"),
  "HDA Solutions — Agents IA et automatisation": T(
   "HDA Solutions — AI agents and automation",
@@ -84,29 +103,14 @@ TEXT = {
   "Partimos de una necesidad concreta y de sus herramientas actuales para construir una solución adaptada a su organización."),
  "01 / ASSISTER": T("01 / ASSIST", "01 / ASSISTIR", "01 / ASISTIR"),
  "Assistants et copilotes": T("Assistants and copilots", "Assistentes e copilotos", "Asistentes y copilotos"),
- "Des interfaces conversationnelles pour guider les utilisateurs, préparer des contenus et accompagner les tâches quotidiennes.": T(
-  "Conversational interfaces to guide users, prepare content and support everyday tasks.",
-  "Interfaces conversacionais para orientar os usuários, preparar conteúdos e apoiar as tarefas do dia a dia.",
-  "Interfaces conversacionales para guiar a los usuarios, preparar contenidos y acompañar las tareas diarias."),
- "Agents IA": T("AI agents", "Agentes de IA", "Agentes de IA"),
  "02 / CONNECTER": T("02 / CONNECT", "02 / CONECTAR", "02 / CONECTAR"),
  "Connaissance accessible": T("Accessible knowledge", "Conhecimento acessível", "Conocimiento accesible"),
- "Relier les documents utiles à un assistant, structurer l’information et faciliter la recherche dans le respect des accès définis.": T(
-  "Connect the right documents to an assistant, structure information and make searching easier while respecting defined access rights.",
-  "Conectar os documentos úteis a um assistente, estruturar a informação e facilitar a busca, respeitando os acessos definidos.",
-  "Conectar los documentos útiles a un asistente, estructurar la información y facilitar la búsqueda respetando los accesos definidos."),
  "03 / AUTOMATISER": T("03 / AUTOMATE", "03 / AUTOMATIZAR", "03 / AUTOMATIZAR"),
  "Processus simplifiés": T("Simpler processes", "Processos simplificados", "Procesos simplificados"),
- "Préparer des réponses, organiser des demandes et connecter les étapes répétitives, avec les contrôles adaptés à chaque usage.": T(
-  "Prepare answers, organise requests and connect repetitive steps, with the right controls for each use.",
-  "Preparar respostas, organizar solicitações e conectar etapas repetitivas, com os controles adequados a cada uso.",
-  "Preparar respuestas, organizar solicitudes y conectar los pasos repetitivos, con los controles adecuados a cada uso."),
  "Applications métier": T("Business apps", "Aplicativos de negócio", "Aplicaciones de negocio"),
  "💶 Tarifs": T("💶 Pricing", "💶 Preços", "💶 Precios"),
- "Essayer la démo": T("Try the demo", "Experimentar a demo", "Probar la demo"),
  "Tableau de bord ↗": T("Dashboard ↗", "Painel ↗", "Panel ↗"),
  "Le suivi du conseil syndical": T("The owners’ council overview", "O acompanhamento do conselho", "El seguimiento del consejo"),
- "Appels de fonds et documents d’AG": T("Service charges and meeting documents", "Cotas e documentos de assembleia", "Cuotas y documentos de junta"),
  "Copropriété fictive, données de démonstration · réponses générées par IA": T(
   "Fictional condominium, demo data · AI-generated answers",
   "Condomínio fictício, dados de demonstração · respostas geradas por IA",
@@ -169,11 +173,6 @@ TEXT = {
  "Profil LinkedIn ↗": T("LinkedIn profile ↗", "Perfil no LinkedIn ↗", "Perfil de LinkedIn ↗"),
  "Comment démarrer": T("How to start", "Como começar", "Cómo empezar"),
  "Commencer petit. Construire utile.": T("Start small. Build what’s useful.", "Começar pequeno. Construir o que é útil.", "Empezar poco a poco. Construir algo útil."),
- "Choisir un besoin": T("Choose a need", "Escolher uma necessidade", "Elegir una necesidad"),
- "Identifier une tâche, les utilisateurs concernés et le résultat attendu.": T(
-  "Identify a task, the users involved and the expected result.",
-  "Identificar uma tarefa, os usuários envolvidos e o resultado esperado.",
-  "Identificar una tarea, los usuarios implicados y el resultado esperado."),
  "Tester une solution": T("Test a solution", "Testar uma solução", "Probar una solución"),
  "Définir le périmètre, connecter les sources nécessaires et évaluer un premier fonctionnement, avec un point d’avancement chaque semaine.": T(
   "Define the scope, connect the necessary sources and evaluate a first version, with a progress update every week.",
