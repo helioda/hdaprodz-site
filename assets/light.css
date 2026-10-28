@@ -134,3 +134,7 @@ footer a{color:#fff}
 .chat-a{background:#ffffff14;color:#f5f7ff;border:1px solid #ffffff1f}
 .chat-a b{color:#fb8a72}
 .chat-src{background:#fbbf2420;color:#fde68a;border-left-color:#fbbf24}
+
+/* Readable light buttons: dark text on cyan */
+.button.light{background:#86e8ff;color:#0b1330;font-weight:800}
+.button.light:hover{background:#a5efff}
