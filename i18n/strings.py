@@ -100,6 +100,7 @@ TEXT = {
   "Preparar respuestas, organizar solicitudes y conectar los pasos repetitivos, con los controles adecuados a cada uso."),
  "Applications métier": T("Business apps", "Aplicativos de negócio", "Aplicaciones de negocio"),
  "💶 Tarifs": T("💶 Pricing", "💶 Preços", "💶 Precios"),
+ "Essayer la démo": T("Try the demo", "Experimentar a demo", "Probar la demo"),
  "Essayer la démo ↗": T("Try the demo ↗", "Experimentar a demo ↗", "Probar la demo ↗"),
  "Démarrer un pilote": T("Start a pilot", "Iniciar um piloto", "Iniciar un piloto"),
  "Sur vos propres documents, dans votre Microsoft 365": T("On your own documents, in your Microsoft 365", "Com os seus próprios documentos, no seu Microsoft 365", "Con sus propios documentos, en su Microsoft 365"),
