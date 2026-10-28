@@ -34,7 +34,7 @@ TEXT = {
   "Microsoft Entra ID (contas, login multifator, regras de acesso), Microsoft Defender (antivírus, proteção de e-mails e dispositivos), Microsoft Purview",
   "Microsoft Entra ID (cuentas, inicio de sesión multifactor, reglas de acceso), Microsoft Defender (antivirus, protección del correo y de los dispositivos), Microsoft Purview"),
  "IA et cloud": T("AI and cloud", "IA e nuvem", "IA y nube"),
- "Azure AI Foundry, Copilot Studio, agents Frontier et Power Automate": T("Azure AI Foundry, Copilot Studio, Frontier agents and Power Automate", "Azure AI Foundry, Copilot Studio, agentes Frontier e Power Automate", "Azure AI Foundry, Copilot Studio, agentes Frontier y Power Automate"),
+ "Azure AI Foundry, Copilot Studio (agents disponibles dans Teams et sur votre site), agents Frontier et Power Automate": T("Azure AI Foundry, Copilot Studio (agents available in Teams and on your website), Frontier agents and Power Automate", "Azure AI Foundry, Copilot Studio (agentes disponíveis no Teams e no seu site), agentes Frontier e Power Automate", "Azure AI Foundry, Copilot Studio (agentes disponibles en Teams y en su sitio web), agentes Frontier y Power Automate"),
  "Paramétrer les fonctions et prévoir les coûts": T("Set up the features and plan the costs", "Configurar as funções e prever os custos", "Configurar las funciones y prever los costes"),
  "Choisissez la taille de votre copropriété et les options utiles (tableau de bord, maintenance) : vous obtenez tout de suite une estimation de votre déploiement.": T(
   "Choose the size of your building and the options you need (dashboard, maintenance): you get an instant estimate of your deployment.",
