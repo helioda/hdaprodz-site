@@ -22,6 +22,10 @@
   // Rounding step for converted price points (whole amounts) per currency.
   var STEP = { EUR: 1, USD: 10, GBP: 10, BRL: 50, MXN: 100, CAD: 10, CHF: 10 };
   var REGION = { US: "USD", GB: "GBP", BR: "BRL", MX: "MXN", CA: "CAD", CH: "CHF" };
+  // Eurozone (and euro-using microstates): euros on every language page.
+  "AT BE BG HR CY EE FI FR DE GR IE IT LV LT LU MT NL PT SK SI ES AD MC SM VA ME XK".split(" ").forEach(function (c) { REGION[c] = "EUR"; });
+  // Rest of Latin America: US dollars, the usual business reference currency there.
+  "AR BO CL CO CR CU DO EC SV GT HN NI PA PY PE PR UY VE".split(" ").forEach(function (c) { REGION[c] = "USD"; });
   var PAGE_DEFAULT = { fr: "EUR", en: "USD", pt: "BRL", es: "EUR" };
   var S = FR, L = window.PRICING_L10N;
   if (L) { S = {}; Object.keys(FR).forEach(function (k) { S[k] = k in L ? L[k] : FR[k]; }); }
@@ -37,8 +41,9 @@
     cur = FX[c] ? c : "EUR";
     fmt = new Intl.NumberFormat(S.locale, { style: "currency", currency: cur, currencyDisplay: "narrowSymbol", maximumFractionDigits: 0 });
     fmt2 = new Intl.NumberFormat(S.locale, { style: "currency", currency: cur, currencyDisplay: "narrowSymbol", minimumFractionDigits: 2, maximumFractionDigits: 2 });
-    if (cur === "MXN" || cur === "CAD") { // "$" alone is ambiguous next to USD
-      var pre = cur === "MXN" ? "MX$" : "CA$";
+    var usOutsideEn = cur === "USD" && S.locale.slice(0, 2) !== "en";
+    if (cur === "MXN" || cur === "CAD" || usOutsideEn) { // "$" alone is ambiguous (pesos, CA$, US$)
+      var pre = cur === "MXN" ? "MX$" : cur === "CAD" ? "CA$" : "US$";
       fmt = { format: (function (f) { return function (v) { return f.format(v).replace("$", pre); }; })(fmt) };
       fmt2 = { format: (function (f) { return function (v) { return f.format(v).replace("$", pre); }; })(fmt2) };
     }
