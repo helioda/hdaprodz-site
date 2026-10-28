@@ -105,7 +105,7 @@ TEXT = {
  "Sur vos propres documents, dans votre Microsoft 365": T("On your own documents, in your Microsoft 365", "Com os seus próprios documentos, no seu Microsoft 365", "Con sus propios documentos, en su Microsoft 365"),
  "Posez vos questions à l’assistant": T("Ask the assistant your questions", "Faça suas perguntas ao assistente", "Haga sus preguntas al asistente"),
  "Estimer le coût": T("Estimate the cost", "Estimar o custo", "Estimar el coste"),
- "Prix par lot et par mois, en direct": T("Price per unit per month, live (in euros)", "Preço por unidade e por mês, em euros", "Precio por unidad y por mes, en euros"),
+ "Prix par lot et par mois, en direct": T("Price per unit per month, live", "Preço por unidade e por mês, ao vivo", "Precio por unidad y por mes, en directo"),
  "Tableau de bord ↗": T("Dashboard ↗", "Painel ↗", "Panel ↗"),
  "Le suivi du conseil syndical": T("The owners’ council overview", "O acompanhamento do conselho", "El seguimiento del consejo"),
  "Outils du syndic ↗": T("Manager tools ↗", "Ferramentas da administradora ↗", "Herramientas del administrador ↗"),
@@ -342,7 +342,7 @@ POSTER = {
 # ---------------------------------------------------------------------------
 # Standalone pages: syndic tools demo (/outils/) and price estimator (/tarifs/).
 # Their JavaScript texts live in outils/l10n.js and tarifs/l10n.js.
-# Prices stay in euros in every language; only the number format follows the locale.
+# Prices are set in euros; the estimator converts them to the visitor's currency (indicative, ECB rate).
 PAGES["outils/index.html"] = {
     "out": {"en": "tools/index.html", "pt": "ferramentas/index.html", "es": "herramientas/index.html"},
     "must_not_remain": ["Outils du syndic", "Appels de fonds", "Ordre du jour", "Procès-verbal", "Budget prévisionnel",
@@ -450,9 +450,9 @@ TEXT["tarifs/index.html"] = {
   "Estime o custo do CoproSens – HDA Solutions",
   "Calcule el coste de CoproSens – HDA Solutions"),
  "Estimez en quelques secondes le coût de CoproSens pour votre copropriété : pilote, mise en place, licences Microsoft et coût par lot et par mois.": T(
-  "Estimate in seconds what CoproSens costs for your building: pilot, setup, Microsoft licences and cost per unit per month, in euros.",
-  "Estime em segundos o custo do CoproSens para o seu condomínio: piloto, implantação, licenças Microsoft e custo por unidade e por mês, em euros.",
-  "Calcule en segundos el coste de CoproSens para su comunidad: piloto, implantación, licencias de Microsoft y coste por vivienda y mes, en euros."),
+  "Estimate in seconds what CoproSens costs for your building: pilot, setup, Microsoft licences and cost per unit per month, in your currency.",
+  "Estime em segundos o custo do CoproSens para o seu condomínio: piloto, implantação, licenças Microsoft e custo por unidade e por mês, na sua moeda.",
+  "Calcule en segundos el coste de CoproSens para su comunidad: piloto, implantación, licencias de Microsoft y coste por vivienda y mes, en su moneda."),
  "Navigation principale": T("Main navigation", "Navegação principal", "Navegación principal"),
  "Outils du syndic": T("Manager tools", "Ferramentas da administradora", "Herramientas del administrador"),
  "Tableau de bord": T("Dashboard", "Painel", "Panel"),
@@ -463,9 +463,9 @@ TEXT["tarifs/index.html"] = {
   "Quanto custa o CoproSens para o seu condomínio?",
   "¿Cuánto cuesta CoproSens para su comunidad?"),
  "Indiquez la taille de votre copropriété et les options souhaitées : vous obtenez une estimation immédiate, y compris le coût par lot et par mois. Nos prix dépendent de la complexité réelle du projet, pas d’un forfait unique.": T(
-  "Enter the size of your building and the options you want: you get an instant estimate, including the cost per unit per month. All prices are in euros and reflect the real complexity of the project, not a one-size-fits-all package.",
-  "Informe o tamanho do seu condomínio e as opções desejadas: você recebe uma estimativa imediata, incluindo o custo por unidade e por mês. Todos os valores estão em euros e dependem da complexidade real do projeto, não de um pacote único.",
-  "Indique el tamaño de su comunidad y las opciones que desea: obtendrá una estimación inmediata, incluido el coste por vivienda y mes. Todos los importes están en euros y dependen de la complejidad real del proyecto, no de una tarifa única."),
+  "Enter the size of your building and the options you want: you get an instant estimate, including the cost per unit per month. Prices are shown in your currency and reflect the real complexity of the project, not a one-size-fits-all package.",
+  "Informe o tamanho do seu condomínio e as opções desejadas: você recebe uma estimativa imediata, incluindo o custo por unidade e por mês. Os valores aparecem na sua moeda e dependem da complexidade real do projeto, não de um pacote único.",
+  "Indique el tamaño de su comunidad y las opciones que desea: obtendrá una estimación inmediata, incluido el coste por vivienda y mes. Los importes se muestran en su moneda y dependen de la complejidad real del proyecto, no de una tarifa única."),
  "Votre copropriété": T("Your building", "Seu condomínio", "Su comunidad"),
  "Nombre de lots principaux (logements, commerces, bureaux)": T(
   "Number of main units (homes, shops, offices)",
@@ -540,10 +540,11 @@ TEXT["tarifs/index.html"] = {
   "Owners’ council dashboard: €750 (included in the founding offer). Extra day: €550. Beyond the included time, maintenance is billed at €550 per day. Microsoft 365 licences re-invoiced at cost (indicative basis €7.80 per member per month, taxes included). AI consumption is billed directly by Microsoft to the building; during the pilot, it is deducted from our invoice.",
   "Painel do conselho: € 750 (incluído na oferta fundadores). Dia adicional: € 550. Além do tempo incluído, a manutenção é cobrada a € 550 por dia. Licenças Microsoft 365 repassadas a preço de custo (base indicativa de € 7,80 por membro e por mês, impostos incluídos). O consumo de IA é faturado diretamente pela Microsoft ao condomínio; durante o piloto, ele é descontado da nossa fatura.",
   "Panel del consejo: 750 € (incluido en la oferta fundadores). Día adicional: 550 €. Más allá del tiempo incluido, el mantenimiento se factura a 550 € por día. Licencias de Microsoft 365 refacturadas a precio de coste (base orientativa de 7,80 € por miembro y mes, impuestos incluidos). El consumo de IA lo factura Microsoft directamente a la comunidad; durante el piloto, se descuenta de nuestra factura."),
+ "Devise": T("Currency", "Moeda", "Moneda"),
  "Estimation indicative, non contractuelle.": T("Indicative, non-binding estimate.", "Estimativa indicativa, sem valor contratual.", "Estimación orientativa, sin valor contractual."),
  "Ces montants servent à vous donner un ordre de grandeur. Le prix définitif est confirmé par un devis écrit, après un échange sur vos documents, vos besoins et vos contraintes. TVA non applicable, art. 293 B du CGI. Les prix des licences et de la consommation Microsoft peuvent évoluer.": T(
-  "These amounts give you an order of magnitude. The final price is confirmed in a written quote, after we discuss your documents, needs and constraints. All prices are in euros. VAT not applicable (French micro-enterprise, art. 293 B of the French General Tax Code). Microsoft licence and consumption prices may change.",
-  "Esses valores dão uma ordem de grandeza. O preço final é confirmado por um orçamento por escrito, após uma conversa sobre seus documentos, necessidades e restrições. Todos os valores estão em euros. Sem incidência de IVA francês (microempresa francesa, art. 293 B do Código Geral de Impostos da França). Os preços das licenças e do consumo Microsoft podem mudar.",
-  "Estos importes le dan un orden de magnitud. El precio definitivo se confirma mediante un presupuesto por escrito, tras analizar sus documentos, necesidades y limitaciones. Todos los importes están en euros. IVA no aplicable (microempresa francesa, art. 293 B del Código General de Impuestos de Francia). Los precios de las licencias y del consumo de Microsoft pueden variar."),
+  "These amounts give you an order of magnitude. The final price is confirmed in a written quote, after we discuss your documents, needs and constraints. Our prices are set in euros; other currencies are indicative conversions. VAT not applicable (French micro-enterprise, art. 293 B of the French General Tax Code). Microsoft licence and consumption prices may change.",
+  "Esses valores dão uma ordem de grandeza. O preço final é confirmado por um orçamento por escrito, após uma conversa sobre seus documentos, necessidades e restrições. Nossos preços são definidos em euros; as outras moedas são conversões indicativas. Sem incidência de IVA francês (microempresa francesa, art. 293 B do Código Geral de Impostos da França). Os preços das licenças e do consumo Microsoft podem mudar.",
+  "Estos importes le dan un orden de magnitud. El precio definitivo se confirma mediante un presupuesto por escrito, tras analizar sus documentos, necesidades y limitaciones. Nuestros precios se fijan en euros; las demás monedas son conversiones orientativas. IVA no aplicable (microempresa francesa, art. 293 B del Código General de Impuestos de Francia). Los precios de las licencias y del consumo de Microsoft pueden variar."),
  "Retour à l’accueil": T("Back to home", "Voltar à página inicial", "Volver al inicio"),
 }

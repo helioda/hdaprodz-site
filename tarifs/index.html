@@ -46,7 +46,7 @@
     </form>
 
     <div class="tool-card kpis" aria-live="polite">
-      <p class="tier" id="k-tier"></p>
+      <div class="cur-line"><p class="tier" id="k-tier"></p><label class="cur">Devise <select id="f-cur"><option value="EUR">EUR €</option><option value="USD">USD $</option><option value="GBP">GBP £</option><option value="BRL">BRL R$</option><option value="MXN">MXN $</option><option value="CAD">CAD $</option><option value="CHF">CHF</option></select></label></div>
       <div><span>Pilote CoproSens (6 semaines)</span><b id="k-pilot"></b></div>
       <div><span>Mise en place Microsoft 365 et prise en main</span><b id="k-setup"></b></div>
       <div><span>Tableau de bord</span><b id="k-dash"></b></div>
@@ -55,12 +55,13 @@
       <div class="highlight"><span>Par lot et par mois, la 1<sup>re</sup> année</span><b id="k-y1m"></b></div>
       <div class="highlight"><span>Par lot et par mois, les années suivantes</span><b id="k-y2m"></b></div>
       <div id="row-maint"><span>Maintenance (par mois), soit par lot et par mois</span><b id="k-maint"></b></div>
+      <p class="fx" id="k-fx" hidden></p>
       <p class="quote" id="k-quote" hidden>Au-delà de 200 lots, chaque projet est étudié sur mesure : nous vous adressons un devis détaillé.</p>
       <div class="actions"><a class="button" href="/projet.html?type=pilote#formulaire">Demander un devis personnalisé</a><button type="button" class="ghost" id="k-print">Imprimer</button></div>
     </div>
   </div>
 
-  <section class="tool-card tiers">
+  <section class="tool-card tiers" id="grid">
     <h2>Notre grille, selon la taille de la copropriété</h2>
     <div class="table-wrap">
       <table class="calc">

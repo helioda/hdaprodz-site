@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Estime o custo do CoproSens – HDA Solutions</title>
-<meta name="description" content="Estime em segundos o custo do CoproSens para o seu condomínio: piloto, implantação, licenças Microsoft e custo por unidade e por mês, em euros.">
+<meta name="description" content="Estime em segundos o custo do CoproSens para o seu condomínio: piloto, implantação, licenças Microsoft e custo por unidade e por mês, na sua moeda.">
 <link rel="alternate" hreflang="fr" href="https://www.hdaprodz.com/tarifs/">
 <link rel="alternate" hreflang="en" href="https://www.hdaprodz.com/en/pricing/">
 <link rel="alternate" hreflang="pt" href="https://www.hdaprodz.com/pt/precos/">
@@ -22,7 +22,7 @@
   <section class="tools-hero">
     <p class="eyebrow">CoproSens · estimativa transparente</p>
     <h1>Quanto custa o CoproSens para o seu condomínio?</h1>
-    <p class="intro">Informe o tamanho do seu condomínio e as opções desejadas: você recebe uma estimativa imediata, incluindo o custo por unidade e por mês. Todos os valores estão em euros e dependem da complexidade real do projeto, não de um pacote único.</p>
+    <p class="intro">Informe o tamanho do seu condomínio e as opções desejadas: você recebe uma estimativa imediata, incluindo o custo por unidade e por mês. Os valores aparecem na sua moeda e dependem da complexidade real do projeto, não de um pacote único.</p>
   </section>
 
   <div class="tool-grid">
@@ -46,7 +46,7 @@
     </form>
 
     <div class="tool-card kpis" aria-live="polite">
-      <p class="tier" id="k-tier"></p>
+      <div class="cur-line"><p class="tier" id="k-tier"></p><label class="cur">Moeda <select id="f-cur"><option value="EUR">EUR €</option><option value="USD">USD $</option><option value="GBP">GBP £</option><option value="BRL">BRL R$</option><option value="MXN">MXN $</option><option value="CAD">CAD $</option><option value="CHF">CHF</option></select></label></div>
       <div><span>Piloto CoproSens (6 semanas)</span><b id="k-pilot"></b></div>
       <div><span>Implantação no Microsoft 365 e capacitação</span><b id="k-setup"></b></div>
       <div><span>Painel</span><b id="k-dash"></b></div>
@@ -55,12 +55,13 @@
       <div class="highlight"><span>Por unidade e por mês, no 1<sup>º</sup> ano</span><b id="k-y1m"></b></div>
       <div class="highlight"><span>Por unidade e por mês, nos anos seguintes</span><b id="k-y2m"></b></div>
       <div id="row-maint"><span>Manutenção (por mês), ou seja, por unidade e por mês</span><b id="k-maint"></b></div>
+      <p class="fx" id="k-fx" hidden></p>
       <p class="quote" id="k-quote" hidden>Acima de 200 unidades, cada projeto é estudado sob medida: enviamos um orçamento detalhado.</p>
       <div class="actions"><a class="button" href="/pt/projeto.html?type=pilote#formulaire">Solicitar um orçamento personalizado</a><button type="button" class="ghost" id="k-print">Imprimir</button></div>
     </div>
   </div>
 
-  <section class="tool-card tiers">
+  <section class="tool-card tiers" id="grid">
     <h2>Nossa tabela, conforme o tamanho do condomínio</h2>
     <div class="table-wrap">
       <table class="calc">
@@ -76,7 +77,7 @@
     <p class="hint">Painel do conselho: € 750 (incluído na oferta fundadores). Dia adicional: € 550. Além do tempo incluído, a manutenção é cobrada a € 550 por dia. Licenças Microsoft 365 repassadas a preço de custo (base indicativa de € 7,80 por membro e por mês, impostos incluídos). O consumo de IA é faturado diretamente pela Microsoft ao condomínio; durante o piloto, ele é descontado da nossa fatura.</p>
   </section>
 
-  <p class="disclaimer"><b>Estimativa indicativa, sem valor contratual.</b> Esses valores dão uma ordem de grandeza. O preço final é confirmado por um orçamento por escrito, após uma conversa sobre seus documentos, necessidades e restrições. Todos os valores estão em euros. Sem incidência de IVA francês (microempresa francesa, art. 293 B do Código Geral de Impostos da França). Os preços das licenças e do consumo Microsoft podem mudar.</p>
+  <p class="disclaimer"><b>Estimativa indicativa, sem valor contratual.</b> Esses valores dão uma ordem de grandeza. O preço final é confirmado por um orçamento por escrito, após uma conversa sobre seus documentos, necessidades e restrições. Nossos preços são definidos em euros; as outras moedas são conversões indicativas. Sem incidência de IVA francês (microempresa francesa, art. 293 B do Código Geral de Impostos da França). Os preços das licenças e do consumo Microsoft podem mudar.</p>
 </main>
 <footer><div class="wrap"><div class="row"><span>© 2026 HDA PRODZ · HDA Solutions</span><span>Massy, France · SIRET 910 349 968 00016</span><a href="/pt/">Voltar à página inicial</a></div></div></footer>
 <script src="/tarifs/l10n.js"></script>

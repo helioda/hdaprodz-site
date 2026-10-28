@@ -15,3 +15,12 @@
 .kpis div:not(.actions) span{padding-right:14px}
 .kpis div:not(.actions) b{white-space:nowrap}
 @media (max-width:640px){.tiers table.calc{font-size:13px;min-width:560px}}
+
+.cur-line{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin:0 0 4px}
+.cur-line .tier{margin:0}
+.kpis .cur{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:700;margin:0}
+.kpis .cur select{width:auto;padding:6px 10px;border-radius:10px;background:#141c4f;color:#eef2ff;border:1px solid #ffffff33;font:inherit}
+.kpis .fx{margin:4px 0 0;font-size:13px;color:#c9d3ff}
+@media print{.kpis .cur{display:none}}
+.tool-card.kpis label.cur{display:flex!important;flex-direction:row;align-items:center;gap:8px;margin:0}
+.tool-card.kpis label.cur select{width:auto!important;margin:0}

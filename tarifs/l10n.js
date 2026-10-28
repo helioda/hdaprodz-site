@@ -1,6 +1,6 @@
 /* CoproSens price estimator — English, Brazilian Portuguese and Spanish texts.
    Loaded by /en/pricing/, /pt/precos/ and /es/precios/ before tarifs.js.
-   Prices stay in euros in every language; only the display format changes. */
+   Prices are set in euros; tarifs.js converts them to the chosen currency (indicative). */
 (function () {
   "use strict";
   var D = {
@@ -12,6 +12,8 @@
       founder: " · founding client offer",
       included: "Included",
       notChosen: "Not selected",
+      fx: "Indicative conversion of our euro prices at the ECB reference rate of {date} (€1 = {rate}). Your written quote confirms the amount and currency.",
+      fxDate: "26 Oct 2026",
       notChosenF: "Not selected"
     },
     pt: {
@@ -22,6 +24,8 @@
       founder: " · oferta clientes fundadores",
       included: "Incluído",
       notChosen: "Não incluído",
+      fx: "Conversão indicativa dos nossos preços em euros, à taxa de referência do BCE de {date} (1 € = {rate}). O orçamento por escrito confirma o valor e a moeda.",
+      fxDate: "26/10/2026",
       notChosenF: "Não incluída"
     },
     es: {
@@ -32,6 +36,8 @@
       founder: " · oferta clientes fundadores",
       included: "Incluido",
       notChosen: "No incluido",
+      fx: "Conversión orientativa de nuestros precios en euros, al tipo de referencia del BCE del {date} (1 € = {rate}). El presupuesto por escrito confirma el importe y la moneda.",
+      fxDate: "26/10/2026",
       notChosenF: "No incluido"
     }
   };
