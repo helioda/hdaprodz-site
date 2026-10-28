@@ -255,3 +255,6 @@ nav .links a.nav-price{background:linear-gradient(180deg,#f5a8cf,#e06aa8);color:
 nav .links a.nav-price{background:linear-gradient(180deg,rgba(224,106,168,.8),rgba(224,106,168,.4)),#141a44;border:1px solid rgba(224,106,168,.8);box-shadow:0 0 16px rgba(224,106,168,.4);color:#fff}
 .button:not(.light):not(.price):not(.alt){background:linear-gradient(180deg,rgba(232,116,63,.95),rgba(232,116,63,.55)),#141a44;border:1px solid rgba(232,116,63,.9);box-shadow:0 0 24px rgba(232,116,63,.45);color:#fff;text-shadow:0 1px 2px #0008}
 .button.light{background:linear-gradient(180deg,rgba(56,163,240,.85),rgba(56,163,240,.45)),#141a44;border:1px solid rgba(56,163,240,.9);box-shadow:0 0 22px rgba(56,163,240,.4);color:#fff;text-shadow:0 1px 2px #0008}
+/* Main CTA buttons: same reflection recipe as the tiles */
+.button:not(.light):not(.price):not(.alt){background:linear-gradient(180deg,rgba(232,116,63,.85) 0%,rgba(232,116,63,.45) 55%,rgba(18,22,64,.85) 100%),#141a44;border:1px solid rgba(232,116,63,.85);box-shadow:0 0 22px rgba(232,116,63,.4),0 10px 24px #0007}
+.button.light{background:linear-gradient(180deg,rgba(56,163,240,.8) 0%,rgba(56,163,240,.42) 55%,rgba(18,22,64,.85) 100%),#141a44}
