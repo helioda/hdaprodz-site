@@ -188,3 +188,7 @@ nav .links a.nav-price:hover{background:#fcd34d}
 .steps .card{padding:20px 22px}
 .steps .card h3{font-size:19px;margin:10px 0 6px}
 .steps .card p{font-size:15px;line-height:1.5;margin:0}
+/* Tiles sized to their text, centred */
+.actions-grid{display:flex!important;flex-wrap:wrap;justify-content:center;gap:10px}
+.act{flex:0 0 auto;padding:9px 16px 9px 10px}
+@media(max-width:520px){.act{flex:1 1 100%}}
