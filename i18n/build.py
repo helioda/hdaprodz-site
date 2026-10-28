@@ -72,6 +72,8 @@ def build(src_name, lang):
     t = t.replace('poster="/media/syndic-assist-poster.svg"', f'poster="/media/syndic-assist-poster-{lang}.svg"')
     t = t.replace('href="https://demo.hdaprodz.com/?lang=fr"', f'href="https://demo.hdaprodz.com/?lang={lang}"')
     t = t.replace('href="https://demo.hdaprodz.com/?lang=fr&amp;assistant=1"', f'href="https://demo.hdaprodz.com/?lang={lang}&amp;assistant=1"')
+    t = t.replace('/media/coprosens-presentation.mp4', f'/media/coprosens-presentation-{lang}.mp4')
+    t = t.replace('poster="/media/coprosens-poster.jpg"', f'poster="/media/coprosens-poster-{lang}.jpg"')
     t = t.replace('src="/media/demo-dashboard-fr.webp"', f'src="/media/demo-dashboard-{lang}.webp"')
 
     # 3. Safety net: no French words that should have been translated.
