@@ -126,15 +126,25 @@
     $("row-maint").classList.toggle("muted-row", !maintOn);
   }
 
+  // Currency: ?cur= in the link, else this visit's manual choice, else the visitor's country
+  // (Cloudflare, /api/geo), else the browser region, else the page language's default.
   var pageLang = (document.documentElement.lang || "fr").slice(0, 2), saved = null;
-  try { saved = localStorage.getItem("hda-cur"); } catch (e) {}
+  try { saved = sessionStorage.getItem("hda-cur"); localStorage.removeItem("hda-cur"); } catch (e) {}
   var region = ((navigator.language || "").split("-")[1] || "").toUpperCase();
   var q0 = new URLSearchParams(location.search).get("cur");
-  var start = (q0 && FX[q0.toUpperCase()] && q0.toUpperCase()) || (saved && FX[saved] && saved) || REGION[region] || PAGE_DEFAULT[pageLang] || "EUR";
-  setCur(start); $("f-cur").value = cur;
+  var fixed = (q0 && FX[q0.toUpperCase()] && q0.toUpperCase()) || (saved && FX[saved] && saved);
+  setCur(fixed || PAGE_DEFAULT[pageLang] || "EUR"); $("f-cur").value = cur;
+  if (!fixed) {
+    fetch("/api/geo", { cache: "no-store" }).then(function (r) { return r.json(); }).then(function (g) {
+      var c = REGION[(g && g.country) || ""] || REGION[region];
+      if (c && c !== cur) { setCur(c); $("f-cur").value = cur; compute(); }
+    }).catch(function () {
+      if (REGION[region] && REGION[region] !== cur) { setCur(REGION[region]); $("f-cur").value = cur; compute(); }
+    });
+  }
   $("f-cur").addEventListener("change", function () {
     setCur(this.value);
-    try { localStorage.setItem("hda-cur", cur); } catch (e) {}
+    try { sessionStorage.setItem("hda-cur", cur); } catch (e) {}
     compute();
   });
   ["f-lots", "f-cs", "f-days", "f-dash", "f-maint", "f-founder"].forEach(function (id) {
