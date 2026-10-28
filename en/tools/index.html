@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Property manager tools – CoproSens (demo)</title>
+<meta name="description" content="CoproSens demo: charge allocation and service-charge calls, agenda, notice of meeting and general meeting minutes.">
+<link rel="icon" href="/favicon.ico">
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/light.css">
+<link rel="stylesheet" href="/outils/tools.css">
+</head>
+<body>
+<header><div class="wrap"><nav aria-label="Main navigation"><a class="brand" href="/en/"><img class="brand-mark" src="/media/hda-solutions-mark.svg" alt="" width="44" height="44">HDA <span>Solutions</span></a><div class="links"><a href="https://demo.hdaprodz.com/?lang=en">Dashboard</a><!--lang--><span class="lang-switch" aria-label="Language"><a href="/outils/" hreflang="fr" lang="fr" title="Français">FR</a><a href="/en/tools/" hreflang="en" lang="en" title="English" aria-current="true">EN</a><a href="/pt/ferramentas/" hreflang="pt" lang="pt" title="Português">PT</a><a href="/es/herramientas/" hreflang="es" lang="es" title="Español">ES</a></span><!--/lang--><a class="button" href="/en/project.html">Let’s talk about your project ↗</a></div></nav></div></header>
+<main id="main" class="wrap tools">
+  <section class="tools-hero">
+    <p class="eyebrow">CoproSens · demo</p>
+    <h1>Property manager tools, with no re-keying.</h1>
+    <p class="intro">Charges split to the cent, service-charge calls per unit, and general meeting documents ready to review. Example based on the fictional building <b>Résidence Le Clos des Mésanges</b> (42 units, 10,000 ownership shares).</p>
+    <div class="tabs" role="tablist">
+      <button class="tab" role="tab" aria-selected="true" aria-controls="p-calc">Service-charge calls</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="p-ag">General meeting documents</button>
+    </div>
+  </section>
+
+  <section class="panel" id="p-calc" role="tabpanel">
+    <div class="tool-grid">
+      <form id="calc-form" class="tool-card">
+        <h2>Annual budget</h2>
+        <label>General charges (general shares)<input id="b-gen" type="number" min="0" step="100" inputmode="decimal"></label>
+        <label>Lift (upper-floor units only)<input id="b-asc" type="number" min="0" step="100" inputmode="decimal"></label>
+        <label>Cold water (individual meters)<input id="b-eau" type="number" min="0" step="100" inputmode="decimal"></label>
+        <label>Communal heating<input id="b-ch" type="number" min="0" step="100" inputmode="decimal"></label>
+        <div class="row2">
+          <label>Heating: usage-based share (%)<input id="p-ch" type="number" min="0" max="100" step="5"></label>
+          <label>Reserve fund (% of budget)<input id="p-ft" type="number" min="0" step="0.5"></label>
+        </div>
+        <p class="hint">Heating: variable share based on each unit’s heat cost allocators, fixed share based on ownership shares. Reserve fund: at least 5% of the annual budget (French rule).</p>
+        <label class="check-line"><input id="m-simple" type="checkbox"> Simple mode: split everything by general shares</label>
+        <p class="hint">Simple mode is the one used in the <a href="https://demo.hdaprodz.com/?lang=en" style="color:inherit">demo dashboard</a> (unit 01: €796.98 per quarter). Detailed mode charges the lift to upper-floor units only and uses actual water and heating consumption.</p>
+      </form>
+      <div class="tool-card kpis">
+        <div><span>Annual budget</span><b id="k-budget"></b></div>
+        <div><span>Reserve fund</span><b id="k-ft"></b></div>
+        <div><span>Total to collect for the year</span><b id="k-total"></b></div>
+        <p class="check" id="k-check"></p>
+        <div class="actions"><button type="button" class="button" id="calc-csv">Export (Excel, CSV)</button><button type="button" class="ghost" id="calc-print">Print</button></div>
+        <p class="hint">Deterministic calculation, no AI: every amount is rounded to the cent and the units always add up exactly to the budget.</p>
+      </div>
+    </div>
+    <div class="table-wrap tool-card">
+      <table class="calc">
+        <caption>Annual split and quarterly call per unit</caption>
+        <thead><tr><th scope="col">Unit</th><th scope="col">Shares</th><th scope="col">General charges</th><th scope="col">Lift</th><th scope="col">Water</th><th scope="col">Heating</th><th scope="col">Reserve fund</th><th scope="col">Annual total</th><th scope="col">Quarterly call</th></tr></thead>
+        <tbody id="calc-body"></tbody>
+        <tfoot id="calc-foot"></tfoot>
+      </table>
+    </div>
+  </section>
+
+  <section class="panel" id="p-ag" role="tabpanel" hidden>
+    <div class="tool-grid ag">
+      <div class="tool-card">
+        <h2>Prepare the meeting</h2>
+        <div class="row2">
+          <label>Meeting date<input id="ag-date" type="date"></label>
+          <label>Time<input id="ag-heure" type="time"></label>
+        </div>
+        <label>Venue<input id="ag-lieu" type="text"></label>
+        <label>Date the notice is sent<input id="ag-envoi" type="date"></label>
+        <label class="check-line"><input id="ag-visio" type="checkbox"> Attendance by video conference possible</label>
+        <h3>Agenda</h3>
+        <ol id="res-list" class="res-list"></ol>
+        <button type="button" class="ghost" id="res-add">Add a resolution</button>
+        <h3>Voting results (for the minutes)</h3>
+        <label>Units absent and not represented<input id="ag-absents" type="text"></label>
+        <div id="vote-list"></div>
+      </div>
+      <div class="tool-card doc">
+        <div class="doc-tabs" role="group" aria-label="Document">
+          <button type="button" class="doc-tab" data-doc="ordre" aria-pressed="false">Agenda</button>
+          <button type="button" class="doc-tab" data-doc="convocation" aria-pressed="true">Notice of meeting</button>
+          <button type="button" class="doc-tab" data-doc="vote" aria-pressed="false">Postal vote</button>
+          <button type="button" class="doc-tab" data-doc="pv" aria-pressed="false">Minutes</button>
+        </div>
+        <article id="doc-view" class="doc-view" aria-live="polite"></article>
+        <div class="actions"><button type="button" class="button" id="doc-word">Download (Word)</button><button type="button" class="ghost" id="doc-print">Print / PDF</button><button type="button" class="ghost" id="doc-send">Send to owners</button></div>
+        <p id="send-msg" class="hint send" hidden>Nothing is sent in this demo. In your organisation, documents go out from your Microsoft 365 mailbox or your electronic registered mail provider, only after the property manager has approved them.</p>
+      </div>
+    </div>
+  </section>
+  <p class="disclaimer">Demo with fictional data. The document templates follow the standard wording of the French law of 10 July 1965 and decree of 17 March 1967; they must be reviewed and approved by the property manager and are not legal advice. During a pilot, they are adapted to your country and legal framework.</p>
+</main>
+<footer><div class="wrap"><div class="row"><span>© 2026 HDA PRODZ · HDA Solutions</span><span>Massy, France · SIRET 910 349 968 00016</span><a href="/en/">Back to home</a></div></div></footer>
+<script src="/outils/l10n.js"></script>
+<script src="/outils/data.js"></script>
+<script src="/outils/tools.js"></script>
+</body>
+</html>

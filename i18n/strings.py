@@ -109,7 +109,7 @@ TEXT = {
  "Tableau de bord ↗": T("Dashboard ↗", "Painel ↗", "Panel ↗"),
  "Le suivi du conseil syndical": T("The owners’ council overview", "O acompanhamento do conselho", "El seguimiento del consejo"),
  "Outils du syndic ↗": T("Manager tools ↗", "Ferramentas da administradora ↗", "Herramientas del administrador ↗"),
- "Appels de fonds et documents d’AG": T("Service charges and meeting documents (in French)", "Cotas e documentos de assembleia (em francês)", "Cuotas y documentos de junta (en francés)"),
+ "Appels de fonds et documents d’AG": T("Service charges and meeting documents", "Cotas e documentos de assembleia", "Cuotas y documentos de junta"),
  "Nous contacter": T("Contact us", "Fale conosco", "Contáctenos"),
  "Réponse personnalisée, sans engagement": T("Personal reply, no commitment", "Resposta personalizada, sem compromisso", "Respuesta personalizada, sin compromiso"),
  "Copropriété fictive, données de démonstration · réponses générées par IA": T(
@@ -337,4 +337,213 @@ POSTER = {
         ("Présentation · 2 min 49 s · English", "Apresentação · 2 min 49 s · em inglês")],
  "es": [("L’IA au service de la gestion de copropriété.", "La IA al servicio de la gestión de comunidades."),
         ("Présentation · 2 min 49 s · English", "Presentación · 2 min 49 s · en inglés")],
+}
+
+# ---------------------------------------------------------------------------
+# Standalone pages: syndic tools demo (/outils/) and price estimator (/tarifs/).
+# Their JavaScript texts live in outils/l10n.js and tarifs/l10n.js.
+# Prices stay in euros in every language; only the number format follows the locale.
+PAGES["outils/index.html"] = {
+    "out": {"en": "tools/index.html", "pt": "ferramentas/index.html", "es": "herramientas/index.html"},
+    "must_not_remain": ["Outils du syndic", "Appels de fonds", "Ordre du jour", "Procès-verbal", "Budget prévisionnel",
+                        "Télécharger", "Imprimer", "Retour à l’accueil", "tantièmes", "copropriétaires", "Tableau de bord", "Parlons de"],
+}
+PAGES["tarifs/index.html"] = {
+    "out": {"en": "pricing/index.html", "pt": "precos/index.html", "es": "precios/index.html"},
+    "must_not_remain": ["Votre copropriété", "Demander", "Imprimer", " lots", "Estimation indicative", "par mois",
+                        "Retour à l’accueil", "conseil syndical", "Tableau de bord", "Outils du syndic", "TVA"],
+}
+
+TEXT["outils/index.html"] = {
+ "Outils du syndic – CoproSens (démonstration)": T(
+  "Property manager tools – CoproSens (demo)",
+  "Ferramentas da administradora – CoproSens (demonstração)",
+  "Herramientas del administrador de fincas – CoproSens (demostración)"),
+ "Démonstration CoproSens : répartition des charges et appels de fonds, ordre du jour, convocation et procès-verbal d’assemblée générale.": T(
+  "CoproSens demo: charge allocation and service-charge calls, agenda, notice of meeting and general meeting minutes.",
+  "Demonstração do CoproSens: rateio de despesas e cotas, ordem do dia, convocação e ata de assembleia geral.",
+  "Demostración de CoproSens: reparto de gastos y cuotas, orden del día, convocatoria y acta de la junta general."),
+ "Navigation principale": T("Main navigation", "Navegação principal", "Navegación principal"),
+ "Tableau de bord": T("Dashboard", "Painel", "Panel"),
+ "Parlons de votre projet ↗": T("Let’s talk about your project ↗", "Vamos falar do seu projeto ↗", "Hablemos de su proyecto ↗"),
+ "CoproSens · démonstration": T("CoproSens · demo", "CoproSens · demonstração", "CoproSens · demostración"),
+ "Les outils du syndic, sans ressaisie.": T(
+  "Property manager tools, with no re-keying.",
+  "As ferramentas da administradora, sem redigitação.",
+  "Las herramientas del administrador, sin volver a teclear nada."),
+ "Répartition des charges au centime près, appels de fonds par lot, et documents d’assemblée générale prêts à relire. Exemple sur la copropriété fictive": T(
+  "Charges split to the cent, service-charge calls per unit, and general meeting documents ready to review. Example based on the fictional building",
+  "Rateio das despesas ao centavo, cotas por unidade e documentos de assembleia geral prontos para revisar. Exemplo com o condomínio fictício",
+  "Reparto de gastos al céntimo, cuotas por vivienda y documentos de junta general listos para revisar. Ejemplo con la comunidad ficticia"),
+ "(42 lots, 10 000 tantièmes).": T("(42 units, 10,000 ownership shares).", "(42 unidades, 10.000 frações ideais).", "(42 viviendas, coeficientes sobre 10.000)."),
+ "Appels de fonds": T("Service-charge calls", "Cotas condominiais", "Cuotas por vivienda"),
+ "Documents d’assemblée générale": T("General meeting documents", "Documentos da assembleia geral", "Documentos de la junta general"),
+ "Budget prévisionnel": T("Annual budget", "Previsão orçamentária", "Presupuesto anual"),
+ "Charges générales (tantièmes généraux)": T("General charges (general shares)", "Despesas gerais (frações ideais gerais)", "Gastos generales (coeficientes generales)"),
+ "Ascenseur (lots en étage uniquement)": T("Lift (upper-floor units only)", "Elevador (somente unidades nos andares)", "Ascensor (solo viviendas en plantas superiores)"),
+ "Eau froide (compteurs individuels)": T("Cold water (individual meters)", "Água fria (medidores individuais)", "Agua fría (contadores individuales)"),
+ "Chauffage collectif": T("Communal heating", "Aquecimento coletivo", "Calefacción central"),
+ "Part consommation du chauffage (%)": T("Heating: usage-based share (%)", "Aquecimento: parcela por consumo (%)", "Calefacción: parte según consumo (%)"),
+ "Fonds de travaux (% du budget)": T("Reserve fund (% of budget)", "Fundo de reserva (% do orçamento)", "Fondo de reserva (% del presupuesto)"),
+ "Chauffage : part variable selon les répartiteurs de chaque lot, part fixe selon les tantièmes. Fonds de travaux : au moins 5 % du budget prévisionnel.": T(
+  "Heating: variable share based on each unit’s heat cost allocators, fixed share based on ownership shares. Reserve fund: at least 5% of the annual budget (French rule).",
+  "Aquecimento: parcela variável conforme os medidores de calor de cada unidade, parcela fixa conforme as frações ideais. Fundo de reserva: no mínimo 5% da previsão orçamentária (regra francesa).",
+  "Calefacción: parte variable según los repartidores de costes de cada vivienda, parte fija según los coeficientes. Fondo de reserva: al menos el 5 % del presupuesto (norma francesa)."),
+ "Mode simple : tout répartir aux tantièmes généraux": T(
+  "Simple mode: split everything by general shares",
+  "Modo simples: ratear tudo pelas frações ideais gerais",
+  "Modo simple: repartir todo según los coeficientes generales"),
+ "Le mode simple est celui du": T("Simple mode is the one used in the", "O modo simples é o do", "El modo simple es el del"),
+ "tableau de bord de démonstration": T("demo dashboard", "painel de demonstração", "panel de demostración"),
+ "(lot 01 : 796,98 € par trimestre). Le mode détaillé applique l’ascenseur aux seuls lots en étage et les consommations réelles d’eau et de chauffage.": T(
+  "(unit 01: €796.98 per quarter). Detailed mode charges the lift to upper-floor units only and uses actual water and heating consumption.",
+  "(unidade 01: € 796,98 por trimestre). O modo detalhado cobra o elevador apenas das unidades nos andares e usa os consumos reais de água e aquecimento.",
+  "(vivienda 01: 796,98 € por trimestre). El modo detallado imputa el ascensor solo a las viviendas de plantas superiores y aplica los consumos reales de agua y calefacción."),
+ "Fonds de travaux": T("Reserve fund", "Fundo de reserva", "Fondo de reserva"),
+ "Total à appeler sur l’année": T("Total to collect for the year", "Total a arrecadar no ano", "Total a recaudar en el año"),
+ "Exporter (Excel, CSV)": T("Export (Excel, CSV)", "Exportar (Excel, CSV)", "Exportar (Excel, CSV)"),
+ "Imprimer": T("Print", "Imprimir", "Imprimir"),
+ "Calcul déterministe, sans IA : chaque montant est arrondi au centime et le total des lots est toujours égal au budget.": T(
+  "Deterministic calculation, no AI: every amount is rounded to the cent and the units always add up exactly to the budget.",
+  "Cálculo determinístico, sem IA: cada valor é arredondado ao centavo e a soma das unidades é sempre igual ao orçamento.",
+  "Cálculo determinista, sin IA: cada importe se redondea al céntimo y la suma de las viviendas coincide siempre con el presupuesto."),
+ "Répartition annuelle et appel trimestriel par lot": T("Annual split and quarterly call per unit", "Rateio anual e cota trimestral por unidade", "Reparto anual y cuota trimestral por vivienda"),
+ "Lot": T("Unit", "Unidade", "Vivienda"),
+ "Tantièmes": T("Shares", "Fração", "Coeficiente"),
+ "Charges générales": T("General charges", "Despesas gerais", "Gastos generales"),
+ "Ascenseur": T("Lift", "Elevador", "Ascensor"),
+ "Eau": T("Water", "Água", "Agua"),
+ "Chauffage": T("Heating", "Aquecimento", "Calefacción"),
+ "Total annuel": T("Annual total", "Total anual", "Total anual"),
+ "Appel trimestriel": T("Quarterly call", "Cota trimestral", "Cuota trimestral"),
+ "Préparer l’assemblée": T("Prepare the meeting", "Preparar a assembleia", "Preparar la junta"),
+ "Date de l’assemblée": T("Meeting date", "Data da assembleia", "Fecha de la junta"),
+ "Heure": T("Time", "Horário", "Hora"),
+ "Lieu": T("Venue", "Local", "Lugar"),
+ "Date d’envoi de la convocation": T("Date the notice is sent", "Data de envio da convocação", "Fecha de envío de la convocatoria"),
+ "Participation possible en visioconférence": T("Attendance by video conference possible", "Participação por videoconferência possível", "Posibilidad de asistir por videoconferencia"),
+ "Ordre du jour": T("Agenda", "Ordem do dia", "Orden del día"),
+ "Ajouter une résolution": T("Add a resolution", "Adicionar uma resolução", "Añadir una propuesta"),
+ "Résultats des votes (pour le procès-verbal)": T("Voting results (for the minutes)", "Resultados das votações (para a ata)", "Resultados de las votaciones (para el acta)"),
+ "Lots absents et non représentés": T("Units absent and not represented", "Unidades ausentes e não representadas", "Viviendas ausentes y no representadas"),
+ "Document": T("Document", "Documento", "Documento"),
+ "Convocation": T("Notice of meeting", "Convocação", "Convocatoria"),
+ "Vote par correspondance": T("Postal vote", "Voto por correspondência", "Voto por correo"),
+ "Procès-verbal": T("Minutes", "Ata", "Acta"),
+ "Télécharger (Word)": T("Download (Word)", "Baixar (Word)", "Descargar (Word)"),
+ "Imprimer / PDF": T("Print / PDF", "Imprimir / PDF", "Imprimir / PDF"),
+ "Envoyer aux copropriétaires": T("Send to owners", "Enviar aos condôminos", "Enviar a los propietarios"),
+ "En démonstration, rien n’est envoyé. Chez vous, l’envoi part de votre messagerie Microsoft 365 ou de votre prestataire de lettre recommandée électronique, uniquement après validation du document par le syndic.": T(
+  "Nothing is sent in this demo. In your organisation, documents go out from your Microsoft 365 mailbox or your electronic registered mail provider, only after the property manager has approved them.",
+  "Nada é enviado nesta demonstração. Na sua empresa, o envio sai da sua caixa de e-mail Microsoft 365 ou do seu provedor de carta registrada eletrônica, somente após a validação do documento pela administradora.",
+  "En esta demostración no se envía nada. En su despacho, el envío sale de su buzón de Microsoft 365 o de su proveedor de correo certificado electrónico, solo después de que el administrador haya validado el documento."),
+ "Démonstration sur données fictives. Les modèles de documents reprennent les mentions usuelles de la loi du 10 juillet 1965 et du décret du 17 mars 1967 ; ils doivent être relus et validés par le syndic et ne constituent pas un conseil juridique.": T(
+  "Demo with fictional data. The document templates follow the standard wording of the French law of 10 July 1965 and decree of 17 March 1967; they must be reviewed and approved by the property manager and are not legal advice. During a pilot, they are adapted to your country and legal framework.",
+  "Demonstração com dados fictícios. Os modelos de documentos seguem as menções usuais da lei francesa de 10 de julho de 1965 e do decreto de 17 de março de 1967; devem ser revisados e validados pela administradora e não constituem aconselhamento jurídico. Durante um piloto, são adaptados ao seu país e ao seu marco legal.",
+  "Demostración con datos ficticios. Los modelos de documentos recogen las menciones habituales de la ley francesa de 10 de julio de 1965 y del decreto de 17 de marzo de 1967; deben ser revisados y validados por el administrador y no constituyen asesoramiento jurídico. Durante un piloto, se adaptan a su país y a su marco legal."),
+ "Retour à l’accueil": T("Back to home", "Voltar à página inicial", "Volver al inicio"),
+}
+
+TEXT["tarifs/index.html"] = {
+ "Estimer le coût de CoproSens – HDA Solutions": T(
+  "Estimate the cost of CoproSens – HDA Solutions",
+  "Estime o custo do CoproSens – HDA Solutions",
+  "Calcule el coste de CoproSens – HDA Solutions"),
+ "Estimez en quelques secondes le coût de CoproSens pour votre copropriété : pilote, mise en place, licences Microsoft et coût par lot et par mois.": T(
+  "Estimate in seconds what CoproSens costs for your building: pilot, setup, Microsoft licences and cost per unit per month, in euros.",
+  "Estime em segundos o custo do CoproSens para o seu condomínio: piloto, implantação, licenças Microsoft e custo por unidade e por mês, em euros.",
+  "Calcule en segundos el coste de CoproSens para su comunidad: piloto, implantación, licencias de Microsoft y coste por vivienda y mes, en euros."),
+ "Navigation principale": T("Main navigation", "Navegação principal", "Navegación principal"),
+ "Outils du syndic": T("Manager tools", "Ferramentas da administradora", "Herramientas del administrador"),
+ "Tableau de bord": T("Dashboard", "Painel", "Panel"),
+ "Demander un devis ↗": T("Request a quote ↗", "Solicitar orçamento ↗", "Solicitar presupuesto ↗"),
+ "CoproSens · estimation en toute transparence": T("CoproSens · transparent estimate", "CoproSens · estimativa transparente", "CoproSens · estimación transparente"),
+ "Combien coûte CoproSens pour votre copropriété&nbsp;?": T(
+  "How much does CoproSens cost for your building?",
+  "Quanto custa o CoproSens para o seu condomínio?",
+  "¿Cuánto cuesta CoproSens para su comunidad?"),
+ "Indiquez la taille de votre copropriété et les options souhaitées : vous obtenez une estimation immédiate, y compris le coût par lot et par mois. Nos prix dépendent de la complexité réelle du projet, pas d’un forfait unique.": T(
+  "Enter the size of your building and the options you want: you get an instant estimate, including the cost per unit per month. All prices are in euros and reflect the real complexity of the project, not a one-size-fits-all package.",
+  "Informe o tamanho do seu condomínio e as opções desejadas: você recebe uma estimativa imediata, incluindo o custo por unidade e por mês. Todos os valores estão em euros e dependem da complexidade real do projeto, não de um pacote único.",
+  "Indique el tamaño de su comunidad y las opciones que desea: obtendrá una estimación inmediata, incluido el coste por vivienda y mes. Todos los importes están en euros y dependen de la complejidad real del proyecto, no de una tarifa única."),
+ "Votre copropriété": T("Your building", "Seu condomínio", "Su comunidad"),
+ "Nombre de lots principaux (logements, commerces, bureaux)": T(
+  "Number of main units (homes, shops, offices)",
+  "Número de unidades principais (apartamentos, lojas, salas comerciais)",
+  "Número de viviendas y locales (viviendas, comercios, oficinas)"),
+ "Sans compter les caves ni les parkings. Ce chiffre figure sur la fiche synthétique de votre copropriété.": T(
+  "Not counting storage rooms or parking spaces. You will find this figure in your building’s records.",
+  "Sem contar depósitos nem vagas de garagem. Esse número consta nos documentos do seu condomínio.",
+  "Sin contar trasteros ni plazas de garaje. Esta cifra figura en la documentación de su comunidad."),
+ "Membres du conseil syndical (comptes Microsoft 365)": T(
+  "Owners’ council members (Microsoft 365 accounts)",
+  "Membros do conselho (contas Microsoft 365)",
+  "Miembros del consejo de propietarios (cuentas de Microsoft 365)"),
+ "Jours supplémentaires (numérisation d’archives papier, historique très volumineux, séances de prise en main en plus)": T(
+  "Extra days (digitising paper archives, very large history, additional onboarding sessions)",
+  "Dias adicionais (digitalização de arquivos em papel, histórico muito volumoso, sessões extras de capacitação)",
+  "Días adicionales (digitalización de archivos en papel, histórico muy voluminoso, sesiones de formación adicionales)"),
+ "Options": T("Options", "Opções", "Opciones"),
+ "Tableau de bord du conseil syndical (appels de fonds, travaux, décisions d’AG)": T(
+  "Owners’ council dashboard (service-charge calls, works, general meeting decisions)",
+  "Painel do conselho (cotas, obras, decisões de assembleia)",
+  "Panel del consejo (cuotas, obras, acuerdos de la junta)"),
+ "Contrat de maintenance après le pilote": T("Maintenance contract after the pilot", "Contrato de manutenção após o piloto", "Contrato de mantenimiento tras el piloto"),
+ "Offre clients fondateurs (copropriétés jusqu’à 32 lots, jusqu’au 31/12/2026)": T(
+  "Founding client offer (buildings up to 32 units, until 31 December 2026)",
+  "Oferta clientes fundadores (condomínios com até 32 unidades, até 31/12/2026)",
+  "Oferta clientes fundadores (comunidades de hasta 32 viviendas, hasta el 31/12/2026)"),
+ "Pilote à tarif réduit et tableau de bord inclus, en échange d’un témoignage et d’une étude de cas.": T(
+  "Discounted pilot with the dashboard included, in exchange for a testimonial and a case study.",
+  "Piloto com preço reduzido e painel incluído, em troca de um depoimento e de um estudo de caso.",
+  "Piloto a precio reducido con el panel incluido, a cambio de un testimonio y un caso de éxito."),
+ "Pilote CoproSens (6 semaines)": T("CoproSens pilot (6 weeks)", "Piloto CoproSens (6 semanas)", "Piloto CoproSens (6 semanas)"),
+ "Mise en place Microsoft 365 et prise en main": T("Microsoft 365 setup and onboarding", "Implantação no Microsoft 365 e capacitação", "Implantación en Microsoft 365 y formación"),
+ "Licences Microsoft 365 (par an)": T("Microsoft 365 licences (per year)", "Licenças Microsoft 365 (por ano)", "Licencias de Microsoft 365 (por año)"),
+ "Total première année": T("First-year total", "Total do primeiro ano", "Total del primer año"),
+ "Par lot et par mois, la 1": T("Per unit per month, 1", "Por unidade e por mês, no 1", "Por vivienda y mes, el 1."),
+ "re": T("st", "º", "er"),
+ "année": T("year", "ano", "año"),
+ "Par lot et par mois, les années suivantes": T("Per unit per month, following years", "Por unidade e por mês, nos anos seguintes", "Por vivienda y mes, años siguientes"),
+ "Maintenance (par mois), soit par lot et par mois": T(
+  "Maintenance (per month), i.e. per unit per month",
+  "Manutenção (por mês), ou seja, por unidade e por mês",
+  "Mantenimiento (al mes), es decir, por vivienda y mes"),
+ "Au-delà de 200 lots, chaque projet est étudié sur mesure : nous vous adressons un devis détaillé.": T(
+  "Above 200 units, each project is assessed individually: we send you a detailed quote.",
+  "Acima de 200 unidades, cada projeto é estudado sob medida: enviamos um orçamento detalhado.",
+  "Por encima de 200 viviendas, cada proyecto se estudia a medida: le enviamos un presupuesto detallado."),
+ "Imprimer": T("Print", "Imprimir", "Imprimir"),
+ "Demander un devis personnalisé": T("Request a tailored quote", "Solicitar um orçamento personalizado", "Solicitar un presupuesto personalizado"),
+ "Notre grille, selon la taille de la copropriété": T("Our price grid, by building size", "Nossa tabela, conforme o tamanho do condomínio", "Nuestras tarifas, según el tamaño de la comunidad"),
+ "Taille": T("Size", "Tamanho", "Tamaño"),
+ "Pilote": T("Pilot", "Piloto", "Piloto"),
+ "Mise en place et prise en main": T("Setup and onboarding", "Implantação e capacitação", "Implantación y formación"),
+ "Maintenance (option)": T("Maintenance (optional)", "Manutenção (opcional)", "Mantenimiento (opcional)"),
+ "Jusqu’à 32 lots": T("Up to 32 units", "Até 32 unidades", "Hasta 32 viviendas"),
+ "2 500 € (1 750 € offre fondateurs)": T("€2,500 (€1,750 founding offer)", "€ 2.500 (€ 1.750 na oferta fundadores)", "2500 € (1750 € oferta fundadores)"),
+ "3 jours, soit 1 650 €": T("3 days, i.e. €1,650", "3 dias, ou seja, € 1.650", "3 días, es decir, 1650 €"),
+ "175 € / mois (2 h incluses)": T("€175 / month (2 h included)", "€ 175 / mês (2 h incluídas)", "175 € / mes (2 h incluidas)"),
+ "33 à 100 lots": T("33 to 100 units", "33 a 100 unidades", "De 33 a 100 viviendas"),
+ "2 500 €": T("€2,500", "€ 2.500", "2500 €"),
+ "5 jours, soit 2 750 €": T("5 days, i.e. €2,750", "5 dias, ou seja, € 2.750", "5 días, es decir, 2750 €"),
+ "350 € / mois (½ journée incluse)": T("€350 / month (½ day included)", "€ 350 / mês (½ dia incluído)", "350 € / mes (½ jornada incluida)"),
+ "101 à 200 lots": T("101 to 200 units", "101 a 200 unidades", "De 101 a 200 viviendas"),
+ "8 jours, soit 4 400 €": T("8 days, i.e. €4,400", "8 dias, ou seja, € 4.400", "8 días, es decir, 4400 €"),
+ "550 € / mois (1 journée incluse)": T("€550 / month (1 day included)", "€ 550 / mês (1 dia incluído)", "550 € / mes (1 jornada incluida)"),
+ "Plus de 200 lots": T("More than 200 units", "Mais de 200 unidades", "Más de 200 viviendas"),
+ "Devis personnalisé, établi après étude de vos documents": T(
+  "Tailored quote, prepared after reviewing your documents",
+  "Orçamento personalizado, elaborado após análise dos seus documentos",
+  "Presupuesto personalizado, elaborado tras estudiar sus documentos"),
+ "Tableau de bord du conseil syndical : 750 € (inclus dans l’offre fondateurs). Jour supplémentaire : 550 €. Au-delà du temps inclus, la maintenance est facturée 550 € par jour. Licences Microsoft 365 refacturées à prix coûtant (base indicative 7,80 € TTC par membre et par mois). La consommation d’IA est facturée directement par Microsoft à la copropriété ; pendant le pilote, elle est déduite de notre facture.": T(
+  "Owners’ council dashboard: €750 (included in the founding offer). Extra day: €550. Beyond the included time, maintenance is billed at €550 per day. Microsoft 365 licences re-invoiced at cost (indicative basis €7.80 per member per month, taxes included). AI consumption is billed directly by Microsoft to the building; during the pilot, it is deducted from our invoice.",
+  "Painel do conselho: € 750 (incluído na oferta fundadores). Dia adicional: € 550. Além do tempo incluído, a manutenção é cobrada a € 550 por dia. Licenças Microsoft 365 repassadas a preço de custo (base indicativa de € 7,80 por membro e por mês, impostos incluídos). O consumo de IA é faturado diretamente pela Microsoft ao condomínio; durante o piloto, ele é descontado da nossa fatura.",
+  "Panel del consejo: 750 € (incluido en la oferta fundadores). Día adicional: 550 €. Más allá del tiempo incluido, el mantenimiento se factura a 550 € por día. Licencias de Microsoft 365 refacturadas a precio de coste (base orientativa de 7,80 € por miembro y mes, impuestos incluidos). El consumo de IA lo factura Microsoft directamente a la comunidad; durante el piloto, se descuenta de nuestra factura."),
+ "Estimation indicative, non contractuelle.": T("Indicative, non-binding estimate.", "Estimativa indicativa, sem valor contratual.", "Estimación orientativa, sin valor contractual."),
+ "Ces montants servent à vous donner un ordre de grandeur. Le prix définitif est confirmé par un devis écrit, après un échange sur vos documents, vos besoins et vos contraintes. TVA non applicable, art. 293 B du CGI. Les prix des licences et de la consommation Microsoft peuvent évoluer.": T(
+  "These amounts give you an order of magnitude. The final price is confirmed in a written quote, after we discuss your documents, needs and constraints. All prices are in euros. VAT not applicable (French micro-enterprise, art. 293 B of the French General Tax Code). Microsoft licence and consumption prices may change.",
+  "Esses valores dão uma ordem de grandeza. O preço final é confirmado por um orçamento por escrito, após uma conversa sobre seus documentos, necessidades e restrições. Todos os valores estão em euros. Sem incidência de IVA francês (microempresa francesa, art. 293 B do Código Geral de Impostos da França). Os preços das licenças e do consumo Microsoft podem mudar.",
+  "Estos importes le dan un orden de magnitud. El precio definitivo se confirma mediante un presupuesto por escrito, tras analizar sus documentos, necesidades y limitaciones. Todos los importes están en euros. IVA no aplicable (microempresa francesa, art. 293 B del Código General de Impuestos de Francia). Los precios de las licencias y del consumo de Microsoft pueden variar."),
+ "Retour à l’accueil": T("Back to home", "Voltar à página inicial", "Volver al inicio"),
 }

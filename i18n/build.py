@@ -16,6 +16,8 @@ from strings import PAGES, TEXT, POSTER  # noqa: E402
 
 HOME = {"fr": "/", "en": "/en/", "pt": "/pt/", "es": "/es/"}
 FORM = {"fr": "/projet.html", "en": "/en/project.html", "pt": "/pt/projeto.html", "es": "/es/proyecto.html"}
+TOOLS = {"fr": "/outils/", "en": "/en/tools/", "pt": "/pt/ferramentas/", "es": "/es/herramientas/"}
+PRICING = {"fr": "/tarifs/", "en": "/en/pricing/", "pt": "/pt/precos/", "es": "/es/precios/"}
 HTML_LANG = {"en": "en", "pt": "pt-BR", "es": "es"}
 SWITCH_LABEL = {"en": "Language", "pt": "Idioma", "es": "Idioma"}
 NAMES = {"fr": "Français", "en": "English", "pt": "Português", "es": "Español"}
@@ -34,7 +36,7 @@ def build(src_name, lang):
     page = PAGES[src_name]
     out_name = page["out"][lang]
     t = open(os.path.join(ROOT, src_name), encoding="utf-8").read()
-    urls = HOME if src_name == "index.html" else FORM
+    urls = {"index.html": HOME, "projet.html": FORM, "outils/index.html": TOOLS, "tarifs/index.html": PRICING}[src_name]
 
     # The brand name is never translated.
     t = t.replace("HDA <span>Solutions</span>", "HDA <span>@@BRAND@@</span>")
@@ -59,6 +61,15 @@ def build(src_name, lang):
 
     # 2. Structure: language, links, asset paths, switcher, form language.
     t = t.replace('<html lang="fr">', f'<html lang="{HTML_LANG[lang]}">', 1)
+    # Absolute links (tools and pricing pages, and the tiles/pill on the home page).
+    t = t.replace('href="/outils/"', f'href="{TOOLS[lang]}"')
+    t = t.replace('href="/tarifs/"', f'href="{PRICING[lang]}"')
+    t = t.replace('href="/projet.html', f'href="{FORM[lang]}')
+    t = t.replace('href="/"', f'href="{HOME[lang]}"')
+    t = t.replace('href="https://demo.hdaprodz.com/"', f'href="https://demo.hdaprodz.com/?lang={lang}"')
+    # Translated tools/pricing pages load their string table before the scripts.
+    t = t.replace('<script src="/outils/data.js"></script>', '<script src="/outils/l10n.js"></script>\n<script src="/outils/data.js"></script>')
+    t = t.replace('<script src="/tarifs/tarifs.js"></script>', '<script src="/tarifs/l10n.js"></script>\n<script src="/tarifs/tarifs.js"></script>')
     t = re.sub(r"<!--lang-->.*?<!--/lang-->", lambda m: switcher(urls, lang), t, count=1, flags=re.S)
     t = re.sub(r'(href|src|poster)="(assets|media)/', r'\1="/\2/', t)
     t = t.replace('href="projet.html', f'href="{FORM[lang]}')

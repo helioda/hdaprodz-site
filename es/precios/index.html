@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calcule el coste de CoproSens – HDA Solutions</title>
+<meta name="description" content="Calcule en segundos el coste de CoproSens para su comunidad: piloto, implantación, licencias de Microsoft y coste por vivienda y mes, en euros.">
+<link rel="alternate" hreflang="fr" href="https://www.hdaprodz.com/tarifs/">
+<link rel="alternate" hreflang="en" href="https://www.hdaprodz.com/en/pricing/">
+<link rel="alternate" hreflang="pt" href="https://www.hdaprodz.com/pt/precos/">
+<link rel="alternate" hreflang="es" href="https://www.hdaprodz.com/es/precios/">
+<link rel="alternate" hreflang="x-default" href="https://www.hdaprodz.com/tarifs/">
+<link rel="icon" href="/favicon.ico">
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/light.css">
+<link rel="stylesheet" href="/outils/tools.css">
+<link rel="stylesheet" href="/tarifs/tarifs.css">
+</head>
+<body>
+<header><div class="wrap"><nav aria-label="Navegación principal"><a class="brand" href="/es/"><img class="brand-mark" src="/media/hda-solutions-mark.svg" alt="" width="44" height="44">HDA <span>Solutions</span></a><div class="links"><a href="/es/herramientas/">Herramientas del administrador</a><a href="https://demo.hdaprodz.com/?lang=es">Panel</a><!--lang--><span class="lang-switch" aria-label="Idioma"><a href="/tarifs/" hreflang="fr" lang="fr" title="Français">FR</a><a href="/en/pricing/" hreflang="en" lang="en" title="English">EN</a><a href="/pt/precos/" hreflang="pt" lang="pt" title="Português">PT</a><a href="/es/precios/" hreflang="es" lang="es" title="Español" aria-current="true">ES</a></span><!--/lang--><a class="button" href="/es/proyecto.html?type=pilote#formulaire">Solicitar presupuesto ↗</a></div></nav></div></header>
+<main id="main" class="wrap tools">
+  <section class="tools-hero">
+    <p class="eyebrow">CoproSens · estimación transparente</p>
+    <h1>¿Cuánto cuesta CoproSens para su comunidad?</h1>
+    <p class="intro">Indique el tamaño de su comunidad y las opciones que desea: obtendrá una estimación inmediata, incluido el coste por vivienda y mes. Todos los importes están en euros y dependen de la complejidad real del proyecto, no de una tarifa única.</p>
+  </section>
+
+  <div class="tool-grid">
+    <form id="est-form" class="tool-card" novalidate>
+      <h2>Su comunidad</h2>
+      <label>Número de viviendas y locales (viviendas, comercios, oficinas)
+        <input id="f-lots" type="number" min="1" max="2000" step="1" value="32" inputmode="numeric">
+      </label>
+      <p class="hint">Sin contar trasteros ni plazas de garaje. Esta cifra figura en la documentación de su comunidad.</p>
+      <label>Miembros del consejo de propietarios (cuentas de Microsoft 365)
+        <input id="f-cs" type="number" min="1" max="30" step="1" value="6" inputmode="numeric">
+      </label>
+      <label>Días adicionales (digitalización de archivos en papel, histórico muy voluminoso, sesiones de formación adicionales)
+        <input id="f-days" type="number" min="0" max="60" step="1" value="0" inputmode="numeric">
+      </label>
+      <h3>Opciones</h3>
+      <label class="check-line"><input id="f-dash" type="checkbox"> Panel del consejo (cuotas, obras, acuerdos de la junta)</label>
+      <label class="check-line"><input id="f-maint" type="checkbox"> Contrato de mantenimiento tras el piloto</label>
+      <label class="check-line" id="founder-line"><input id="f-founder" type="checkbox"> Oferta clientes fundadores (comunidades de hasta 32 viviendas, hasta el 31/12/2026)</label>
+      <p class="hint" id="founder-hint">Piloto a precio reducido con el panel incluido, a cambio de un testimonio y un caso de éxito.</p>
+    </form>
+
+    <div class="tool-card kpis" aria-live="polite">
+      <p class="tier" id="k-tier"></p>
+      <div><span>Piloto CoproSens (6 semanas)</span><b id="k-pilot"></b></div>
+      <div><span>Implantación en Microsoft 365 y formación</span><b id="k-setup"></b></div>
+      <div><span>Panel</span><b id="k-dash"></b></div>
+      <div><span>Licencias de Microsoft 365 (por año)</span><b id="k-lic"></b></div>
+      <div class="total"><span>Total del primer año</span><b id="k-y1"></b></div>
+      <div class="highlight"><span>Por vivienda y mes, el 1.<sup>er</sup> año</span><b id="k-y1m"></b></div>
+      <div class="highlight"><span>Por vivienda y mes, años siguientes</span><b id="k-y2m"></b></div>
+      <div id="row-maint"><span>Mantenimiento (al mes), es decir, por vivienda y mes</span><b id="k-maint"></b></div>
+      <p class="quote" id="k-quote" hidden>Por encima de 200 viviendas, cada proyecto se estudia a medida: le enviamos un presupuesto detallado.</p>
+      <div class="actions"><a class="button" href="/es/proyecto.html?type=pilote#formulaire">Solicitar un presupuesto personalizado</a><button type="button" class="ghost" id="k-print">Imprimir</button></div>
+    </div>
+  </div>
+
+  <section class="tool-card tiers">
+    <h2>Nuestras tarifas, según el tamaño de la comunidad</h2>
+    <div class="table-wrap">
+      <table class="calc">
+        <thead><tr><th scope="col">Tamaño</th><th scope="col">Piloto</th><th scope="col">Implantación y formación</th><th scope="col">Mantenimiento (opcional)</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Hasta 32 viviendas</th><td>2500 € (1750 € oferta fundadores)</td><td>3 días, es decir, 1650 €</td><td>175 € / mes (2 h incluidas)</td></tr>
+          <tr><th scope="row">De 33 a 100 viviendas</th><td>2500 €</td><td>5 días, es decir, 2750 €</td><td>350 € / mes (½ jornada incluida)</td></tr>
+          <tr><th scope="row">De 101 a 200 viviendas</th><td>2500 €</td><td>8 días, es decir, 4400 €</td><td>550 € / mes (1 jornada incluida)</td></tr>
+          <tr><th scope="row">Más de 200 viviendas</th><td colspan="3">Presupuesto personalizado, elaborado tras estudiar sus documentos</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="hint">Panel del consejo: 750 € (incluido en la oferta fundadores). Día adicional: 550 €. Más allá del tiempo incluido, el mantenimiento se factura a 550 € por día. Licencias de Microsoft 365 refacturadas a precio de coste (base orientativa de 7,80 € por miembro y mes, impuestos incluidos). El consumo de IA lo factura Microsoft directamente a la comunidad; durante el piloto, se descuenta de nuestra factura.</p>
+  </section>
+
+  <p class="disclaimer"><b>Estimación orientativa, sin valor contractual.</b> Estos importes le dan un orden de magnitud. El precio definitivo se confirma mediante un presupuesto por escrito, tras analizar sus documentos, necesidades y limitaciones. Todos los importes están en euros. IVA no aplicable (microempresa francesa, art. 293 B del Código General de Impuestos de Francia). Los precios de las licencias y del consumo de Microsoft pueden variar.</p>
+</main>
+<footer><div class="wrap"><div class="row"><span>© 2026 HDA PRODZ · HDA Solutions</span><span>Massy, France · SIRET 910 349 968 00016</span><a href="/es/">Volver al inicio</a></div></div></footer>
+<script src="/tarifs/l10n.js"></script>
+<script src="/tarifs/tarifs.js"></script>
+</body>
+</html>
