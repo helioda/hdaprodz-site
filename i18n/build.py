@@ -65,6 +65,7 @@ def build(src_name, lang):
     t = t.replace('href="/outils/"', f'href="{TOOLS[lang]}"')
     t = t.replace('href="/tarifs/"', f'href="{PRICING[lang]}"')
     t = t.replace('href="/projet.html', f'href="{FORM[lang]}')
+    t = t.replace('href="/#', f'href="{HOME[lang]}#')
     t = t.replace('href="/"', f'href="{HOME[lang]}"')
     t = t.replace('href="https://demo.hdaprodz.com/"', f'href="https://demo.hdaprodz.com/?lang={lang}"')
     # Translated tools/pricing pages load their string table before the scripts.

@@ -19,6 +19,10 @@ def T(en, pt, es):
 
 TEXT = {
 "index.html": {
+ "Outils": T("Tools", "Ferramentas", "Herramientas"),
+ "Décrire mon projet": T("Describe my project", "Descrever meu projeto", "Describir mi proyecto"),
+ "Outils du syndic": T("Manager tools", "Ferramentas da administradora", "Herramientas del administrador"),
+ "Décrire mon projet →": T("Describe my project →", "Descrever meu projeto →", "Describir mi proyecto →"),
  "HDA Solutions — Agents IA et automatisation": T(
   "HDA Solutions — AI agents and automation",
   "HDA Solutions — Agentes de IA e automação",
@@ -30,8 +34,6 @@ TEXT = {
  "Aller au contenu": T("Skip to content", "Ir para o conteúdo", "Ir al contenido"),
  "Navigation principale": T("Main navigation", "Navegação principal", "Navegación principal"),
  "Solutions": T("Solutions", "Soluções", "Soluciones"),
- "Applications": T("Use cases", "Aplicações", "Aplicaciones"),
- "Parlons de votre projet ↗": T("Let’s talk about your project ↗", "Vamos falar do seu projeto ↗", "Hablemos de su proyecto ↗"),
  "Votre expertise.": T("Your expertise.", "Sua expertise.", "Su experiencia."),
  "Amplifiée par": T("Amplified by", "Amplificada por", "Amplificada por"),
  "des agents IA.": T("AI agents.", "agentes de IA.", "agentes de IA."),
@@ -39,7 +41,6 @@ TEXT = {
   "AI agents, copilots and automations to find information, simplify your processes and move your work forward.",
   "Agentes de IA, copilotos e automações para encontrar informações, simplificar seus processos e avançar no seu trabalho.",
   "Agentes de IA, copilotos y automatizaciones para encontrar la información, simplificar sus procesos y avanzar en su trabajo."),
- "Discuter de mon besoin ↗": T("Discuss my needs ↗", "Falar sobre minha necessidade ↗", "Hablar de mi necesidad ↗"),
  "Découvrir les solutions": T("Explore the solutions", "Conhecer as soluções", "Descubrir las soluciones"),
  "Aperçu de CoproSens : le tableau de bord du conseil syndical et une réponse de l’assistant avec sa source.": T(
   "CoproSens preview: the board dashboard and an assistant answer with its source.",
@@ -109,7 +110,6 @@ TEXT = {
  "Prix par lot et par mois, en direct": T("Price per unit per month, live", "Preço por unidade e por mês, ao vivo", "Precio por unidad y por mes, en directo"),
  "Tableau de bord ↗": T("Dashboard ↗", "Painel ↗", "Panel ↗"),
  "Le suivi du conseil syndical": T("The owners’ council overview", "O acompanhamento do conselho", "El seguimiento del consejo"),
- "Outils du syndic ↗": T("Manager tools ↗", "Ferramentas da administradora ↗", "Herramientas del administrador ↗"),
  "Appels de fonds et documents d’AG": T("Service charges and meeting documents", "Cotas e documentos de assembleia", "Cuotas y documentos de junta"),
  "Nous contacter": T("Contact us", "Fale conosco", "Contáctenos"),
  "Réponse personnalisée, sans engagement": T("Personal reply, no commitment", "Resposta personalizada, sem compromisso", "Respuesta personalizada, sin compromiso"),
@@ -175,7 +175,6 @@ TEXT = {
  "Profil LinkedIn ↗": T("LinkedIn profile ↗", "Perfil no LinkedIn ↗", "Perfil de LinkedIn ↗"),
  "Comment démarrer": T("How to start", "Como começar", "Cómo empezar"),
  "Commencer petit. Construire utile.": T("Start small. Build what’s useful.", "Começar pequeno. Construir o que é útil.", "Empezar poco a poco. Construir algo útil."),
- "Décrire mon besoin": T("Describe your need", "Descrever sua necessidade", "Describir su necesidad"),
  "Choisir un besoin": T("Choose a need", "Escolher uma necessidade", "Elegir una necesidad"),
  "Identifier une tâche, les utilisateurs concernés et le résultat attendu.": T(
   "Identify a task, the users involved and the expected result.",
@@ -197,7 +196,6 @@ TEXT = {
   "Describe your need, your current tools and the tasks that take up your time. Together we can define a first step.",
   "Descreva sua necessidade, suas ferramentas atuais e as tarefas que tomam seu tempo. Juntos, podemos definir um primeiro passo.",
   "Describa su necesidad, sus herramientas actuales y las tareas que le quitan tiempo. Juntos podremos definir un primer paso."),
- "Décrire mon projet ↗": T("Describe my project ↗", "Descrever meu projeto ↗", "Describir mi proyecto ↗"),
  "ou écrire à contact@hdaprodz.com": T("or write to contact@hdaprodz.com", "ou escrever para contact@hdaprodz.com", "o escribir a contact@hdaprodz.com"),
  "Retour en haut ↑": T("Back to top ↑", "Voltar ao topo ↑", "Volver arriba ↑"),
  "Éditeur et confidentialité": T("Publisher and privacy", "Editor e privacidade", "Editor y privacidad"),
@@ -229,6 +227,9 @@ TEXT = {
   "). Puede solicitar el acceso, la rectificación o la supresión de sus datos en la dirección indicada. También puede presentar una reclamación ante la CNIL (autoridad francesa de protección de datos)."),
 },
 "projet.html": {
+ "Outils": T("Tools", "Ferramentas", "Herramientas"),
+ "💶 Tarifs": T("💶 Pricing", "💶 Preços", "💶 Precios"),
+ "Décrire mon projet →": T("Describe my project →", "Descrever meu projeto →", "Describir mi proyecto →"),
  "Demande de projet — HDA Solutions": T("Project request — HDA Solutions", "Solicitação de projeto — HDA Solutions", "Solicitud de proyecto — HDA Solutions"),
  "Décrivez votre projet d’agent IA, de copilote ou d’automatisation : objectifs, délais et budget indicatif. Réponse personnalisée de HDA Solutions.": T(
   "Describe your AI agent, copilot or automation project: goals, timing and indicative budget. A personal reply from HDA Solutions.",
@@ -237,8 +238,6 @@ TEXT = {
  "Aller au formulaire": T("Skip to the form", "Ir para o formulário", "Ir al formulario"),
  "Navigation principale": T("Main navigation", "Navegação principal", "Navegación principal"),
  "Solutions": T("Solutions", "Soluções", "Soluciones"),
- "Applications": T("Use cases", "Aplicações", "Aplicaciones"),
- "Décrire mon projet ↗": T("Describe my project ↗", "Descrever meu projeto ↗", "Describir mi proyecto ↗"),
  "Demande de projet": T("Project request", "Solicitação de projeto", "Solicitud de proyecto"),
  "Parlez-nous de": T("Tell us about", "Fale-nos do", "Háblenos de"),
  "votre projet.": T("your project.", "seu projeto.", "su proyecto."),
@@ -357,6 +356,10 @@ PAGES["tarifs/index.html"] = {
 }
 
 TEXT["outils/index.html"] = {
+ "Outils": T("Tools", "Ferramentas", "Herramientas"),
+ "Solutions": T("Solutions", "Soluções", "Soluciones"),
+ "💶 Tarifs": T("💶 Pricing", "💶 Preços", "💶 Precios"),
+ "Décrire mon projet →": T("Describe my project →", "Descrever meu projeto →", "Describir mi proyecto →"),
  "Outils du syndic – CoproSens (démonstration)": T(
   "Property manager tools – CoproSens (demo)",
   "Ferramentas da administradora – CoproSens (demonstração)",
@@ -366,8 +369,6 @@ TEXT["outils/index.html"] = {
   "Demonstração do CoproSens: rateio de despesas e cotas, ordem do dia, convocação e ata de assembleia geral.",
   "Demostración de CoproSens: reparto de gastos y cuotas, orden del día, convocatoria y acta de la junta general."),
  "Navigation principale": T("Main navigation", "Navegação principal", "Navegación principal"),
- "Tableau de bord": T("Dashboard", "Painel", "Panel"),
- "Parlons de votre projet ↗": T("Let’s talk about your project ↗", "Vamos falar do seu projeto ↗", "Hablemos de su proyecto ↗"),
  "CoproSens · démonstration": T("CoproSens · demo", "CoproSens · demonstração", "CoproSens · demostración"),
  "Les outils du syndic, sans ressaisie.": T(
   "Property manager tools, with no re-keying.",
@@ -447,6 +448,11 @@ TEXT["outils/index.html"] = {
 }
 
 TEXT["tarifs/index.html"] = {
+ "Outils": T("Tools", "Ferramentas", "Herramientas"),
+ "Tableau de bord": T("Dashboard", "Painel", "Panel"),
+ "Solutions": T("Solutions", "Soluções", "Soluciones"),
+ "💶 Tarifs": T("💶 Pricing", "💶 Preços", "💶 Precios"),
+ "Demander un devis →": T("Request a quote →", "Solicitar orçamento →", "Solicitar presupuesto →"),
  "Estimer le coût de CoproSens – HDA Solutions": T(
   "Estimate the cost of CoproSens – HDA Solutions",
   "Estime o custo do CoproSens – HDA Solutions",
@@ -456,9 +462,6 @@ TEXT["tarifs/index.html"] = {
   "Estime em segundos o custo do CoproSens para o seu condomínio: piloto, implantação, licenças Microsoft e custo por unidade e por mês, na sua moeda.",
   "Calcule en segundos el coste de CoproSens para su comunidad: piloto, implantación, licencias de Microsoft y coste por vivienda y mes, en su moneda."),
  "Navigation principale": T("Main navigation", "Navegação principal", "Navegación principal"),
- "Outils du syndic": T("Manager tools", "Ferramentas da administradora", "Herramientas del administrador"),
- "Tableau de bord": T("Dashboard", "Painel", "Panel"),
- "Demander un devis ↗": T("Request a quote ↗", "Solicitar orçamento ↗", "Solicitar presupuesto ↗"),
  "CoproSens · estimation en toute transparence": T("CoproSens · transparent estimate", "CoproSens · estimativa transparente", "CoproSens · estimación transparente"),
  "Combien coûte CoproSens pour votre copropriété&nbsp;?": T(
   "How much does CoproSens cost for your building?",

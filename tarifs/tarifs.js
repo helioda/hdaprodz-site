@@ -124,6 +124,13 @@
     set("k-y2m", fmt2.format(lic / lots / 12));
     set("k-maint", maintOn ? fmt.format(conv(tier.maint)) + " · " + fmt2.format(conv(tier.maint) / lots) : S.notChosenF);
     $("row-maint").classList.toggle("muted-row", !maintOn);
+    // Quote buttons carry the current estimate to the request form.
+    var qs = "type=devis&lots=" + lots + "&cs=" + (+$("f-cs").value || 0) + "&days=" + (+$("f-days").value || 0) +
+      "&dash=" + ($("f-dash").checked ? 1 : 0) + "&maint=" + ($("f-maint").checked ? 1 : 0) + "&founder=" + ($("f-founder").checked ? 1 : 0) +
+      "&est=" + encodeURIComponent(fmt2.format(y1));
+    Array.prototype.forEach.call(document.querySelectorAll('a[href*="type=devis"]'), function (a) {
+      a.href = a.getAttribute("href").split("?")[0] + "?" + qs + "#formulaire";
+    });
   }
 
   // Currency: ?cur= in the link, else this visit's manual choice, else the visitor's country

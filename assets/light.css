@@ -304,3 +304,4 @@ footer{border-top:1px solid;border-image:linear-gradient(90deg,transparent,var(-
 .steps .step-link:hover .step-cta i,.steps .step-link:focus-visible .step-cta i{transform:translateX(5px)}
 .steps .step-link:focus-visible{outline:3px solid #86e8ff;outline-offset:3px}
 @media(prefers-reduced-motion:reduce){.steps .step-link:hover,.steps .step-link .step-cta i{transform:none}}
+nav .links a,nav .links .button{white-space:nowrap}
