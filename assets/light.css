@@ -222,3 +222,17 @@ nav .links a.nav-price:hover{background:#fcd34d}
 .button:not(.light):not(.price):not(.alt){background:linear-gradient(180deg,#f8b27a,#e8743f);color:#0b1330;box-shadow:0 10px 26px #e8743f40}
 .button.light{background:linear-gradient(180deg,#9adcfd,#38a3f0);color:#0b1330}
 nav .links a.nav-price{background:linear-gradient(180deg,#f5a8cf,#e06aa8);color:#0b1330}
+/* Step cards: number beside title, compact */
+.steps .card{display:grid;grid-template-columns:auto 1fr;column-gap:12px;align-items:center;padding:16px 20px}
+.steps .card>*{grid-column:1/-1}
+.steps .card>.number{grid-column:1;width:34px;height:34px;font-size:13px;margin:0}
+.steps .card>h3{grid-column:2;margin:0;font-size:18px}
+.steps .card>p{margin:8px 0 0;font-size:14.5px;line-height:1.45}
+/* Contact band: smaller, single-line button */
+.contact{padding:30px 40px!important;margin-bottom:48px}
+.contact h2{font-size:clamp(26px,3vw,36px);margin:6px 0 10px}
+.contact p{margin:0}
+.contact .button{white-space:nowrap;padding:12px 20px}
+.creds{padding-bottom:12px}
+.steps .card{align-content:start}
+.contact{margin-top:28px}
