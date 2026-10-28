@@ -236,3 +236,22 @@ nav .links a.nav-price{background:linear-gradient(180deg,#f5a8cf,#e06aa8);color:
 .creds{padding-bottom:12px}
 .steps .card{align-content:start}
 .contact{margin-top:28px}
+
+/* Reflection aesthetic: dark glass tiles lit by a coloured glow, like city lights on water */
+.act-pilot{background:linear-gradient(180deg,rgba(232,116,63,.78) 0%,rgba(232,116,63,.42) 55%,rgba(18,22,64,.85) 100%),#141a44;border:1px solid rgba(232,116,63,.75);box-shadow:0 0 22px rgba(232,116,63,.35),0 10px 24px #0007;color:#fff}
+.act-pilot .act-ic{background:rgba(232,116,63,.35);color:#fff}
+.act-price{background:linear-gradient(180deg,rgba(224,106,168,.78) 0%,rgba(224,106,168,.42) 55%,rgba(18,22,64,.85) 100%),#141a44;border:1px solid rgba(224,106,168,.75);box-shadow:0 0 22px rgba(224,106,168,.35),0 10px 24px #0007;color:#fff}
+.act-price .act-ic{background:rgba(224,106,168,.35);color:#fff}
+.act-contact{background:linear-gradient(180deg,rgba(56,163,240,.78) 0%,rgba(56,163,240,.42) 55%,rgba(18,22,64,.85) 100%),#141a44;border:1px solid rgba(56,163,240,.75);box-shadow:0 0 22px rgba(56,163,240,.35),0 10px 24px #0007;color:#fff}
+.act-contact .act-ic{background:rgba(56,163,240,.35);color:#fff}
+.act-dash{background:linear-gradient(180deg,rgba(79,110,232,.78) 0%,rgba(79,110,232,.42) 55%,rgba(18,22,64,.85) 100%),#141a44;border:1px solid rgba(79,110,232,.75);box-shadow:0 0 22px rgba(79,110,232,.35),0 10px 24px #0007;color:#fff}
+.act-dash .act-ic{background:rgba(79,110,232,.35);color:#fff}
+.act-demo{background:linear-gradient(180deg,rgba(132,102,242,.78) 0%,rgba(132,102,242,.42) 55%,rgba(18,22,64,.85) 100%),#141a44;border:1px solid rgba(132,102,242,.75);box-shadow:0 0 22px rgba(132,102,242,.35),0 10px 24px #0007;color:#fff}
+.act-demo .act-ic{background:rgba(132,102,242,.35);color:#fff}
+.act-tools{background:linear-gradient(180deg,rgba(181,68,209,.78) 0%,rgba(181,68,209,.42) 55%,rgba(18,22,64,.85) 100%),#141a44;border:1px solid rgba(181,68,209,.75);box-shadow:0 0 22px rgba(181,68,209,.35),0 10px 24px #0007;color:#fff}
+.act-tools .act-ic{background:rgba(181,68,209,.35);color:#fff}
+.act strong{color:#fff;text-shadow:0 1px 2px #0008}
+.act:hover{filter:brightness(1.12)}
+nav .links a.nav-price{background:linear-gradient(180deg,rgba(224,106,168,.8),rgba(224,106,168,.4)),#141a44;border:1px solid rgba(224,106,168,.8);box-shadow:0 0 16px rgba(224,106,168,.4);color:#fff}
+.button:not(.light):not(.price):not(.alt){background:linear-gradient(180deg,rgba(232,116,63,.95),rgba(232,116,63,.55)),#141a44;border:1px solid rgba(232,116,63,.9);box-shadow:0 0 24px rgba(232,116,63,.45);color:#fff;text-shadow:0 1px 2px #0008}
+.button.light{background:linear-gradient(180deg,rgba(56,163,240,.85),rgba(56,163,240,.45)),#141a44;border:1px solid rgba(56,163,240,.9);box-shadow:0 0 22px rgba(56,163,240,.4);color:#fff;text-shadow:0 1px 2px #0008}
