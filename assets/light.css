@@ -357,3 +357,4 @@ html[lang="en"] .role-q li:after,html[lang="pt-BR"] .role-q li:after{content:"â€
 #applications + .wrap > .section:first-child{padding-top:40px}#applications{padding-bottom:44px}
 #applications + .wrap > .section:first-child{padding-top:14px}#applications{padding-bottom:28px}
 #solutions{padding-bottom:24px}#applications{padding-top:18px}#solutions{padding-top:42px}
+#solutions .grid .card{display:grid;grid-template-columns:auto 1fr;grid-template-rows:auto auto 1fr auto;column-gap:12px;align-items:center}#solutions .grid .card>h3,#solutions .grid .card>p,#solutions .grid .card>.tags{grid-column:1/-1}#solutions .grid .card>p{align-self:start}#solutions .grid .card>.tags{display:flex;flex-wrap:wrap;gap:6px;align-self:end}#solutions .grid .card .tags>.tag{margin:0}
