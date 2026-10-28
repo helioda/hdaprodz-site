@@ -305,3 +305,12 @@ footer{border-top:1px solid;border-image:linear-gradient(90deg,transparent,var(-
 .steps .step-link:focus-visible{outline:3px solid #86e8ff;outline-offset:3px}
 @media(prefers-reduced-motion:reduce){.steps .step-link:hover,.steps .step-link .step-cta i{transform:none}}
 nav .links a,nav .links .button{white-space:nowrap}
+/* Audience boxes: each opens the tool that audience uses */
+.aud-link{display:flex;flex-direction:column;text-decoration:none;color:inherit;cursor:pointer;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.aud-link .aud-cta{margin-top:auto;padding-top:14px;font:700 14.5px/1.3 var(--display)}
+.aud-teal .aud-cta{color:var(--teal)}.aud-amber .aud-cta{color:var(--amber)}.aud-coral .aud-cta{color:var(--coral)}
+.aud-link .aud-cta i{font-style:normal;display:inline-block;margin-left:6px;transition:transform .2s ease}
+.aud-link:hover,.aud-link:focus-visible{transform:translateY(-4px);box-shadow:0 0 26px #86e8ff33,0 14px 30px #0006}
+.aud-link:hover .aud-cta i,.aud-link:focus-visible .aud-cta i{transform:translateX(4px)}
+.aud-link:focus-visible{outline:3px solid #86e8ff;outline-offset:3px}
+@media(prefers-reduced-motion:reduce){.aud-link:hover,.aud-link .aud-cta i{transform:none}}

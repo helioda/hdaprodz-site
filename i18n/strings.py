@@ -19,6 +19,10 @@ def T(en, pt, es):
 
 TEXT = {
 "index.html": {
+ "Configurer et estimer mon déploiement": T("Configure and estimate my deployment", "Configurar e estimar minha implantação", "Configurar y estimar mi despliegue"),
+ "Essayer les outils du syndic": T("Try the manager tools", "Experimentar as ferramentas da administradora", "Probar las herramientas del administrador"),
+ "Voir le tableau de bord": T("See the dashboard", "Ver o painel", "Ver el panel"),
+ "Poser une question à l’assistant": T("Ask the assistant a question", "Fazer uma pergunta ao assistente", "Hacer una pregunta al asistente"),
  "Outils": T("Tools", "Ferramentas", "Herramientas"),
  "Décrire mon projet": T("Describe my project", "Descrever meu projeto", "Describir mi proyecto"),
  "Outils du syndic": T("Manager tools", "Ferramentas da administradora", "Herramientas del administrador"),
