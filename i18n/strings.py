@@ -19,6 +19,22 @@ def T(en, pt, es):
 
 TEXT = {
 "index.html": {
+ "Tout l’écosystème Microsoft, à ajouter selon vos besoins": T("The whole Microsoft ecosystem, added as you need it", "Todo o ecossistema Microsoft, para adicionar conforme sua necessidade", "Todo el ecosistema Microsoft, para añadir según sus necesidades"),
+ "Ces services peuvent compléter votre solution, selon vos licences Microsoft 365. Nous vous conseillons la formule adaptée et pouvons vous la fournir.": T(
+  "These services can be added to your solution, depending on your Microsoft 365 licences. We advise you on the right plan and can supply it.",
+  "Esses serviços podem complementar sua solução, conforme suas licenças do Microsoft 365. Indicamos o plano adequado e podemos fornecê-lo.",
+  "Estos servicios pueden completar su solución, según sus licencias de Microsoft 365. Le aconsejamos el plan adecuado y podemos suministrárselo."),
+ "Travail au quotidien": T("Everyday work", "Trabalho do dia a dia", "Trabajo diario"),
+ "Outlook (e-mail, agenda), Teams, OneNote, Word, Excel et PowerPoint": T("Outlook (e-mail, calendar), Teams, OneNote, Word, Excel and PowerPoint", "Outlook (e-mail, agenda), Teams, OneNote, Word, Excel e PowerPoint", "Outlook (correo, agenda), Teams, OneNote, Word, Excel y PowerPoint"),
+ "Intranets et extranets": T("Intranets and extranets", "Intranets e extranets", "Intranets y extranets"),
+ "SharePoint : portails internes et espaces partagés avec vos clients et partenaires": T("SharePoint: internal portals and spaces shared with your clients and partners", "SharePoint: portais internos e espaços compartilhados com seus clientes e parceiros", "SharePoint: portales internos y espacios compartidos con sus clientes y socios"),
+ "Identité et sécurité": T("Identity and security", "Identidade e segurança", "Identidad y seguridad"),
+ "Microsoft Entra ID (comptes, connexion multifacteur, règles d’accès), Microsoft Defender (antivirus, protection des e-mails et des appareils), Microsoft Purview": T(
+  "Microsoft Entra ID (accounts, multi-factor sign-in, access rules), Microsoft Defender (antivirus, e-mail and device protection), Microsoft Purview",
+  "Microsoft Entra ID (contas, login multifator, regras de acesso), Microsoft Defender (antivírus, proteção de e-mails e dispositivos), Microsoft Purview",
+  "Microsoft Entra ID (cuentas, inicio de sesión multifactor, reglas de acceso), Microsoft Defender (antivirus, protección del correo y de los dispositivos), Microsoft Purview"),
+ "IA et cloud": T("AI and cloud", "IA e nuvem", "IA y nube"),
+ "Azure AI Foundry, Copilot Studio, agents Frontier et Power Automate": T("Azure AI Foundry, Copilot Studio, Frontier agents and Power Automate", "Azure AI Foundry, Copilot Studio, agentes Frontier e Power Automate", "Azure AI Foundry, Copilot Studio, agentes Frontier y Power Automate"),
  "Paramétrer les fonctions et prévoir les coûts": T("Set up the features and plan the costs", "Configurar as funções e prever os custos", "Configurar las funciones y prever los costes"),
  "Choisissez la taille de votre copropriété et les options utiles (tableau de bord, maintenance) : vous obtenez tout de suite une estimation de votre déploiement.": T(
   "Choose the size of your building and the options you need (dashboard, maintenance): you get an instant estimate of your deployment.",
