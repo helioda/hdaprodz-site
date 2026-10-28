@@ -19,6 +19,11 @@ def T(en, pt, es):
 
 TEXT = {
 "index.html": {
+ "Paramétrer les fonctions et prévoir les coûts": T("Set up the features and plan the costs", "Configurar as funções e prever os custos", "Configurar las funciones y prever los costes"),
+ "Choisissez la taille de votre copropriété et les options utiles (tableau de bord, maintenance) : vous obtenez tout de suite une estimation de votre déploiement.": T(
+  "Choose the size of your building and the options you need (dashboard, maintenance): you get an instant estimate of your deployment.",
+  "Escolha o tamanho do seu condomínio e as opções úteis (painel, manutenção): você recebe na hora uma estimativa da sua implantação.",
+  "Elija el tamaño de su comunidad y las opciones útiles (panel, mantenimiento): obtendrá al instante una estimación de su despliegue."),
  "Des assistants et des agents IA, dont les agents Frontier de Microsoft 365 Copilot, qui retrouvent l’information, préparent des contenus et accomplissent des tâches pour vos équipes.": T(
   "Assistants and AI agents, including Microsoft 365 Copilot’s Frontier agents, that find information, prepare content and carry out tasks for your teams.",
   "Assistentes e agentes de IA, incluindo os agentes Frontier do Microsoft 365 Copilot, que encontram informações, preparam conteúdos e executam tarefas para suas equipes.",
@@ -178,11 +183,6 @@ TEXT = {
   "Define the scope, connect the necessary sources and evaluate a first version, with a progress update every week.",
   "Definir o escopo, conectar as fontes necessárias e avaliar um primeiro funcionamento, com um status de andamento toda semana.",
   "Definir el alcance, conectar las fuentes necesarias y evaluar un primer funcionamiento, con un seguimiento cada semana."),
- "Ajuster et déployer": T("Adjust and deploy", "Ajustar e implantar", "Ajustar y desplegar"),
- "Vérifier les réponses, les permissions et les validations avant de généraliser l’usage.": T(
-  "Check answers, permissions and approvals before rolling it out more widely.",
-  "Verificar as respostas, as permissões e as validações antes de ampliar o uso.",
-  "Verificar las respuestas, los permisos y las validaciones antes de generalizar su uso."),
  "Retour en haut ↑": T("Back to top ↑", "Voltar ao topo ↑", "Volver arriba ↑"),
  "Éditeur et confidentialité": T("Publisher and privacy", "Editor e privacidade", "Editor y privacidad"),
  "Éditeur :": T("Publisher:", "Editor:", "Editor:"),
