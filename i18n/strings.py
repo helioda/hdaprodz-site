@@ -174,6 +174,7 @@ TEXT = {
  "Profil LinkedIn ↗": T("LinkedIn profile ↗", "Perfil no LinkedIn ↗", "Perfil de LinkedIn ↗"),
  "Comment démarrer": T("How to start", "Como começar", "Cómo empezar"),
  "Commencer petit. Construire utile.": T("Start small. Build what’s useful.", "Começar pequeno. Construir o que é útil.", "Empezar poco a poco. Construir algo útil."),
+ "Décrire mon besoin": T("Describe your need", "Descrever sua necessidade", "Describir su necesidad"),
  "Choisir un besoin": T("Choose a need", "Escolher uma necessidade", "Elegir una necesidad"),
  "Identifier une tâche, les utilisateurs concernés et le résultat attendu.": T(
   "Identify a task, the users involved and the expected result.",

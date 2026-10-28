@@ -295,3 +295,12 @@ h2{text-shadow:0 0 28px #8466f240}
 .contact{box-shadow:0 0 0 1px #d946ef55,0 0 40px #8466f240,0 20px 50px #05081f99!important}
 .steps .card>.number,#solutions .icon{box-shadow:0 0 14px currentColor}
 footer{border-top:1px solid;border-image:linear-gradient(90deg,transparent,var(--neon-v),var(--neon-c),transparent) 1}
+/* "Comment démarrer" steps: each whole card is a link to its next action */
+.steps .step-link{text-decoration:none;color:inherit;cursor:pointer;grid-template-rows:auto auto 1fr}
+.steps .step-link .step-cta{grid-column:1/-1;align-self:end;margin-top:12px;font:700 14.5px/1.3 var(--display);color:var(--teal)}
+.steps .step-link:nth-child(2) .step-cta{color:var(--amber)}.steps .step-link:nth-child(3) .step-cta{color:var(--coral)}
+.steps .step-link .step-cta i{font-style:normal;display:inline-block;margin-left:6px;transition:transform .2s ease}
+.steps .step-link:hover,.steps .step-link:focus-visible{transform:translateY(-4px);border-color:#86e8ffaa;box-shadow:0 0 26px #86e8ff33,0 14px 30px #0006}
+.steps .step-link:hover .step-cta i,.steps .step-link:focus-visible .step-cta i{transform:translateX(5px)}
+.steps .step-link:focus-visible{outline:3px solid #86e8ff;outline-offset:3px}
+@media(prefers-reduced-motion:reduce){.steps .step-link:hover,.steps .step-link .step-cta i{transform:none}}
