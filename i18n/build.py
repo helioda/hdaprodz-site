@@ -18,6 +18,7 @@ HOME = {"fr": "/", "en": "/en/", "pt": "/pt/", "es": "/es/"}
 FORM = {"fr": "/projet.html", "en": "/en/project.html", "pt": "/pt/projeto.html", "es": "/es/proyecto.html"}
 TOOLS = {"fr": "/outils/", "en": "/en/tools/", "pt": "/pt/ferramentas/", "es": "/es/herramientas/"}
 PRICING = {"fr": "/tarifs/", "en": "/en/pricing/", "pt": "/pt/precos/", "es": "/es/precios/"}
+ROLES = {"fr": "/coprosens/", "en": "/en/coprosens/", "pt": "/pt/coprosens/", "es": "/es/coprosens/"}
 HTML_LANG = {"en": "en", "pt": "pt-BR", "es": "es"}
 SWITCH_LABEL = {"en": "Language", "pt": "Idioma", "es": "Idioma"}
 NAMES = {"fr": "Français", "en": "English", "pt": "Português", "es": "Español"}
@@ -36,7 +37,7 @@ def build(src_name, lang):
     page = PAGES[src_name]
     out_name = page["out"][lang]
     t = open(os.path.join(ROOT, src_name), encoding="utf-8").read()
-    urls = {"index.html": HOME, "projet.html": FORM, "outils/index.html": TOOLS, "tarifs/index.html": PRICING}[src_name]
+    urls = {"index.html": HOME, "projet.html": FORM, "outils/index.html": TOOLS, "tarifs/index.html": PRICING, "coprosens/index.html": ROLES}[src_name]
 
     # The brand name is never translated.
     t = t.replace("HDA <span>Solutions</span>", "HDA <span>@@BRAND@@</span>")
@@ -64,6 +65,7 @@ def build(src_name, lang):
     # Absolute links (tools and pricing pages, and the tiles/pill on the home page).
     t = t.replace('href="/outils/"', f'href="{TOOLS[lang]}"')
     t = t.replace('href="/tarifs/"', f'href="{PRICING[lang]}"')
+    t = t.replace('href="/coprosens/', f'href="{ROLES[lang]}')
     t = t.replace('href="/projet.html', f'href="{FORM[lang]}')
     t = t.replace('href="/#', f'href="{HOME[lang]}#')
     t = t.replace('href="/"', f'href="{HOME[lang]}"')

@@ -19,10 +19,8 @@ def T(en, pt, es):
 
 TEXT = {
 "index.html": {
+ "Voir comment CoproSens les aide": T("See how CoproSens helps them", "Ver como o CoproSens ajuda", "Ver cómo les ayuda CoproSens"),
  "Configurer et estimer mon déploiement": T("Configure and estimate my deployment", "Configurar e estimar minha implantação", "Configurar y estimar mi despliegue"),
- "Essayer les outils du syndic": T("Try the manager tools", "Experimentar as ferramentas da administradora", "Probar las herramientas del administrador"),
- "Suivre les travaux et les devis": T("Follow works and quotes", "Acompanhar obras e orçamentos", "Seguir obras y presupuestos"),
- "Poser une question à l’assistant": T("Ask the assistant a question", "Fazer uma pergunta ao assistente", "Hacer una pregunta al asistente"),
  "Outils": T("Tools", "Ferramentas", "Herramientas"),
  "Décrire mon projet": T("Describe my project", "Descrever meu projeto", "Describir mi proyecto"),
  "Outils du syndic": T("Manager tools", "Ferramentas da administradora", "Herramientas del administrador"),
@@ -106,17 +104,9 @@ TEXT = {
  "Applications métier": T("Business apps", "Aplicativos de negócio", "Aplicaciones de negocio"),
  "💶 Tarifs": T("💶 Pricing", "💶 Preços", "💶 Precios"),
  "Essayer la démo": T("Try the demo", "Experimentar a demo", "Probar la demo"),
- "Essayer la démo ↗": T("Try the demo ↗", "Experimentar a demo ↗", "Probar la demo ↗"),
- "Démarrer un pilote": T("Start a pilot", "Iniciar um piloto", "Iniciar un piloto"),
- "Sur vos propres documents, dans votre Microsoft 365": T("On your own documents, in your Microsoft 365", "Com os seus próprios documentos, no seu Microsoft 365", "Con sus propios documentos, en su Microsoft 365"),
- "Posez vos questions à l’assistant": T("Ask the assistant your questions", "Faça suas perguntas ao assistente", "Haga sus preguntas al asistente"),
- "Estimer le coût": T("Estimate the cost", "Estimar o custo", "Estimar el coste"),
- "Prix par lot et par mois, en direct": T("Price per unit per month, live", "Preço por unidade e por mês, ao vivo", "Precio por unidad y por mes, en directo"),
  "Tableau de bord ↗": T("Dashboard ↗", "Painel ↗", "Panel ↗"),
  "Le suivi du conseil syndical": T("The owners’ council overview", "O acompanhamento do conselho", "El seguimiento del consejo"),
  "Appels de fonds et documents d’AG": T("Service charges and meeting documents", "Cotas e documentos de assembleia", "Cuotas y documentos de junta"),
- "Nous contacter": T("Contact us", "Fale conosco", "Contáctenos"),
- "Réponse personnalisée, sans engagement": T("Personal reply, no commitment", "Resposta personalizada, sem compromisso", "Respuesta personalizada, sin compromiso"),
  "Copropriété fictive, données de démonstration · réponses générées par IA": T(
   "Fictional condominium, demo data · AI-generated answers",
   "Condomínio fictício, dados de demonstração · respostas geradas por IA",
@@ -194,13 +184,6 @@ TEXT = {
   "Check answers, permissions and approvals before rolling it out more widely.",
   "Verificar as respostas, as permissões e as validações antes de ampliar o uso.",
   "Verificar las respuestas, los permisos y las validaciones antes de generalizar su uso."),
- "Parlons de votre projet": T("Let’s talk about your project", "Vamos falar do seu projeto", "Hablemos de su proyecto"),
- "Quel travail aimeriez-vous simplifier ?": T("What work would you like to simplify?", "Que trabalho você gostaria de simplificar?", "¿Qué trabajo le gustaría simplificar?"),
- "Décrivez votre besoin, vos outils actuels et les tâches qui vous prennent du temps. Nous pourrons définir ensemble une première étape.": T(
-  "Describe your need, your current tools and the tasks that take up your time. Together we can define a first step.",
-  "Descreva sua necessidade, suas ferramentas atuais e as tarefas que tomam seu tempo. Juntos, podemos definir um primeiro passo.",
-  "Describa su necesidad, sus herramientas actuales y las tareas que le quitan tiempo. Juntos podremos definir un primer paso."),
- "ou écrire à contact@hdaprodz.com": T("or write to contact@hdaprodz.com", "ou escrever para contact@hdaprodz.com", "o escribir a contact@hdaprodz.com"),
  "Retour en haut ↑": T("Back to top ↑", "Voltar ao topo ↑", "Volver arriba ↑"),
  "Éditeur et confidentialité": T("Publisher and privacy", "Editor e privacidade", "Editor y privacidad"),
  "Éditeur :": T("Publisher:", "Editor:", "Editor:"),
@@ -556,4 +539,134 @@ TEXT["tarifs/index.html"] = {
   "Esses valores dão uma ordem de grandeza. O preço final é confirmado por um orçamento por escrito, após uma conversa sobre seus documentos, necessidades e restrições. Nossos preços são definidos em euros; as outras moedas são conversões indicativas. Sem incidência de IVA francês (microempresa francesa, art. 293 B do Código Geral de Impostos da França). Os preços das licenças e do consumo Microsoft podem mudar.",
   "Estos importes le dan un orden de magnitud. El precio definitivo se confirma mediante un presupuesto por escrito, tras analizar sus documentos, necesidades y limitaciones. Nuestros precios se fijan en euros; las demás monedas son conversiones orientativas. IVA no aplicable (microempresa francesa, art. 293 B del Código General de Impuestos de Francia). Los precios de las licencias y del consumo de Microsoft pueden variar."),
  "Retour à l’accueil": T("Back to home", "Voltar à página inicial", "Volver al inicio"),
+}
+
+# ---------------------------------------------------------------------------
+# CoproSens role page (/coprosens/): needs and use, role by role.
+PAGES["coprosens/index.html"] = {
+    "out": {"en": "coprosens/index.html", "pt": "coprosens/index.html", "es": "coprosens/index.html"},
+    "must_not_remain": ["Leur quotidien", "Ce que fait CoproSens", "Exemples de questions", "Syndics", "Copropriétaires",
+                        "conseil syndical", "Retour à l’accueil", "Décrire mon projet", "Démarrer un pilote"],
+}
+TEXT["coprosens/index.html"] = {
+ "CoproSens pour chaque acteur de la copropriété – HDA Solutions": T(
+  "CoproSens for everyone in the building – HDA Solutions",
+  "CoproSens para cada ator do condomínio – HDA Solutions",
+  "CoproSens para cada actor de la comunidad – HDA Solutions"),
+ "Comment CoproSens répond aux besoins des syndics, des conseils syndicaux et des copropriétaires : tâches du quotidien, outils et exemples de questions.": T(
+  "How CoproSens meets the needs of property managers, owners’ boards and owners: everyday tasks, tools and example questions.",
+  "Como o CoproSens atende às necessidades das administradoras, dos conselhos e dos condôminos: tarefas do dia a dia, ferramentas e exemplos de perguntas.",
+  "Cómo CoproSens responde a las necesidades de los administradores, las juntas y los propietarios: tareas diarias, herramientas y ejemplos de preguntas."),
+ "Solutions": T("Solutions", "Soluções", "Soluciones"),
+ "Outils": T("Tools", "Ferramentas", "Herramientas"),
+ "💶 Tarifs": T("💶 Pricing", "💶 Preços", "💶 Precios"),
+ "Décrire mon projet →": T("Describe my project →", "Descrever meu projeto →", "Describir mi proyecto →"),
+ "CoproSens · rôle par rôle": T("CoproSens · role by role", "CoproSens · papel por papel", "CoproSens · rol por rol"),
+ "Un assistant, trois façons de s’en servir.": T("One assistant, three ways to use it.", "Um assistente, três maneiras de usá-lo.", "Un asistente, tres formas de usarlo."),
+ "Syndic, conseil syndical ou copropriétaire : chacun a ses propres questions. Voici ce que CoproSens fait pour chacun, avec les outils à essayer et des exemples de questions à poser.": T(
+  "Property manager, owners’ board or owner: each has their own questions. Here is what CoproSens does for each of them, with the tools to try and example questions to ask.",
+  "Administradora, conselho ou condômino: cada um tem suas próprias perguntas. Veja o que o CoproSens faz por cada um, com as ferramentas para experimentar e exemplos de perguntas.",
+  "Administrador, junta o propietario: cada uno tiene sus propias preguntas. Esto es lo que CoproSens hace por cada uno, con las herramientas para probar y ejemplos de preguntas."),
+ "Rôles": T("Roles", "Papéis", "Roles"),
+ "Syndics": T("Property managers", "Administradoras", "Administradores de fincas"),
+ "Conseils syndicaux": T("Owners’ boards", "Conselhos do condomínio", "Juntas de propietarios"),
+ "Copropriétaires": T("Owners", "Condôminos", "Propietarios"),
+ "Leur quotidien": T("Their day-to-day", "O dia a dia", "Su día a día"),
+ "Ce que fait CoproSens": T("What CoproSens does", "O que o CoproSens faz", "Lo que hace CoproSens"),
+ "Exemples de questions": T("Example questions", "Exemplos de perguntas", "Ejemplos de preguntas"),
+ "Suivre les impayés et relancer les copropriétaires en retard.": T(
+  "Track unpaid charges and send reminders to owners who are behind.",
+  "Acompanhar a inadimplência e cobrar os condôminos em atraso.",
+  "Seguir los impagos y reclamar a los propietarios morosos."),
+ "Gérer les contrats d’entretien et leurs échéances.": T(
+  "Manage maintenance contracts and their renewal dates.",
+  "Gerenciar os contratos de manutenção e seus vencimentos.",
+  "Gestionar los contratos de mantenimiento y sus vencimientos."),
+ "Demander, comparer et présenter les devis.": T(
+  "Request, compare and present quotes.",
+  "Solicitar, comparar e apresentar orçamentos.",
+  "Pedir, comparar y presentar presupuestos."),
+ "Préparer les appels de fonds et les documents d’assemblée générale.": T(
+  "Prepare service-charge calls and general-meeting documents.",
+  "Preparar as chamadas de cotas e os documentos de assembleia.",
+  "Preparar las cuotas y los documentos de la junta general."),
+ "Répondre aux nombreuses questions des copropriétaires.": T(
+  "Answer owners’ many questions.",
+  "Responder às inúmeras perguntas dos condôminos.",
+  "Responder a las numerosas preguntas de los propietarios."),
+ "Retrouve en quelques secondes une décision d’AG, un contrat ou un devis, avec sa source.": T(
+  "Finds a meeting decision, a contract or a quote in seconds, with its source.",
+  "Encontra em segundos uma decisão de assembleia, um contrato ou um orçamento, com a fonte.",
+  "Encuentra en segundos un acuerdo de junta, un contrato o un presupuesto, con su fuente."),
+ "Calcule les appels de fonds de chaque lot au centime près : tantièmes, charges spéciales, eau et chauffage.": T(
+  "Calculates each unit’s service-charge call to the cent: ownership shares, special charges, water and heating.",
+  "Calcula a cota de cada unidade, centavo por centavo: frações ideais, despesas específicas, água e aquecimento.",
+  "Calcula la cuota de cada vivienda al céntimo: coeficientes, gastos especiales, agua y calefacción."),
+ "Prépare l’ordre du jour, la convocation, le vote par correspondance et le procès-verbal, que le syndic relit et valide avant tout envoi.": T(
+  "Drafts the agenda, the notice of meeting, the postal-vote form and the minutes, which the property manager reviews and approves before anything is sent.",
+  "Prepara a ordem do dia, a convocação, o voto por correspondência e a ata, que a administradora revisa e valida antes de qualquer envio.",
+  "Prepara el orden del día, la convocatoria, el voto por correo y el acta, que el administrador revisa y valida antes de cualquier envío."),
+ "Quels lots sont en retard de paiement ?": T("Which units are behind on payments?", "Quais unidades estão com pagamento atrasado?", "¿Qué viviendas tienen pagos atrasados?"),
+ "Jusqu’à quand court le contrat d’entretien de l’ascenseur ?": T("When does the lift maintenance contract end?", "Até quando vai o contrato de manutenção do elevador?", "¿Hasta cuándo dura el contrato de mantenimiento del ascensor?"),
+ "Quels devis avons-nous reçus pour l’étanchéité de la toiture ?": T("Which quotes have we received for the roof waterproofing?", "Quais orçamentos recebemos para a impermeabilização da laje?", "¿Qué presupuestos hemos recibido para la impermeabilización de la cubierta?"),
+ "Essayer les outils du syndic →": T("Try the manager tools →", "Experimentar as ferramentas da administradora →", "Probar las herramientas del administrador →"),
+ "Suivre l’avancement des travaux votés.": T("Follow the progress of approved works.", "Acompanhar o andamento das obras aprovadas.", "Seguir el avance de las obras aprobadas."),
+ "Vérifier que les décisions d’AG sont bien exécutées, dans les délais.": T(
+  "Check that meeting decisions are carried out, on time.",
+  "Verificar se as decisões de assembleia são executadas, dentro do prazo.",
+  "Comprobar que los acuerdos de junta se ejecutan, dentro de plazo."),
+ "Retrouver une résolution votée et son contexte.": T("Find a resolution that was passed, and its context.", "Encontrar uma resolução aprovada e seu contexto.", "Encontrar un acuerdo aprobado y su contexto."),
+ "Examiner et comparer les devis avant l’assemblée.": T("Review and compare quotes before the meeting.", "Analisar e comparar orçamentos antes da assembleia.", "Examinar y comparar presupuestos antes de la junta."),
+ "Contrôler la gestion du syndic et préparer l’AG avec lui.": T(
+  "Oversee the property manager’s work and prepare the meeting together.",
+  "Fiscalizar a gestão da administradora e preparar a assembleia com ela.",
+  "Supervisar la gestión del administrador y preparar la junta con él."),
+ "Un tableau de bord des travaux et des devis : étape, montant, entreprise et résolution d’AG liée.": T(
+  "A dashboard of works and quotes: stage, amount, contractor and the related meeting resolution.",
+  "Um painel de obras e orçamentos: etapa, valor, empresa e resolução de assembleia relacionada.",
+  "Un panel de obras y presupuestos: fase, importe, empresa y acuerdo de junta relacionado."),
+ "Le suivi des décisions d’AG, avec leurs échéances et leur état d’exécution.": T(
+  "Tracking of meeting decisions, with their deadlines and status.",
+  "O acompanhamento das decisões de assembleia, com prazos e situação.",
+  "El seguimiento de los acuerdos de junta, con sus plazos y su estado."),
+ "Un assistant qui répond à partir des documents de la copropriété, en citant sa source.": T(
+  "An assistant that answers from the building’s documents and cites its source.",
+  "Um assistente que responde com base nos documentos do condomínio, citando a fonte.",
+  "Un asistente que responde a partir de los documentos de la comunidad, citando su fuente."),
+ "Où en est le ravalement des façades ?": T("How far along is the facade renovation?", "Em que pé está a reforma das fachadas?", "¿Cómo va la rehabilitación de las fachadas?"),
+ "Quelles décisions d’AG restent à exécuter ?": T("Which meeting decisions are still to be carried out?", "Quais decisões de assembleia ainda precisam ser executadas?", "¿Qué acuerdos de junta quedan por ejecutar?"),
+ "Quels devis comparons-nous pour l’étanchéité ?": T("Which waterproofing quotes are we comparing?", "Quais orçamentos de impermeabilização estamos comparando?", "¿Qué presupuestos de impermeabilización estamos comparando?"),
+ "Voir les travaux et les devis ↗": T("See works and quotes ↗", "Ver obras e orçamentos ↗", "Ver obras y presupuestos ↗"),
+ "Voir le suivi des décisions d’AG ↗": T("See meeting-decision tracking ↗", "Ver o acompanhamento das decisões ↗", "Ver el seguimiento de los acuerdos ↗"),
+ "Vérifier leurs appels de fonds et leurs dates d’échéance.": T("Check their service-charge calls and due dates.", "Conferir suas cotas e as datas de vencimento.", "Comprobar sus cuotas y las fechas de vencimiento."),
+ "Comprendre le détail et l’exactitude de leurs charges.": T("Understand the breakdown of their charges and check they are correct.", "Entender o detalhe das despesas e conferir se estão corretas.", "Entender el detalle de sus gastos y comprobar que son correctos."),
+ "Connaître la date de la prochaine assemblée générale.": T("Know the date of the next general meeting.", "Saber a data da próxima assembleia.", "Conocer la fecha de la próxima junta general."),
+ "Savoir quelles résolutions ont été votées et quels travaux sont prévus.": T("Know which resolutions were passed and which works are planned.", "Saber quais resoluções foram aprovadas e quais obras estão previstas.", "Saber qué acuerdos se aprobaron y qué obras están previstas."),
+ "Des réponses claires, à toute heure, à partir des documents de la copropriété et avec leur source.": T(
+  "Clear answers at any time, from the building’s documents and with their source.",
+  "Respostas claras a qualquer hora, com base nos documentos do condomínio e com a fonte.",
+  "Respuestas claras a cualquier hora, a partir de los documentos de la comunidad y con su fuente."),
+ "Chacun ne voit que ce que ses droits d’accès Microsoft 365 autorisent.": T(
+  "Each person sees only what their Microsoft 365 access rights allow.",
+  "Cada um vê apenas o que seus acessos no Microsoft 365 permitem.",
+  "Cada persona solo ve lo que sus permisos de Microsoft 365 autorizan."),
+ "Moins de questions répétitives pour le syndic, qui garde la main sur les sujets sensibles.": T(
+  "Fewer repetitive questions for the property manager, who stays in charge of sensitive matters.",
+  "Menos perguntas repetitivas para a administradora, que mantém o controle dos assuntos sensíveis.",
+  "Menos preguntas repetitivas para el administrador, que mantiene el control de los temas sensibles."),
+ "Combien le lot 12 paie-t-il pour le ravalement des façades ?": T("How much does unit 12 pay for the facade renovation?", "Quanto a unidade 12 paga pela reforma da fachada?", "¿Cuánto paga la vivienda 12 por la rehabilitación de las fachadas?"),
+ "Quand a lieu la prochaine assemblée générale ?": T("When is the next general meeting?", "Quando é a próxima assembleia?", "¿Cuándo es la próxima junta general?"),
+ "Qu’a décidé la dernière AG au sujet des interphones ?": T("What did the last meeting decide about the intercoms?", "O que a última assembleia decidiu sobre os interfones?", "¿Qué decidió la última junta sobre los interfonos?"),
+ "Poser une question à l’assistant ↗": T("Ask the assistant a question ↗", "Fazer uma pergunta ao assistente ↗", "Hacer una pregunta al asistente ↗"),
+ "Votre copropriété, vos questions.": T("Your building, your questions.", "Seu condomínio, suas perguntas.", "Su comunidad, sus preguntas."),
+ "Décrivez vos besoins : nous préparons avec vous un pilote sur vos propres documents, dans votre Microsoft 365.": T(
+  "Tell us what you need: we’ll prepare a pilot with you on your own documents, in your Microsoft 365.",
+  "Conte suas necessidades: preparamos com você um piloto com os seus próprios documentos, no seu Microsoft 365.",
+  "Cuéntenos lo que necesita: preparamos con usted un piloto con sus propios documentos, en su Microsoft 365."),
+ "Démarrer un pilote →": T("Start a pilot →", "Iniciar um piloto →", "Iniciar un piloto →"),
+ "Copropriété fictive, données de démonstration · réponses générées par IA": T(
+  "Fictional building, demo data · AI-generated answers",
+  "Condomínio fictício, dados de demonstração · respostas geradas por IA",
+  "Comunidad ficticia, datos de demostración · respuestas generadas por IA"),
+ "Retour à l’accueil": T("Back to home", "Voltar ao início", "Volver al inicio"),
 }
