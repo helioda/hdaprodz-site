@@ -107,6 +107,7 @@ TEXT = {
   "Estimate the cost of CoproSens for your property (in French, prices in euros) ↗",
   "Estimar o custo do CoproSens para o seu condomínio (em francês, preços em euros) ↗",
   "Estimar el coste de CoproSens para su comunidad (en francés, precios en euros) ↗"),
+ "Tarifs": T("Pricing", "Preços", "Precios"),
  "Démarrer un pilote sur vos documents": T("Start a pilot on your documents", "Iniciar um piloto com os seus documentos", "Iniciar un piloto con sus documentos"),
  "Le pilote : CoproSens installé dans votre propre Microsoft 365, sur les documents de vos immeubles.": T(
   "The pilot: CoproSens set up in your own Microsoft 365, on your buildings’ documents.",
