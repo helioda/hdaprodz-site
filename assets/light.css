@@ -150,3 +150,21 @@ nav .links a.nav-price:hover{background:#fcd34d}
 /* Secondary CTA buttons (dashboard, tools) */
 .button.alt{display:flex;width:fit-content;max-width:100%;background:#ffffff;color:#0b1330;border:2px solid #67e8f9;font-weight:800;box-shadow:0 8px 22px #67e8f933}
 .button.alt:hover{background:#e0fbff}
+
+/* CoproSens action grid: rainbow tiles, dark text for readability */
+#applications .cases.single .case>.actions-grid,#applications .cases.single .case>.actions-note{grid-column:1/-1}
+.actions-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;margin-top:30px}
+.act{display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px;padding:20px 14px 18px;border-radius:18px;text-decoration:none;color:#0b1330;box-shadow:0 12px 28px #0006;transition:transform .15s ease,box-shadow .15s ease}
+.act:hover,.act:focus-visible{transform:translateY(-3px);box-shadow:0 18px 34px #0008}
+.act strong{font:800 17px/1.2 var(--display);color:#0b1330}
+.act small{font-size:13.5px;line-height:1.35;color:#1e293b}
+.act-ic{display:grid;place-items:center;width:46px;height:46px;border-radius:14px;background:#ffffffb3;color:#0b1330;margin-bottom:4px}
+.act-ic svg{width:26px;height:26px}
+.act-pilot{background:linear-gradient(150deg,#fda4af,#fb7185)}
+.act-price{background:linear-gradient(150deg,#fde68a,#fbbf24)}
+.act-dash{background:linear-gradient(150deg,#bbf7d0,#4ade80)}
+.act-demo{background:linear-gradient(150deg,#bae6fd,#38bdf8)}
+.act-tools{background:linear-gradient(150deg,#ddd6fe,#a78bfa)}
+.actions-note{text-align:center;font-size:13px;color:var(--soft);margin:14px 0 0}
+@media(max-width:1000px){.actions-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.act-pilot{grid-column:1/-1}}
+@media(max-width:520px){.actions-grid{grid-template-columns:1fr}}
