@@ -71,7 +71,7 @@ TEXT = {
   "Respostas claras sobre suas cotas e as obras aprovadas, a qualquer hora.",
   "Respuestas claras sobre sus derramas y las obras aprobadas, a cualquier hora."),
  "Assistants & agents IA": T("AI assistants & agents", "Assistentes e agentes de IA", "Asistentes y agentes de IA"),
- "Solutions sur mesure · Clients dans le monde entier": T("Tailor-made solutions · Clients worldwide", "Soluções sob medida · Clientes no mundo inteiro", "Soluciones a medida · Clientes en todo el mundo"),
+ "Solutions sur mesure, où que vous soyez": T("Tailor-made solutions, wherever you are", "Soluções sob medida, onde quer que esteja", "Soluciones a medida, dondequiera que esté"),
  "Ce que nous développons": T("What we build", "O que desenvolvemos", "Lo que desarrollamos"),
  "L’IA au service": T("AI at the service", "A IA a serviço", "La IA al servicio"),
  "du travail réel.": T("of real work.", "do trabalho real.", "del trabajo real."),
