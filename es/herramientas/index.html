@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Herramientas del administrador de fincas – CoproSens (demostración)</title>
+<meta name="description" content="Demostración de CoproSens: reparto de gastos y cuotas, orden del día, convocatoria y acta de la junta general.">
+<link rel="icon" href="/favicon.ico">
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/light.css">
+<link rel="stylesheet" href="/outils/tools.css">
+</head>
+<body>
+<header><div class="wrap"><nav aria-label="Navegación principal"><a class="brand" href="/es/"><img class="brand-mark" src="/media/hda-solutions-mark.svg" alt="" width="44" height="44">HDA <span>Solutions</span></a><div class="links"><a href="https://demo.hdaprodz.com/?lang=es">Panel</a><!--lang--><span class="lang-switch" aria-label="Idioma"><a href="/outils/" hreflang="fr" lang="fr" title="Français">FR</a><a href="/en/tools/" hreflang="en" lang="en" title="English">EN</a><a href="/pt/ferramentas/" hreflang="pt" lang="pt" title="Português">PT</a><a href="/es/herramientas/" hreflang="es" lang="es" title="Español" aria-current="true">ES</a></span><!--/lang--><a class="button" href="/es/proyecto.html">Hablemos de su proyecto ↗</a></div></nav></div></header>
+<main id="main" class="wrap tools">
+  <section class="tools-hero">
+    <p class="eyebrow">CoproSens · demostración</p>
+    <h1>Las herramientas del administrador, sin volver a teclear nada.</h1>
+    <p class="intro">Reparto de gastos al céntimo, cuotas por vivienda y documentos de junta general listos para revisar. Ejemplo con la comunidad ficticia <b>Résidence Le Clos des Mésanges</b> (42 viviendas, coeficientes sobre 10.000).</p>
+    <div class="tabs" role="tablist">
+      <button class="tab" role="tab" aria-selected="true" aria-controls="p-calc">Cuotas por vivienda</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="p-ag">Documentos de la junta general</button>
+    </div>
+  </section>
+
+  <section class="panel" id="p-calc" role="tabpanel">
+    <div class="tool-grid">
+      <form id="calc-form" class="tool-card">
+        <h2>Presupuesto anual</h2>
+        <label>Gastos generales (coeficientes generales)<input id="b-gen" type="number" min="0" step="100" inputmode="decimal"></label>
+        <label>Ascensor (solo viviendas en plantas superiores)<input id="b-asc" type="number" min="0" step="100" inputmode="decimal"></label>
+        <label>Agua fría (contadores individuales)<input id="b-eau" type="number" min="0" step="100" inputmode="decimal"></label>
+        <label>Calefacción central<input id="b-ch" type="number" min="0" step="100" inputmode="decimal"></label>
+        <div class="row2">
+          <label>Calefacción: parte según consumo (%)<input id="p-ch" type="number" min="0" max="100" step="5"></label>
+          <label>Fondo de reserva (% del presupuesto)<input id="p-ft" type="number" min="0" step="0.5"></label>
+        </div>
+        <p class="hint">Calefacción: parte variable según los repartidores de costes de cada vivienda, parte fija según los coeficientes. Fondo de reserva: al menos el 5 % del presupuesto (norma francesa).</p>
+        <label class="check-line"><input id="m-simple" type="checkbox"> Modo simple: repartir todo según los coeficientes generales</label>
+        <p class="hint">El modo simple es el del <a href="https://demo.hdaprodz.com/?lang=es" style="color:inherit">panel de demostración</a> (vivienda 01: 796,98 € por trimestre). El modo detallado imputa el ascensor solo a las viviendas de plantas superiores y aplica los consumos reales de agua y calefacción.</p>
+      </form>
+      <div class="tool-card kpis">
+        <div><span>Presupuesto anual</span><b id="k-budget"></b></div>
+        <div><span>Fondo de reserva</span><b id="k-ft"></b></div>
+        <div><span>Total a recaudar en el año</span><b id="k-total"></b></div>
+        <p class="check" id="k-check"></p>
+        <div class="actions"><button type="button" class="button" id="calc-csv">Exportar (Excel, CSV)</button><button type="button" class="ghost" id="calc-print">Imprimir</button></div>
+        <p class="hint">Cálculo determinista, sin IA: cada importe se redondea al céntimo y la suma de las viviendas coincide siempre con el presupuesto.</p>
+      </div>
+    </div>
+    <div class="table-wrap tool-card">
+      <table class="calc">
+        <caption>Reparto anual y cuota trimestral por vivienda</caption>
+        <thead><tr><th scope="col">Vivienda</th><th scope="col">Coeficiente</th><th scope="col">Gastos generales</th><th scope="col">Ascensor</th><th scope="col">Agua</th><th scope="col">Calefacción</th><th scope="col">Fondo de reserva</th><th scope="col">Total anual</th><th scope="col">Cuota trimestral</th></tr></thead>
+        <tbody id="calc-body"></tbody>
+        <tfoot id="calc-foot"></tfoot>
+      </table>
+    </div>
+  </section>
+
+  <section class="panel" id="p-ag" role="tabpanel" hidden>
+    <div class="tool-grid ag">
+      <div class="tool-card">
+        <h2>Preparar la junta</h2>
+        <div class="row2">
+          <label>Fecha de la junta<input id="ag-date" type="date"></label>
+          <label>Hora<input id="ag-heure" type="time"></label>
+        </div>
+        <label>Lugar<input id="ag-lieu" type="text"></label>
+        <label>Fecha de envío de la convocatoria<input id="ag-envoi" type="date"></label>
+        <label class="check-line"><input id="ag-visio" type="checkbox"> Posibilidad de asistir por videoconferencia</label>
+        <h3>Orden del día</h3>
+        <ol id="res-list" class="res-list"></ol>
+        <button type="button" class="ghost" id="res-add">Añadir una propuesta</button>
+        <h3>Resultados de las votaciones (para el acta)</h3>
+        <label>Viviendas ausentes y no representadas<input id="ag-absents" type="text"></label>
+        <div id="vote-list"></div>
+      </div>
+      <div class="tool-card doc">
+        <div class="doc-tabs" role="group" aria-label="Documento">
+          <button type="button" class="doc-tab" data-doc="ordre" aria-pressed="false">Orden del día</button>
+          <button type="button" class="doc-tab" data-doc="convocation" aria-pressed="true">Convocatoria</button>
+          <button type="button" class="doc-tab" data-doc="vote" aria-pressed="false">Voto por correo</button>
+          <button type="button" class="doc-tab" data-doc="pv" aria-pressed="false">Acta</button>
+        </div>
+        <article id="doc-view" class="doc-view" aria-live="polite"></article>
+        <div class="actions"><button type="button" class="button" id="doc-word">Descargar (Word)</button><button type="button" class="ghost" id="doc-print">Imprimir / PDF</button><button type="button" class="ghost" id="doc-send">Enviar a los propietarios</button></div>
+        <p id="send-msg" class="hint send" hidden>En esta demostración no se envía nada. En su despacho, el envío sale de su buzón de Microsoft 365 o de su proveedor de correo certificado electrónico, solo después de que el administrador haya validado el documento.</p>
+      </div>
+    </div>
+  </section>
+  <p class="disclaimer">Demostración con datos ficticios. Los modelos de documentos recogen las menciones habituales de la ley francesa de 10 de julio de 1965 y del decreto de 17 de marzo de 1967; deben ser revisados y validados por el administrador y no constituyen asesoramiento jurídico. Durante un piloto, se adaptan a su país y a su marco legal.</p>
+</main>
+<footer><div class="wrap"><div class="row"><span>© 2026 HDA PRODZ · HDA Solutions</span><span>Massy, France · SIRET 910 349 968 00016</span><a href="/es/">Volver al inicio</a></div></div></footer>
+<script src="/outils/l10n.js"></script>
+<script src="/outils/data.js"></script>
+<script src="/outils/tools.js"></script>
+</body>
+</html>

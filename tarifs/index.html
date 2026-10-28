@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Estimer le coût de CoproSens – HDA Solutions</title>
+<meta name="description" content="Estimez en quelques secondes le coût de CoproSens pour votre copropriété : pilote, mise en place, licences Microsoft et coût par lot et par mois.">
+<link rel="alternate" hreflang="fr" href="https://www.hdaprodz.com/tarifs/">
+<link rel="alternate" hreflang="en" href="https://www.hdaprodz.com/en/pricing/">
+<link rel="alternate" hreflang="pt" href="https://www.hdaprodz.com/pt/precos/">
+<link rel="alternate" hreflang="es" href="https://www.hdaprodz.com/es/precios/">
+<link rel="alternate" hreflang="x-default" href="https://www.hdaprodz.com/tarifs/">
+<link rel="icon" href="/favicon.ico">
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/light.css">
+<link rel="stylesheet" href="/outils/tools.css">
+<link rel="stylesheet" href="/tarifs/tarifs.css">
+</head>
+<body>
+<header><div class="wrap"><nav aria-label="Navigation principale"><a class="brand" href="/"><img class="brand-mark" src="/media/hda-solutions-mark.svg" alt="" width="44" height="44">HDA <span>Solutions</span></a><div class="links"><a href="/outils/">Outils du syndic</a><a href="https://demo.hdaprodz.com/?lang=fr">Tableau de bord</a><!--lang--><span class="lang-switch" aria-label="Langue"><a href="/tarifs/" hreflang="fr" lang="fr" title="Français" aria-current="true">FR</a><a href="/en/pricing/" hreflang="en" lang="en" title="English">EN</a><a href="/pt/precos/" hreflang="pt" lang="pt" title="Português">PT</a><a href="/es/precios/" hreflang="es" lang="es" title="Español">ES</a></span><!--/lang--><a class="button" href="/projet.html?type=pilote#formulaire">Demander un devis ↗</a></div></nav></div></header>
+<main id="main" class="wrap tools">
+  <section class="tools-hero">
+    <p class="eyebrow">CoproSens · estimation en toute transparence</p>
+    <h1>Combien coûte CoproSens pour votre copropriété&nbsp;?</h1>
+    <p class="intro">Indiquez la taille de votre copropriété et les options souhaitées : vous obtenez une estimation immédiate, y compris le coût par lot et par mois. Nos prix dépendent de la complexité réelle du projet, pas d’un forfait unique.</p>
+  </section>
+
+  <div class="tool-grid">
+    <form id="est-form" class="tool-card" novalidate>
+      <h2>Votre copropriété</h2>
+      <label>Nombre de lots principaux (logements, commerces, bureaux)
+        <input id="f-lots" type="number" min="1" max="2000" step="1" value="32" inputmode="numeric">
+      </label>
+      <p class="hint">Sans compter les caves ni les parkings. Ce chiffre figure sur la fiche synthétique de votre copropriété.</p>
+      <label>Membres du conseil syndical (comptes Microsoft 365)
+        <input id="f-cs" type="number" min="1" max="30" step="1" value="6" inputmode="numeric">
+      </label>
+      <label>Jours supplémentaires (numérisation d’archives papier, historique très volumineux, séances de prise en main en plus)
+        <input id="f-days" type="number" min="0" max="60" step="1" value="0" inputmode="numeric">
+      </label>
+      <h3>Options</h3>
+      <label class="check-line"><input id="f-dash" type="checkbox"> Tableau de bord du conseil syndical (appels de fonds, travaux, décisions d’AG)</label>
+      <label class="check-line"><input id="f-maint" type="checkbox"> Contrat de maintenance après le pilote</label>
+      <label class="check-line" id="founder-line"><input id="f-founder" type="checkbox"> Offre clients fondateurs (copropriétés jusqu’à 32 lots, jusqu’au 31/12/2026)</label>
+      <p class="hint" id="founder-hint">Pilote à tarif réduit et tableau de bord inclus, en échange d’un témoignage et d’une étude de cas.</p>
+    </form>
+
+    <div class="tool-card kpis" aria-live="polite">
+      <div class="cur-line"><p class="tier" id="k-tier"></p><label class="cur">Devise <select id="f-cur"><option value="EUR">EUR €</option><option value="USD">USD $</option><option value="GBP">GBP £</option><option value="BRL">BRL R$</option><option value="MXN">MXN $</option><option value="CAD">CAD $</option><option value="CHF">CHF</option></select></label></div>
+      <div><span>Pilote CoproSens (6 semaines)</span><b id="k-pilot"></b></div>
+      <div><span>Mise en place Microsoft 365 et prise en main</span><b id="k-setup"></b></div>
+      <div><span>Tableau de bord</span><b id="k-dash"></b></div>
+      <div><span>Licences Microsoft 365 (par an)</span><b id="k-lic"></b></div>
+      <div class="total"><span>Total première année</span><b id="k-y1"></b></div>
+      <div class="highlight"><span>Par lot et par mois, la 1<sup>re</sup> année</span><b id="k-y1m"></b></div>
+      <div class="highlight"><span>Par lot et par mois, les années suivantes</span><b id="k-y2m"></b></div>
+      <div id="row-maint"><span>Maintenance (par mois), soit par lot et par mois</span><b id="k-maint"></b></div>
+      <p class="fx" id="k-fx" hidden></p>
+      <p class="quote" id="k-quote" hidden>Au-delà de 200 lots, chaque projet est étudié sur mesure : nous vous adressons un devis détaillé.</p>
+      <div class="actions"><a class="button" href="/projet.html?type=pilote#formulaire">Demander un devis personnalisé</a><button type="button" class="ghost" id="k-print">Imprimer</button></div>
+    </div>
+  </div>
+
+  <section class="tool-card tiers" id="grid">
+    <h2>Notre grille, selon la taille de la copropriété</h2>
+    <div class="table-wrap">
+      <table class="calc">
+        <thead><tr><th scope="col">Taille</th><th scope="col">Pilote</th><th scope="col">Mise en place et prise en main</th><th scope="col">Maintenance (option)</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Jusqu’à 32 lots</th><td>2 500 € (1 750 € offre fondateurs)</td><td>3 jours, soit 1 650 €</td><td>175 € / mois (2 h incluses)</td></tr>
+          <tr><th scope="row">33 à 100 lots</th><td>2 500 €</td><td>5 jours, soit 2 750 €</td><td>350 € / mois (½ journée incluse)</td></tr>
+          <tr><th scope="row">101 à 200 lots</th><td>2 500 €</td><td>8 jours, soit 4 400 €</td><td>550 € / mois (1 journée incluse)</td></tr>
+          <tr><th scope="row">Plus de 200 lots</th><td colspan="3">Devis personnalisé, établi après étude de vos documents</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="hint">Tableau de bord du conseil syndical : 750 € (inclus dans l’offre fondateurs). Jour supplémentaire : 550 €. Au-delà du temps inclus, la maintenance est facturée 550 € par jour. Licences Microsoft 365 refacturées à prix coûtant (base indicative 7,80 € TTC par membre et par mois). La consommation d’IA est facturée directement par Microsoft à la copropriété ; pendant le pilote, elle est déduite de notre facture.</p>
+  </section>
+
+  <p class="disclaimer"><b>Estimation indicative, non contractuelle.</b> Ces montants servent à vous donner un ordre de grandeur. Le prix définitif est confirmé par un devis écrit, après un échange sur vos documents, vos besoins et vos contraintes. TVA non applicable, art. 293 B du CGI. Les prix des licences et de la consommation Microsoft peuvent évoluer.</p>
+</main>
+<footer><div class="wrap"><div class="row"><span>© 2026 HDA PRODZ · HDA Solutions</span><span>Massy, France · SIRET 910 349 968 00016</span><a href="/">Retour à l’accueil</a></div></div></footer>
+<script src="/tarifs/tarifs.js"></script>
+</body>
+</html>

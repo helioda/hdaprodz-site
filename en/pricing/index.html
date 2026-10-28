@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Estimate the cost of CoproSens – HDA Solutions</title>
+<meta name="description" content="Estimate in seconds what CoproSens costs for your building: pilot, setup, Microsoft licences and cost per unit per month, in your currency.">
+<link rel="alternate" hreflang="fr" href="https://www.hdaprodz.com/tarifs/">
+<link rel="alternate" hreflang="en" href="https://www.hdaprodz.com/en/pricing/">
+<link rel="alternate" hreflang="pt" href="https://www.hdaprodz.com/pt/precos/">
+<link rel="alternate" hreflang="es" href="https://www.hdaprodz.com/es/precios/">
+<link rel="alternate" hreflang="x-default" href="https://www.hdaprodz.com/tarifs/">
+<link rel="icon" href="/favicon.ico">
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/light.css">
+<link rel="stylesheet" href="/outils/tools.css">
+<link rel="stylesheet" href="/tarifs/tarifs.css">
+</head>
+<body>
+<header><div class="wrap"><nav aria-label="Main navigation"><a class="brand" href="/en/"><img class="brand-mark" src="/media/hda-solutions-mark.svg" alt="" width="44" height="44">HDA <span>Solutions</span></a><div class="links"><a href="/en/tools/">Manager tools</a><a href="https://demo.hdaprodz.com/?lang=en">Dashboard</a><!--lang--><span class="lang-switch" aria-label="Language"><a href="/tarifs/" hreflang="fr" lang="fr" title="Français">FR</a><a href="/en/pricing/" hreflang="en" lang="en" title="English" aria-current="true">EN</a><a href="/pt/precos/" hreflang="pt" lang="pt" title="Português">PT</a><a href="/es/precios/" hreflang="es" lang="es" title="Español">ES</a></span><!--/lang--><a class="button" href="/en/project.html?type=pilote#formulaire">Request a quote ↗</a></div></nav></div></header>
+<main id="main" class="wrap tools">
+  <section class="tools-hero">
+    <p class="eyebrow">CoproSens · transparent estimate</p>
+    <h1>How much does CoproSens cost for your building?</h1>
+    <p class="intro">Enter the size of your building and the options you want: you get an instant estimate, including the cost per unit per month. Prices are shown in your currency and reflect the real complexity of the project, not a one-size-fits-all package.</p>
+  </section>
+
+  <div class="tool-grid">
+    <form id="est-form" class="tool-card" novalidate>
+      <h2>Your building</h2>
+      <label>Number of main units (homes, shops, offices)
+        <input id="f-lots" type="number" min="1" max="2000" step="1" value="32" inputmode="numeric">
+      </label>
+      <p class="hint">Not counting storage rooms or parking spaces. You will find this figure in your building’s records.</p>
+      <label>Owners’ council members (Microsoft 365 accounts)
+        <input id="f-cs" type="number" min="1" max="30" step="1" value="6" inputmode="numeric">
+      </label>
+      <label>Extra days (digitising paper archives, very large history, additional onboarding sessions)
+        <input id="f-days" type="number" min="0" max="60" step="1" value="0" inputmode="numeric">
+      </label>
+      <h3>Options</h3>
+      <label class="check-line"><input id="f-dash" type="checkbox"> Owners’ council dashboard (service-charge calls, works, general meeting decisions)</label>
+      <label class="check-line"><input id="f-maint" type="checkbox"> Maintenance contract after the pilot</label>
+      <label class="check-line" id="founder-line"><input id="f-founder" type="checkbox"> Founding client offer (buildings up to 32 units, until 31 December 2026)</label>
+      <p class="hint" id="founder-hint">Discounted pilot with the dashboard included, in exchange for a testimonial and a case study.</p>
+    </form>
+
+    <div class="tool-card kpis" aria-live="polite">
+      <div class="cur-line"><p class="tier" id="k-tier"></p><label class="cur">Currency <select id="f-cur"><option value="EUR">EUR €</option><option value="USD">USD $</option><option value="GBP">GBP £</option><option value="BRL">BRL R$</option><option value="MXN">MXN $</option><option value="CAD">CAD $</option><option value="CHF">CHF</option></select></label></div>
+      <div><span>CoproSens pilot (6 weeks)</span><b id="k-pilot"></b></div>
+      <div><span>Microsoft 365 setup and onboarding</span><b id="k-setup"></b></div>
+      <div><span>Dashboard</span><b id="k-dash"></b></div>
+      <div><span>Microsoft 365 licences (per year)</span><b id="k-lic"></b></div>
+      <div class="total"><span>First-year total</span><b id="k-y1"></b></div>
+      <div class="highlight"><span>Per unit per month, 1<sup>st</sup> year</span><b id="k-y1m"></b></div>
+      <div class="highlight"><span>Per unit per month, following years</span><b id="k-y2m"></b></div>
+      <div id="row-maint"><span>Maintenance (per month), i.e. per unit per month</span><b id="k-maint"></b></div>
+      <p class="fx" id="k-fx" hidden></p>
+      <p class="quote" id="k-quote" hidden>Above 200 units, each project is assessed individually: we send you a detailed quote.</p>
+      <div class="actions"><a class="button" href="/en/project.html?type=pilote#formulaire">Request a tailored quote</a><button type="button" class="ghost" id="k-print">Print</button></div>
+    </div>
+  </div>
+
+  <section class="tool-card tiers" id="grid">
+    <h2>Our price grid, by building size</h2>
+    <div class="table-wrap">
+      <table class="calc">
+        <thead><tr><th scope="col">Size</th><th scope="col">Pilot</th><th scope="col">Setup and onboarding</th><th scope="col">Maintenance (optional)</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Up to 32 units</th><td>€2,500 (€1,750 founding offer)</td><td>3 days, i.e. €1,650</td><td>€175 / month (2 h included)</td></tr>
+          <tr><th scope="row">33 to 100 units</th><td>€2,500</td><td>5 days, i.e. €2,750</td><td>€350 / month (½ day included)</td></tr>
+          <tr><th scope="row">101 to 200 units</th><td>€2,500</td><td>8 days, i.e. €4,400</td><td>€550 / month (1 day included)</td></tr>
+          <tr><th scope="row">More than 200 units</th><td colspan="3">Tailored quote, prepared after reviewing your documents</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="hint">Owners’ council dashboard: €750 (included in the founding offer). Extra day: €550. Beyond the included time, maintenance is billed at €550 per day. Microsoft 365 licences re-invoiced at cost (indicative basis €7.80 per member per month, taxes included). AI consumption is billed directly by Microsoft to the building; during the pilot, it is deducted from our invoice.</p>
+  </section>
+
+  <p class="disclaimer"><b>Indicative, non-binding estimate.</b> These amounts give you an order of magnitude. The final price is confirmed in a written quote, after we discuss your documents, needs and constraints. Our prices are set in euros; other currencies are indicative conversions. VAT not applicable (French micro-enterprise, art. 293 B of the French General Tax Code). Microsoft licence and consumption prices may change.</p>
+</main>
+<footer><div class="wrap"><div class="row"><span>© 2026 HDA PRODZ · HDA Solutions</span><span>Massy, France · SIRET 910 349 968 00016</span><a href="/en/">Back to home</a></div></div></footer>
+<script src="/tarifs/l10n.js"></script>
+<script src="/tarifs/tarifs.js"></script>
+</body>
+</html>

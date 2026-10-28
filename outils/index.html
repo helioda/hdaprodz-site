@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Outils du syndic – CoproSens (démonstration)</title>
+<meta name="description" content="Démonstration CoproSens : répartition des charges et appels de fonds, ordre du jour, convocation et procès-verbal d’assemblée générale.">
+<link rel="icon" href="/favicon.ico">
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/light.css">
+<link rel="stylesheet" href="/outils/tools.css">
+</head>
+<body>
+<header><div class="wrap"><nav aria-label="Navigation principale"><a class="brand" href="/"><img class="brand-mark" src="/media/hda-solutions-mark.svg" alt="" width="44" height="44">HDA <span>Solutions</span></a><div class="links"><a href="https://demo.hdaprodz.com/">Tableau de bord</a><!--lang--><span class="lang-switch" aria-label="Langue"><a href="/outils/" hreflang="fr" lang="fr" title="Français" aria-current="true">FR</a><a href="/en/tools/" hreflang="en" lang="en" title="English">EN</a><a href="/pt/ferramentas/" hreflang="pt" lang="pt" title="Português">PT</a><a href="/es/herramientas/" hreflang="es" lang="es" title="Español">ES</a></span><!--/lang--><a class="button" href="/projet.html">Parlons de votre projet ↗</a></div></nav></div></header>
+<main id="main" class="wrap tools">
+  <section class="tools-hero">
+    <p class="eyebrow">CoproSens · démonstration</p>
+    <h1>Les outils du syndic, sans ressaisie.</h1>
+    <p class="intro">Répartition des charges au centime près, appels de fonds par lot, et documents d’assemblée générale prêts à relire. Exemple sur la copropriété fictive <b>Résidence Le Clos des Mésanges</b> (42 lots, 10 000 tantièmes).</p>
+    <div class="tabs" role="tablist">
+      <button class="tab" role="tab" aria-selected="true" aria-controls="p-calc">Appels de fonds</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="p-ag">Documents d’assemblée générale</button>
+    </div>
+  </section>
+
+  <section class="panel" id="p-calc" role="tabpanel">
+    <div class="tool-grid">
+      <form id="calc-form" class="tool-card">
+        <h2>Budget prévisionnel</h2>
+        <label>Charges générales (tantièmes généraux)<input id="b-gen" type="number" min="0" step="100" inputmode="decimal"></label>
+        <label>Ascenseur (lots en étage uniquement)<input id="b-asc" type="number" min="0" step="100" inputmode="decimal"></label>
+        <label>Eau froide (compteurs individuels)<input id="b-eau" type="number" min="0" step="100" inputmode="decimal"></label>
+        <label>Chauffage collectif<input id="b-ch" type="number" min="0" step="100" inputmode="decimal"></label>
+        <div class="row2">
+          <label>Part consommation du chauffage (%)<input id="p-ch" type="number" min="0" max="100" step="5"></label>
+          <label>Fonds de travaux (% du budget)<input id="p-ft" type="number" min="0" step="0.5"></label>
+        </div>
+        <p class="hint">Chauffage : part variable selon les répartiteurs de chaque lot, part fixe selon les tantièmes. Fonds de travaux : au moins 5 % du budget prévisionnel.</p>
+        <label class="check-line"><input id="m-simple" type="checkbox"> Mode simple : tout répartir aux tantièmes généraux</label>
+        <p class="hint">Le mode simple est celui du <a href="https://demo.hdaprodz.com/?lang=fr" style="color:inherit">tableau de bord de démonstration</a> (lot 01 : 796,98 € par trimestre). Le mode détaillé applique l’ascenseur aux seuls lots en étage et les consommations réelles d’eau et de chauffage.</p>
+      </form>
+      <div class="tool-card kpis">
+        <div><span>Budget prévisionnel</span><b id="k-budget"></b></div>
+        <div><span>Fonds de travaux</span><b id="k-ft"></b></div>
+        <div><span>Total à appeler sur l’année</span><b id="k-total"></b></div>
+        <p class="check" id="k-check"></p>
+        <div class="actions"><button type="button" class="button" id="calc-csv">Exporter (Excel, CSV)</button><button type="button" class="ghost" id="calc-print">Imprimer</button></div>
+        <p class="hint">Calcul déterministe, sans IA : chaque montant est arrondi au centime et le total des lots est toujours égal au budget.</p>
+      </div>
+    </div>
+    <div class="table-wrap tool-card">
+      <table class="calc">
+        <caption>Répartition annuelle et appel trimestriel par lot</caption>
+        <thead><tr><th scope="col">Lot</th><th scope="col">Tantièmes</th><th scope="col">Charges générales</th><th scope="col">Ascenseur</th><th scope="col">Eau</th><th scope="col">Chauffage</th><th scope="col">Fonds de travaux</th><th scope="col">Total annuel</th><th scope="col">Appel trimestriel</th></tr></thead>
+        <tbody id="calc-body"></tbody>
+        <tfoot id="calc-foot"></tfoot>
+      </table>
+    </div>
+  </section>
+
+  <section class="panel" id="p-ag" role="tabpanel" hidden>
+    <div class="tool-grid ag">
+      <div class="tool-card">
+        <h2>Préparer l’assemblée</h2>
+        <div class="row2">
+          <label>Date de l’assemblée<input id="ag-date" type="date"></label>
+          <label>Heure<input id="ag-heure" type="time"></label>
+        </div>
+        <label>Lieu<input id="ag-lieu" type="text"></label>
+        <label>Date d’envoi de la convocation<input id="ag-envoi" type="date"></label>
+        <label class="check-line"><input id="ag-visio" type="checkbox"> Participation possible en visioconférence</label>
+        <h3>Ordre du jour</h3>
+        <ol id="res-list" class="res-list"></ol>
+        <button type="button" class="ghost" id="res-add">Ajouter une résolution</button>
+        <h3>Résultats des votes (pour le procès-verbal)</h3>
+        <label>Lots absents et non représentés<input id="ag-absents" type="text"></label>
+        <div id="vote-list"></div>
+      </div>
+      <div class="tool-card doc">
+        <div class="doc-tabs" role="group" aria-label="Document">
+          <button type="button" class="doc-tab" data-doc="ordre" aria-pressed="false">Ordre du jour</button>
+          <button type="button" class="doc-tab" data-doc="convocation" aria-pressed="true">Convocation</button>
+          <button type="button" class="doc-tab" data-doc="vote" aria-pressed="false">Vote par correspondance</button>
+          <button type="button" class="doc-tab" data-doc="pv" aria-pressed="false">Procès-verbal</button>
+        </div>
+        <article id="doc-view" class="doc-view" aria-live="polite"></article>
+        <div class="actions"><button type="button" class="button" id="doc-word">Télécharger (Word)</button><button type="button" class="ghost" id="doc-print">Imprimer / PDF</button><button type="button" class="ghost" id="doc-send">Envoyer aux copropriétaires</button></div>
+        <p id="send-msg" class="hint send" hidden>En démonstration, rien n’est envoyé. Chez vous, l’envoi part de votre messagerie Microsoft 365 ou de votre prestataire de lettre recommandée électronique, uniquement après validation du document par le syndic.</p>
+      </div>
+    </div>
+  </section>
+  <p class="disclaimer">Démonstration sur données fictives. Les modèles de documents reprennent les mentions usuelles de la loi du 10 juillet 1965 et du décret du 17 mars 1967 ; ils doivent être relus et validés par le syndic et ne constituent pas un conseil juridique.</p>
+</main>
+<footer><div class="wrap"><div class="row"><span>© 2026 HDA PRODZ · HDA Solutions</span><span>Massy, France · SIRET 910 349 968 00016</span><a href="/">Retour à l’accueil</a></div></div></footer>
+<script src="/outils/data.js"></script>
+<script src="/outils/tools.js"></script>
+</body>
+</html>
