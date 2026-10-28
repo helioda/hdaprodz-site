@@ -72,7 +72,7 @@ def build(src_name, lang):
     t = t.replace('href="https://demo.hdaprodz.com/"', f'href="https://demo.hdaprodz.com/?lang={lang}"')
     # Translated tools/pricing pages load their string table before the scripts.
     t = t.replace('<script src="/outils/data.js"></script>', '<script src="/outils/l10n.js?v=2"></script>\n<script src="/outils/data.js"></script>')
-    t = t.replace('<script src="/tarifs/tarifs.js"></script>', '<script src="/tarifs/l10n.js"></script>\n<script src="/tarifs/tarifs.js"></script>')
+    t = re.sub(r'(<script src="/tarifs/tarifs\.js[^"]*"></script>)', r'<script src="/tarifs/l10n.js?v=2"></script>\n\1', t)
     t = re.sub(r"<!--lang-->.*?<!--/lang-->", lambda m: switcher(urls, lang), t, count=1, flags=re.S)
     t = re.sub(r'(href|src|poster)="(assets|media)/', r'\1="/\2/', t)
     t = t.replace('href="projet.html', f'href="{FORM[lang]}')
