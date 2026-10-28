@@ -29,3 +29,4 @@ nav .links .lang-switch a[hreflang]{display:inline-block}
   nav .links .button{white-space:nowrap;padding:10px 14px;font-size:13px}
 }
 @media(max-width:480px){nav .links .button{display:none}}
+.hda-chat-live{overflow:hidden;display:flex;flex-direction:column}.hda-chat-live>div{flex:1;min-height:0}
