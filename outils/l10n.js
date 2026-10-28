@@ -9,6 +9,9 @@
 
   D.en = {
     locale: "en-US",
+    // English page: the fictitious demo shown in US dollars with the same figures as
+    // the English demo dashboard (demo.hdaprodz.com), so both match (unit 01: $796.98 per quarter).
+    currency: "USD",
     lot: function (n) { return "Unit " + pad(n); },
     owner: function (n) { return "Owner of unit " + pad(n); },
     floor: function (e) { return " · floor " + e; },
@@ -17,7 +20,7 @@
     balanced: "Totals balance to the cent ✓",
     gap: "Difference of ",
     total: "Total",
-    csvHead: ["Unit", "Type", "Floor", "Shares", "General charges", "Lift", "Water (m³)", "Water (€)", "Heating (units)", "Heating (€)", "Reserve fund", "Annual total", "Quarterly call"],
+    csvHead: ["Unit", "Type", "Floor", "Shares", "General charges", "Lift", "Water (m³)", "Water ($)", "Heating (units)", "Heating ($)", "Reserve fund", "Annual total", "Quarterly call"],
     csvName: "service-charge-calls-clos-des-mesanges.csv",
     csvSep: ",",
     csvDec: ".",
@@ -34,7 +37,7 @@
       { k: "scr", t: "Election of the teller(s)", m: "24" },
       { k: "acc", t: "Approval of the 2026 accounts", m: "24" },
       { k: "quitus", t: "Discharge of the property manager for the 2026 financial year", m: "24" },
-      { k: "budget", t: "Vote on the 2027 annual budget (€156,500)", m: "24" },
+      { k: "budget", t: "Vote on the 2027 annual budget ($156,500)", m: "24" },
       { k: "ft", t: "Annual contribution to the reserve fund (5% of the annual budget)", m: "25" },
       { k: "roof", t: "Roof terrace waterproofing works: choice of contractor based on two quotes", m: "24" },
       { k: "syndic", t: "Appointment of the property manager and approval of the contract", m: "25" }

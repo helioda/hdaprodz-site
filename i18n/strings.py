@@ -401,7 +401,7 @@ TEXT["outils/index.html"] = {
  "Le mode simple est celui du": T("Simple mode is the one used in the", "O modo simples é o do", "El modo simple es el del"),
  "tableau de bord de démonstration": T("demo dashboard", "painel de demonstração", "panel de demostración"),
  "(lot 01 : 796,98 € par trimestre). Le mode détaillé applique l’ascenseur aux seuls lots en étage et les consommations réelles d’eau et de chauffage.": T(
-  "(unit 01: €796.98 per quarter). Detailed mode charges the lift to upper-floor units only and uses actual water and heating consumption.",
+  "(unit 01: $796.98 per quarter). Detailed mode charges the lift to upper-floor units only and uses actual water and heating consumption.",
   "(unidade 01: R$ 4.982,50 por trimestre). O modo detalhado cobra o elevador apenas das unidades nos andares e usa os consumos reais de água e aquecimento.",
   "(vivienda 01: 796,98 € por trimestre). El modo detallado imputa el ascensor solo a las viviendas de plantas superiores y aplica los consumos reales de agua y calefacción."),
  "Fonds de travaux": T("Reserve fund", "Fundo de reserva", "Fondo de reserva"),
