@@ -207,3 +207,18 @@ nav .links a.nav-price:hover{background:#fcd34d}
 #solutions .grid .card>h3,#solutions .grid .card>p{flex:1 1 100%}
 #solutions .grid .card>.tag{flex:0 0 auto;margin:0 6px 0 0}
 #solutions .grid .card>.tag+.tag{margin-left:-6px}
+/* Button palette drawn from the hero's water reflections (all AA contrast) */
+.act-pilot{background:linear-gradient(180deg,#f8b27a,#e8743f)}
+.act-price{background:linear-gradient(180deg,#f5a8cf,#e06aa8)}
+.act-contact{background:linear-gradient(180deg,#9adcfd,#38a3f0)}
+.act-dash{background:linear-gradient(180deg,#4f6ee8,#2f47c2)}
+.act-demo{background:linear-gradient(180deg,#8466f2,#6340d6)}
+.act-tools{background:linear-gradient(180deg,#b544d1,#9d34c4)}
+.act-pilot,.act-price,.act-contact{color:#0b1330}
+.act-pilot .act-ic,.act-price .act-ic,.act-contact .act-ic{background:#ffffff99;color:#0b1330}
+.act-dash,.act-demo,.act-tools{color:#fff}
+.act-dash .act-ic,.act-demo .act-ic,.act-tools .act-ic{background:#ffffff2e;color:#fff}
+.act{border:1px solid #ffffff40}
+.button:not(.light):not(.price):not(.alt){background:linear-gradient(180deg,#f8b27a,#e8743f);color:#0b1330;box-shadow:0 10px 26px #e8743f40}
+.button.light{background:linear-gradient(180deg,#9adcfd,#38a3f0);color:#0b1330}
+nav .links a.nav-price{background:linear-gradient(180deg,#f5a8cf,#e06aa8);color:#0b1330}
