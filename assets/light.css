@@ -192,3 +192,6 @@ nav .links a.nav-price:hover{background:#fcd34d}
 .actions-grid{display:flex!important;flex-wrap:wrap;justify-content:center;gap:10px}
 .act{flex:0 0 auto;padding:9px 16px 9px 10px}
 @media(max-width:520px){.act{flex:1 1 100%}}
+/* Even tighter joins between the case-study band and its neighbours */
+.dark.section{padding:44px 0 36px}
+.dark.section+.wrap>.section:first-child{padding-top:36px}
