@@ -21,7 +21,7 @@ TEXT = {
 "index.html": {
  "Configurer et estimer mon déploiement": T("Configure and estimate my deployment", "Configurar e estimar minha implantação", "Configurar y estimar mi despliegue"),
  "Essayer les outils du syndic": T("Try the manager tools", "Experimentar as ferramentas da administradora", "Probar las herramientas del administrador"),
- "Voir le tableau de bord": T("See the dashboard", "Ver o painel", "Ver el panel"),
+ "Suivre les travaux et les devis": T("Follow works and quotes", "Acompanhar obras e orçamentos", "Seguir obras y presupuestos"),
  "Poser une question à l’assistant": T("Ask the assistant a question", "Fazer uma pergunta ao assistente", "Hacer una pregunta al asistente"),
  "Outils": T("Tools", "Ferramentas", "Herramientas"),
  "Décrire mon projet": T("Describe my project", "Descrever meu projeto", "Describir mi proyecto"),
@@ -61,20 +61,20 @@ TEXT = {
  "Réponse sourcée": T("Sourced answer", "Resposta com fonte", "Respuesta con fuente"),
  "Pour chaque acteur de la copropriété": T("For everyone in the building", "Para cada ator do condomínio", "Para cada actor de la comunidad"),
  "Syndics": T("Property managers", "Administradoras", "Administradores de fincas"),
- "Retrouver une décision d’AG ou un devis en quelques secondes, préparer les appels de fonds et les documents d’AG.": T(
-  "Find a general-meeting decision or a quote in seconds; prepare service-charge calls and meeting documents.",
-  "Encontrar uma decisão de assembleia ou um orçamento em segundos; preparar chamadas de cotas e documentos de assembleia.",
-  "Encontrar un acuerdo de junta o un presupuesto en segundos; preparar cuotas y documentos de junta."),
+ "Suivre les impayés et les relances, les contrats d’entretien et les devis ; préparer les appels de fonds et les documents d’AG.": T(
+  "Track unpaid charges and reminders, maintenance contracts and quotes; prepare service-charge calls and general-meeting documents.",
+  "Acompanhar a inadimplência e as cobranças, os contratos de manutenção e os orçamentos; preparar as chamadas de cotas e os documentos de assembleia.",
+  "Seguir los impagos y los recordatorios, los contratos de mantenimiento y los presupuestos; preparar las cuotas y los documentos de junta."),
  "Conseils syndicaux": T("Owners’ boards", "Conselhos do condomínio", "Juntas de propietarios"),
- "Suivre les impayés, les travaux et l’exécution des décisions d’AG.": T(
-  "Track unpaid charges, works and how meeting decisions are carried out.",
-  "Acompanhar inadimplências, obras e a execução das decisões de assembleia.",
-  "Seguir impagos, obras y la ejecución de los acuerdos de junta."),
+ "Suivre l’avancement des travaux votés, vérifier l’exécution des décisions d’AG, retrouver une résolution et comparer les devis.": T(
+  "Follow the progress of approved works, check that meeting decisions are carried out, find a resolution and compare quotes.",
+  "Acompanhar o andamento das obras aprovadas, verificar a execução das decisões de assembleia, encontrar uma resolução e comparar orçamentos.",
+  "Seguir el avance de las obras aprobadas, comprobar la ejecución de los acuerdos de junta, encontrar un acuerdo y comparar presupuestos."),
  "Copropriétaires": T("Owners", "Condôminos", "Propietarios"),
- "Des réponses claires sur leurs appels de fonds et les travaux votés, à toute heure.": T(
-  "Clear answers about their charges and approved works, at any time.",
-  "Respostas claras sobre suas cotas e as obras aprovadas, a qualquer hora.",
-  "Respuestas claras sobre sus derramas y las obras aprobadas, a cualquier hora."),
+ "Vérifier leurs appels de fonds, leurs échéances et le détail de leurs charges ; connaître la date de la prochaine AG et les résolutions votées.": T(
+  "Check their service-charge calls, due dates and charge breakdown; know the date of the next general meeting and the resolutions passed.",
+  "Conferir suas cotas, os vencimentos e o detalhe das despesas; saber a data da próxima assembleia e as resoluções aprovadas.",
+  "Comprobar sus cuotas, los vencimientos y el detalle de sus gastos; conocer la fecha de la próxima junta y los acuerdos aprobados."),
  "Assistants & agents IA": T("AI assistants & agents", "Assistentes e agentes de IA", "Asistentes y agentes de IA"),
  "Solutions sur mesure, où que vous soyez": T("Tailor-made solutions, wherever you are", "Soluções sob medida, onde quer que esteja", "Soluciones a medida, dondequiera que esté"),
  "Ce que nous développons": T("What we build", "O que desenvolvemos", "Lo que desarrollamos"),
