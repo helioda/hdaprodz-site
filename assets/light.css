@@ -168,3 +168,23 @@ nav .links a.nav-price:hover{background:#fcd34d}
 .actions-note{text-align:center;font-size:13px;color:var(--soft);margin:12px 0 0}
 @media(max-width:1000px){.actions-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:520px){.actions-grid{grid-template-columns:1fr}}
+
+/* Tighter "Ce que nous développons" cards and section spacing */
+.section{padding:52px 0}
+#solutions .sectionhead{margin-bottom:22px}
+#solutions .grid{gap:16px}
+#solutions .grid .card{padding:20px 22px}
+#solutions .icon{width:40px;height:40px;border-radius:11px;margin-bottom:10px}
+#solutions .icon svg{width:21px;height:21px}
+#solutions .card h3{font-size:19px;margin:6px 0 8px}
+#solutions .card p{font-size:15px;line-height:1.5;margin:0 0 12px}
+#solutions .tag{font-size:11.5px;padding:3px 8px}
+.dark.section{padding:52px 0}
+
+/* Smooth colour morph between sections (no hard band edges) */
+.dark{background:none!important;border-top:0!important;border-bottom:0!important;position:relative;isolation:isolate}
+.dark::before{content:"";position:absolute;inset:-120px 0;z-index:-1;pointer-events:none;background:radial-gradient(45% 60% at 0% 0%, rgba(45, 212, 191, 0.19), rgba(0, 0, 0, 0) 70%), radial-gradient(40% 60% at 100% 100%, rgba(251, 138, 114, 0.19), rgba(0, 0, 0, 0) 70%), linear-gradient(140deg, rgb(36, 48, 110), rgb(42, 36, 112) 55%, rgb(22, 80, 103));-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 220px,#000 calc(100% - 220px),transparent 100%);mask-image:linear-gradient(to bottom,transparent 0,#000 220px,#000 calc(100% - 220px),transparent 100%)}
+/* Tighter "Comment démarrer" step cards */
+.steps .card{padding:20px 22px}
+.steps .card h3{font-size:19px;margin:10px 0 6px}
+.steps .card p{font-size:15px;line-height:1.5;margin:0}
