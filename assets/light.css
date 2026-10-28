@@ -354,3 +354,4 @@ html[lang="en"] .role-q li:after,html[lang="pt-BR"] .role-q li:after{content:"â€
 .pf h4{margin:0 0 4px;font-size:14.5px;color:#86e8ff}.pf p{margin:0;font-size:13.5px;line-height:1.45;color:#c9d2e8}
 @media(max-width:1000px){.platform-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:560px){.platform-grid{grid-template-columns:1fr}}
+#applications + .wrap > .section:first-child{padding-top:40px}#applications{padding-bottom:44px}
