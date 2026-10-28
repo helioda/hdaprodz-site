@@ -110,6 +110,8 @@ TEXT = {
  "Le suivi du conseil syndical": T("The owners’ council overview", "O acompanhamento do conselho", "El seguimiento del consejo"),
  "Outils du syndic ↗": T("Manager tools ↗", "Ferramentas da administradora ↗", "Herramientas del administrador ↗"),
  "Appels de fonds et documents d’AG": T("Service charges and meeting documents (in French)", "Cotas e documentos de assembleia (em francês)", "Cuotas y documentos de junta (en francés)"),
+ "Nous contacter": T("Contact us", "Fale conosco", "Contáctenos"),
+ "Réponse personnalisée, sans engagement": T("Personal reply, no commitment", "Resposta personalizada, sem compromisso", "Respuesta personalizada, sin compromiso"),
  "Copropriété fictive, données de démonstration · réponses générées par IA": T(
   "Fictional condominium, demo data · AI-generated answers",
   "Condomínio fictício, dados de demonstração · respostas geradas por IA",
