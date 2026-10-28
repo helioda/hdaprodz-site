@@ -185,10 +185,25 @@
       var tpl = {
         fr: "Nous souhaitons démarrer un pilote CoproSens sur nos documents.\n\nNombre d'immeubles gérés :\nMicrosoft 365 (oui / non, offre) :\nOù sont nos documents aujourd'hui :\nContact informatique :",
         en: "We would like to start a CoproSens pilot on our documents.\n\nNumber of buildings or associations managed:\nMicrosoft 365 (yes / no, plan):\nWhere our documents are stored today:\nIT contact:",
-        pt: "Gostaríamos de iniciar um piloto do CoproSens com os nossos documentos.\n\nNúmero de condomínios geridos:\nMicrosoft 365 (sim / não, plano):\nOnde estão hoje os nossos documentos:\nContacto de informática:",
+        pt: "Gostaríamos de iniciar um piloto do CoproSens com os nossos documentos.\n\nNúmero de condomínios administrados:\nMicrosoft 365 (sim / não, plano):\nOnde estão hoje os nossos documentos:\nContato de TI:",
         es: "Nos gustaría iniciar un piloto de CoproSens con nuestros documentos.\n\nNúmero de edificios administrados:\nMicrosoft 365 (sí / no, plan):\nDónde están hoy nuestros documentos:\nContacto de informática:"
       };
       var lg = (document.documentElement.lang || "fr").slice(0, 2);
+      // Pilot requests get their own heading, so the page matches the "Start a pilot" button.
+      var head = {
+        fr: ["Demande de pilote", "Démarrer un <em>pilote CoproSens.</em>", "Quelques informations suffisent pour préparer votre pilote : le nombre d’immeubles gérés, votre Microsoft 365 et l’endroit où se trouvent vos documents. Vous recevez une réponse personnalisée, sans engagement.", "Démarrer un pilote CoproSens — HDA Solutions"],
+        en: ["Pilot request", "Start a <em>CoproSens pilot.</em>", "A few details are enough to prepare your pilot: how many buildings you manage, your Microsoft 365 and where your documents are kept. You’ll receive a personal reply, with no commitment.", "Start a CoproSens pilot — HDA Solutions"],
+        pt: ["Solicitação de piloto", "Iniciar um <em>piloto do CoproSens.</em>", "Algumas informações bastam para preparar o seu piloto: quantos condomínios você administra, o seu Microsoft 365 e onde estão os seus documentos. Você recebe uma resposta personalizada, sem compromisso.", "Iniciar um piloto do CoproSens — HDA Solutions"],
+        es: ["Solicitud de piloto", "Iniciar un <em>piloto de CoproSens.</em>", "Bastan unos pocos datos para preparar su piloto: cuántos edificios administra, su Microsoft 365 y dónde están sus documentos. Recibirá una respuesta personalizada, sin compromiso.", "Iniciar un piloto de CoproSens — HDA Solutions"]
+      }[lg] || null;
+      var hero = document.querySelector(".p-hero");
+      if (head && hero) {
+        var eb = hero.querySelector(".eyebrow"), h1 = hero.querySelector("h1"), intro = hero.querySelector(".intro");
+        if (eb) eb.textContent = head[0];
+        if (h1) h1.innerHTML = head[1];
+        if (intro) intro.textContent = head[2];
+        document.title = head[3];
+      }
       if (!desc.value) { desc.value = tpl[lg] || tpl.fr; count.textContent = desc.value.length; }
     }
     if (q.get("statut") === "ok" && q.get("ref")) showStatus("ok", MESSAGES.ok(q.get("ref").replace(/[^A-Z0-9-]/gi, "")));
