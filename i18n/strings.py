@@ -103,6 +103,10 @@ TEXT = {
   "Try the property-manager tools: service-charge calls and meeting documents (in French) ↗",
   "Experimentar as ferramentas da administradora: chamadas de cotas e documentos de assembleia (em francês) ↗",
   "Probar las herramientas del administrador: cuotas y documentos de junta (en francés) ↗"),
+ "Estimer le coût de CoproSens pour votre copropriété ↗": T(
+  "Estimate the cost of CoproSens for your property (in French, prices in euros) ↗",
+  "Estimar o custo do CoproSens para o seu condomínio (em francês, preços em euros) ↗",
+  "Estimar el coste de CoproSens para su comunidad (en francés, precios en euros) ↗"),
  "Démarrer un pilote sur vos documents": T("Start a pilot on your documents", "Iniciar um piloto com os seus documentos", "Iniciar un piloto con sus documentos"),
  "Le pilote : CoproSens installé dans votre propre Microsoft 365, sur les documents de vos immeubles.": T(
   "The pilot: CoproSens set up in your own Microsoft 365, on your buildings’ documents.",
