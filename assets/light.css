@@ -138,3 +138,6 @@ footer a{color:#fff}
 /* Readable light buttons: dark text on cyan */
 .button.light{background:#86e8ff;color:#0b1330;font-weight:800}
 .button.light:hover{background:#a5efff}
+
+/* Readable coral buttons: dark text */
+.button:not(.light){color:#0b1330;font-weight:800}
