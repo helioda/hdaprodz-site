@@ -40,6 +40,14 @@
     panel.appendChild(head);
     panel.appendChild(note);
     document.body.appendChild(btn);
+    // Icon only while the hero is visible; full label once the visitor scrolls past it.
+    var hero = document.querySelector(".hero");
+    if (hero && "IntersectionObserver" in window) {
+      btn.setAttribute("title", T.btn);
+      new IntersectionObserver(function (es) {
+        btn.classList.toggle("is-compact", es[0].isIntersecting);
+      }, { threshold: 0.25 }).observe(hero);
+    }
     document.body.appendChild(panel);
 
     var frame = null;
