@@ -382,14 +382,40 @@ nav .links a.button:not(.light):not(.price):not(.alt):hover{background:rgba(232,
 @media(min-width:801px){.hero .intro{font-size:20px;line-height:1.5;max-width:470px}}
 /* Headline ~10% smaller on desktop so the mockup can sit clear of the towers */
 @media(min-width:801px){.hero h1{font-size:clamp(40px,3.5vw,50px);letter-spacing:-2px}}
-/* Hero v3 (29 Oct): skyline first. Desktop shows only the compact assistant card, low and left of the towers */
+/* Hero v4 (29 Oct): one redesigned card — dashboard summary on top, assistant answer below — flat, close to the text, towers clear */
+ .hero .scene{min-height:0;padding:0;border-radius:16px;box-shadow:0 26px 70px #000a,0 0 0 1px #86e8ff40;background:linear-gradient(150deg,#26346ef2,#1a2556f7)}
+ .hero .browser{display:block;width:100%;margin:0;transform:none;border-radius:16px 16px 0 0;box-shadow:none}
+ .hero .chat-card{position:relative;left:auto;right:auto;top:auto;bottom:auto;width:100%;border:0;border-top:1px solid #86e8ff33;border-radius:0 0 16px 16px;box-shadow:none;background:transparent;backdrop-filter:none;-webkit-backdrop-filter:none;padding:12px 14px 13px}
+ .hero .scene-chip{left:auto;right:14px;top:-13px;transform:rotate(-2deg);font-size:11.5px;padding:6px 11px;background:#e9cf8f;color:#3b2a06;box-shadow:0 6px 16px #0005}
 @media(min-width:801px){
- .hero .scene{min-height:0;width:290px;max-width:290px;justify-self:start;align-self:end;margin:0 0 30px -30px}
- .hero .browser{display:none}
- .hero .chat-card{position:relative;left:auto;right:auto;top:auto;bottom:auto;width:290px;padding:12px 14px 11px}
+ .hero .scene{width:380px;max-width:380px;justify-self:start;align-self:center;margin:30px 0 0 -40px;border-radius:16px;box-shadow:0 26px 70px #000a,0 0 0 1px #86e8ff40;background:linear-gradient(150deg,#26346ef2,#1a2556f7)}
+ .hero .browser{display:block;width:100%;margin:0;transform:none;border-radius:16px 16px 0 0;box-shadow:none}
+ .hero .chat-card{position:relative;left:auto;right:auto;top:auto;bottom:auto;width:100%;border:0;border-top:1px solid #86e8ff33;border-radius:0 0 16px 16px;box-shadow:none;background:transparent;backdrop-filter:none;-webkit-backdrop-filter:none;padding:12px 14px 13px}
  .hero .chat-head{font-size:13px}
  .hero .chat-q{font-size:13px}
  .hero .chat-a{font-size:14px}
  .hero .chat-src{font-size:11.5px}
- .hero .scene-chip{left:auto;right:12px;top:-13px}
+ .hero .scene-chip{left:auto;right:14px;top:-13px}
+}
+@media(min-width:1245px){.hero .scene{margin-left:-60px}}
+/* Short landscape screens (phones turned sideways): smaller type, compact header */
+@media(min-width:801px) and (max-height:520px){
+ nav{padding:8px 0}.brand-mark{width:34px;height:34px}.brand{font-size:20px}
+ .hero{min-height:0;padding:18px 0 26px;gap:24px}
+ .hero h1{font-size:34px;letter-spacing:-1.2px;margin:6px 0 10px}
+ .hero .intro{font-size:16px;max-width:420px}.hero .actions{margin-top:14px}
+ .hero .scene{width:330px;max-width:330px;margin:0;align-self:end}
+ .hero .browser{display:none}
+ .hero .chat-card{border-top:0;border-radius:16px}
+ nav .links>a:not(.button):not(.nav-price){display:none}
+ .hero .chat-a{font-size:13px}
+}
+/* Phones (portrait): compact header on one row, hero text higher */
+@media(max-width:800px){
+ nav{padding:10px 0;gap:12px;flex-wrap:nowrap}
+ .brand{font-size:20px}.brand-mark{width:36px;height:36px}
+ nav .links{gap:8px}
+ .hero{padding:26px 0 40px;gap:28px}
+ .hero h1{font-size:clamp(36px,10vw,46px);margin:10px 0 14px}
+ .hero .intro{font-size:17px}
 }
