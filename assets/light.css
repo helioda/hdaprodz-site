@@ -368,13 +368,14 @@ nav .links a.button:not(.light):not(.price):not(.alt):hover{background:rgba(232,
 .hda-chat-btn.is-compact svg{width:22px;height:22px;flex-basis:22px}
 @media(min-width:801px){.hero .intro{max-width:480px}}
 /* Laptops: same composition, scaled down and moved left so the towers stay visible */
-@media(min-width:801px) and (max-width:1599px){
- .hero h1{font-size:clamp(40px,3.6vw,52px);letter-spacing:-2px}
- .hero .scene{transform:scale(.84);transform-origin:left center;justify-self:start;margin-left:-24px}
+@media(min-width:801px){
+ .hero h1{font-size:clamp(40px,3.6vw,54px);letter-spacing:-2px}
+ .hero .scene{transform:scale(.84);transform-origin:left center;justify-self:start;margin-left:-40px}
  .browser{transform:rotate(-1.5deg)}
  .scene-chip{font-size:12px;padding:7px 12px;background:#efcf7a;transform:rotate(-2.5deg)}
 }
-@media(min-width:801px) and (max-width:1300px){.hero .scene{transform:scale(.76)}}
+@media(min-width:1245px){.hero .scene{margin-left:-64px}}
+@media(min-width:801px) and (max-width:1300px){.hero .scene{transform:scale(.76);margin-left:-30px}}
 /* Short landscape screens (phones turned sideways) */
 @media(min-width:801px) and (max-height:520px){
  nav{padding:8px 0}.brand-mark{width:34px;height:34px}.brand{font-size:20px}
