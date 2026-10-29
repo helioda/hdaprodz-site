@@ -396,3 +396,5 @@ nav .links a.button:not(.light):not(.price):not(.alt):hover{background:rgba(232,
  .hero .intro{font-size:17px}
  .scene-chip{font-size:12px;padding:7px 12px;background:#efcf7a}
 }
+@media(min-width:801px) and (max-width:1599px){.hero .scene{transform:scale(.76)}}
+@media(min-width:801px) and (max-width:1300px){.hero .scene{transform:scale(.72)}}
