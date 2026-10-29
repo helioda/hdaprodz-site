@@ -398,3 +398,9 @@ nav .links a.button:not(.light):not(.price):not(.alt):hover{background:rgba(232,
 }
 @media(min-width:801px) and (max-width:1599px){.hero .scene{transform:scale(.76)}}
 @media(min-width:801px) and (max-width:1300px){.hero .scene{transform:scale(.72)}}
+/* Intro paragraph never wider than the headline (any language) */
+@media(min-width:801px){.hero>div:first-child{width:fit-content;max-width:650px}.hero .intro,.hero .actions{width:0;min-width:100%;max-width:none}}
+/* Cards follow the text column at a fixed gap, whatever the language or screen */
+@media(min-width:801px){.hero{grid-template-columns:auto 1fr!important;column-gap:56px}.hero .scene{margin-left:0!important}}
+@media(min-width:801px) and (max-width:1300px){.hero{column-gap:44px}}
+@media(min-width:801px){.hero .actions{flex-wrap:nowrap}.hero .actions .textlink{white-space:nowrap}}
