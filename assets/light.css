@@ -360,7 +360,7 @@ html[lang="en"] .role-q li:after,html[lang="pt-BR"] .role-q li:after{content:"â€
 #solutions .grid .card{display:grid;grid-template-columns:auto 1fr;grid-template-rows:auto auto 1fr auto;column-gap:12px;align-items:center}#solutions .grid .card>h3,#solutions .grid .card>p,#solutions .grid .card>.tags{grid-column:1/-1}#solutions .grid .card>p{align-self:start}#solutions .grid .card>.tags{display:flex;flex-wrap:wrap;gap:6px;align-self:end}#solutions .grid .card .tags>.tag{margin:0}
 /* Hero balance (29 Oct): smaller, flatter mockup shifted left; compact chat card lower right; calmer badge; outlined nav CTA */
 @media(min-width:801px){
- .browser{width:84%;transform:translateX(-36px) rotate(-1deg)}
+ .browser{width:84%;transform:translateX(-28px) rotate(-1deg)}
  .scene-chip{left:-7%;top:-14px;font-size:11.5px;padding:6px 11px;background:#e9cf8f;color:#3b2a06;box-shadow:0 6px 16px #0005;transform:rotate(-2deg)}
  .chat-card{width:248px;right:-7%;bottom:-44px;padding:10px 12px 9px;border-radius:13px}
  .chat-head{font-size:11.5px;margin-bottom:7px;gap:6px}
