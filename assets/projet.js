@@ -197,6 +197,10 @@
         pt: ["Solicitação de orçamento", "Seu <em>orçamento CoproSens.</em>", "Sua estimativa já está copiada abaixo. Complete seus dados de contato e você recebe um orçamento por escrito, adaptado ao seu condomínio, sem compromisso.", "Solicitação de orçamento CoproSens — HDA Solutions"],
         es: ["Solicitud de presupuesto", "Su <em>presupuesto CoproSens.</em>", "Su estimación ya está copiada abajo. Complete sus datos de contacto y recibirá un presupuesto por escrito, adaptado a su edificio, sin compromiso.", "Solicitud de presupuesto CoproSens — HDA Solutions"]
       },
+      salon: {
+        fr: ["Salon de la Copropriété 2026", "Recevoir <em>la présentation CoproSens.</em>", "Merci de votre visite sur notre stand. Laissez vos coordonnées : nous vous envoyons une présentation adaptée à vos immeubles et, si vous le souhaitez, nous organisons un échange en visioconférence. Sans engagement.", "Salon de la Copropriété 2026 — CoproSens — HDA Solutions"],
+        en: ["Copropriété Trade Fair 2026", "Get the <em>CoproSens presentation.</em>", "Thank you for visiting our stand. Leave your details and we’ll send you a presentation tailored to your buildings and, if you wish, set up a video call. No commitment.", "Copropriété Trade Fair 2026 — CoproSens — HDA Solutions"]
+      },
       contact: {
         fr: ["Contact", "Écrivez-<em>nous.</em>", "Une question sur CoproSens ou sur nos services ? Laissez-nous un message : vous recevez une réponse personnalisée, sans engagement.", "Nous contacter — HDA Solutions"],
         en: ["Contact", "Get in <em>touch.</em>", "A question about CoproSens or our services? Leave us a message and you’ll receive a personal reply, with no commitment.", "Contact us — HDA Solutions"],
@@ -215,6 +219,13 @@
     }
     var sel = form.elements.projectType;
     if ((kind === "pilote" || kind === "devis") && sel && sel.querySelector('option[value="Pilote CoproSens"]')) sel.value = "Pilote CoproSens";
+    if (kind === "salon") {
+      if (sel && sel.querySelector('option[value="Pilote CoproSens"]')) sel.value = "Pilote CoproSens";
+      if (form.elements.source && !form.elements.source.value) form.elements.source.value = "Salon de la Copropriété 2026 (stand)";
+      if (!desc.value) desc.value = lg === "en"
+        ? "We met at the Copropriété trade fair (4–5 Nov 2026) and would like to receive the CoproSens presentation.\n\nNumber of buildings managed:\nOur role (property manager, owners' council, owner):\nBest time for a video call:"
+        : "Rencontrés au Salon de la Copropriété (4–5 nov. 2026). Nous souhaitons recevoir la présentation de CoproSens.\n\nNombre d'immeubles gérés :\nVotre rôle (syndic, conseil syndical, copropriétaire) :\nMeilleur moment pour un échange en visioconférence :";
+    }
     if (kind === "pilote" && !desc.value) {
       var tpl = {
         fr: "Nous souhaitons démarrer un pilote CoproSens sur nos documents.\n\nNombre d'immeubles gérés :\nMicrosoft 365 (oui / non, offre) :\nOù sont nos documents aujourd'hui :\nContact informatique :",
