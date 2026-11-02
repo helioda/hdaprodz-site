@@ -187,25 +187,25 @@
     var HEAD = {
       pilote: {
         fr: ["Demande de pilote", "Démarrer un <em>pilote CoproSens.</em>", "Quelques informations suffisent pour préparer votre pilote : le nombre d’immeubles gérés, votre Microsoft 365 et l’endroit où se trouvent vos documents. Vous recevez une réponse personnalisée, sans engagement.", "Démarrer un pilote CoproSens — HDA Solutions"],
-        en: ["Pilot request", "Start a <em>CoproSens pilot.</em>", "A few details are enough to prepare your pilot: how many buildings you manage, your Microsoft 365 and where your documents are kept. You’ll receive a personal reply, with no commitment.", "Start a CoproSens pilot — HDA Solutions"],
-        pt: ["Solicitação de piloto", "Iniciar um <em>piloto do CoproSens.</em>", "Algumas informações bastam para preparar o seu piloto: quantos condomínios você administra, o seu Microsoft 365 e onde estão os seus documentos. Você recebe uma resposta personalizada, sem compromisso.", "Iniciar um piloto do CoproSens — HDA Solutions"],
-        es: ["Solicitud de piloto", "Iniciar un <em>piloto de CoproSens.</em>", "Bastan unos pocos datos para preparar su piloto: cuántos edificios administra, su Microsoft 365 y dónde están sus documentos. Recibirá una respuesta personalizada, sin compromiso.", "Iniciar un piloto de CoproSens — HDA Solutions"]
+        en: ["Pilot request", "Start a <em>CondoSens pilot.</em>", "A few details are enough to prepare your pilot: how many buildings you manage, your Microsoft 365 and where your documents are kept. You’ll receive a personal reply, with no commitment.", "Start a CondoSens pilot — HDA Solutions"],
+        pt: ["Solicitação de piloto", "Iniciar um <em>piloto do CondoSens.</em>", "Algumas informações bastam para preparar o seu piloto: quantos condomínios você administra, o seu Microsoft 365 e onde estão os seus documentos. Você recebe uma resposta personalizada, sem compromisso.", "Iniciar um piloto do CondoSens — HDA Solutions"],
+        es: ["Solicitud de piloto", "Iniciar un <em>piloto de CondoSens.</em>", "Bastan unos pocos datos para preparar su piloto: cuántos edificios administra, su Microsoft 365 y dónde están sus documentos. Recibirá una respuesta personalizada, sin compromiso.", "Iniciar un piloto de CondoSens — HDA Solutions"]
       },
       devis: {
         fr: ["Demande de devis", "Votre <em>devis CoproSens.</em>", "Votre estimation est reprise ci-dessous. Complétez vos coordonnées : vous recevez un devis écrit, adapté à votre copropriété, sans engagement.", "Demande de devis CoproSens — HDA Solutions"],
-        en: ["Quote request", "Your <em>CoproSens quote.</em>", "Your estimate is copied below. Add your contact details and you’ll receive a written quote tailored to your building, with no commitment.", "CoproSens quote request — HDA Solutions"],
-        pt: ["Solicitação de orçamento", "Seu <em>orçamento CoproSens.</em>", "Sua estimativa já está copiada abaixo. Complete seus dados de contato e você recebe um orçamento por escrito, adaptado ao seu condomínio, sem compromisso.", "Solicitação de orçamento CoproSens — HDA Solutions"],
-        es: ["Solicitud de presupuesto", "Su <em>presupuesto CoproSens.</em>", "Su estimación ya está copiada abajo. Complete sus datos de contacto y recibirá un presupuesto por escrito, adaptado a su edificio, sin compromiso.", "Solicitud de presupuesto CoproSens — HDA Solutions"]
+        en: ["Quote request", "Your <em>CondoSens quote.</em>", "Your estimate is copied below. Add your contact details and you’ll receive a written quote tailored to your building, with no commitment.", "CondoSens quote request — HDA Solutions"],
+        pt: ["Solicitação de orçamento", "Seu <em>orçamento CondoSens.</em>", "Sua estimativa já está copiada abaixo. Complete seus dados de contato e você recebe um orçamento por escrito, adaptado ao seu condomínio, sem compromisso.", "Solicitação de orçamento CondoSens — HDA Solutions"],
+        es: ["Solicitud de presupuesto", "Su <em>presupuesto CondoSens.</em>", "Su estimación ya está copiada abajo. Complete sus datos de contacto y recibirá un presupuesto por escrito, adaptado a su edificio, sin compromiso.", "Solicitud de presupuesto CondoSens — HDA Solutions"]
       },
       salon: {
         fr: ["Salon de la Copropriété 2026", "Recevoir <em>la présentation CoproSens.</em>", "Ravis de vous avoir rencontré au Salon. Laissez vos coordonnées : nous vous envoyons une présentation adaptée à vos immeubles et, si vous le souhaitez, nous organisons un échange en visioconférence. Sans engagement.", "Salon de la Copropriété 2026 — CoproSens — HDA Solutions"],
-        en: ["Copropriété Trade Fair 2026", "Get the <em>CoproSens presentation.</em>", "Great to meet you at the trade fair. Leave your details and we’ll send you a presentation tailored to your buildings and, if you wish, set up a video call. No commitment.", "Copropriété Trade Fair 2026 — CoproSens — HDA Solutions"]
+        en: ["Copropriété Trade Fair 2026", "Get the <em>CondoSens presentation.</em>", "Great to meet you at the trade fair. Leave your details and we’ll send you a presentation tailored to your buildings and, if you wish, set up a video call. No commitment.", "Copropriété Trade Fair 2026 — CondoSens — HDA Solutions"]
       },
       contact: {
         fr: ["Contact", "Écrivez-<em>nous.</em>", "Une question sur CoproSens ou sur nos services ? Laissez-nous un message : vous recevez une réponse personnalisée, sans engagement.", "Nous contacter — HDA Solutions"],
-        en: ["Contact", "Get in <em>touch.</em>", "A question about CoproSens or our services? Leave us a message and you’ll receive a personal reply, with no commitment.", "Contact us — HDA Solutions"],
-        pt: ["Contato", "Fale <em>conosco.</em>", "Uma pergunta sobre o CoproSens ou nossos serviços? Deixe sua mensagem: você recebe uma resposta personalizada, sem compromisso.", "Fale conosco — HDA Solutions"],
-        es: ["Contacto", "Escríba<em>nos.</em>", "¿Una pregunta sobre CoproSens o nuestros servicios? Déjenos un mensaje y recibirá una respuesta personalizada, sin compromiso.", "Contáctenos — HDA Solutions"]
+        en: ["Contact", "Get in <em>touch.</em>", "A question about CondoSens or our services? Leave us a message and you’ll receive a personal reply, with no commitment.", "Contact us — HDA Solutions"],
+        pt: ["Contato", "Fale <em>conosco.</em>", "Uma pergunta sobre o CondoSens ou nossos serviços? Deixe sua mensagem: você recebe uma resposta personalizada, sem compromisso.", "Fale conosco — HDA Solutions"],
+        es: ["Contacto", "Escríba<em>nos.</em>", "¿Una pregunta sobre CondoSens o nuestros servicios? Déjenos un mensaje y recibirá una respuesta personalizada, sin compromiso.", "Contáctenos — HDA Solutions"]
       }
     };
     var head = HEAD[kind] && (HEAD[kind][lg] || HEAD[kind].fr);
@@ -223,24 +223,24 @@
       if (sel && sel.querySelector('option[value="Pilote CoproSens"]')) sel.value = "Pilote CoproSens";
       if (form.elements.source && !form.elements.source.value) form.elements.source.value = "Salon de la Copropriété 2026";
       if (!desc.value) desc.value = lg === "en"
-        ? "We met at the Copropriété trade fair (4–5 Nov 2026) and would like to receive the CoproSens presentation.\n\nNumber of buildings managed:\nOur role (property manager, owners' council, owner):\nBest time for a video call:"
+        ? "We met at the Copropriété trade fair (4–5 Nov 2026) and would like to receive the CondoSens presentation.\n\nNumber of buildings managed:\nOur role (property manager, owners' council, owner):\nBest time for a video call:"
         : "Rencontrés au Salon de la Copropriété (4–5 nov. 2026). Nous souhaitons recevoir la présentation de CoproSens.\n\nNombre d'immeubles gérés :\nVotre rôle (syndic, conseil syndical, copropriétaire) :\nMeilleur moment pour un échange en visioconférence :";
     }
     if (kind === "pilote" && !desc.value) {
       var tpl = {
         fr: "Nous souhaitons démarrer un pilote CoproSens sur nos documents.\n\nNombre d'immeubles gérés :\nMicrosoft 365 (oui / non, offre) :\nOù sont nos documents aujourd'hui :\nContact informatique :",
-        en: "We would like to start a CoproSens pilot on our documents.\n\nNumber of buildings or associations managed:\nMicrosoft 365 (yes / no, plan):\nWhere our documents are stored today:\nIT contact:",
-        pt: "Gostaríamos de iniciar um piloto do CoproSens com os nossos documentos.\n\nNúmero de condomínios administrados:\nMicrosoft 365 (sim / não, plano):\nOnde estão hoje os nossos documentos:\nContato de TI:",
-        es: "Nos gustaría iniciar un piloto de CoproSens con nuestros documentos.\n\nNúmero de edificios administrados:\nMicrosoft 365 (sí / no, plan):\nDónde están hoy nuestros documentos:\nContacto de informática:"
+        en: "We would like to start a CondoSens pilot on our documents.\n\nNumber of buildings or associations managed:\nMicrosoft 365 (yes / no, plan):\nWhere our documents are stored today:\nIT contact:",
+        pt: "Gostaríamos de iniciar um piloto do CondoSens com os nossos documentos.\n\nNúmero de condomínios administrados:\nMicrosoft 365 (sim / não, plano):\nOnde estão hoje os nossos documentos:\nContato de TI:",
+        es: "Nos gustaría iniciar un piloto de CondoSens con nuestros documentos.\n\nNúmero de edificios administrados:\nMicrosoft 365 (sí / no, plan):\nDónde están hoy nuestros documentos:\nContacto de informática:"
       };
       desc.value = tpl[lg] || tpl.fr;
     }
     if (kind === "devis" && !desc.value) {
       var QL = {
         fr: ["Nous souhaitons recevoir un devis pour CoproSens.", "Lots principaux", "Membres du conseil syndical", "Jours supplémentaires", "Tableau de bord du conseil", "Contrat de maintenance", "Offre clients fondateurs", "Estimation affichée sur le site (1re année)", "oui", "non"],
-        en: ["We would like a quote for CoproSens.", "Main units", "Owners’ council members", "Extra days", "Owners’ council dashboard", "Maintenance contract", "Founding-client offer", "Estimate shown on the site (first year)", "yes", "no"],
-        pt: ["Gostaríamos de receber um orçamento do CoproSens.", "Unidades principais", "Membros do conselho", "Dias adicionais", "Painel do conselho", "Contrato de manutenção", "Oferta clientes fundadores", "Estimativa exibida no site (1º ano)", "sim", "não"],
-        es: ["Nos gustaría recibir un presupuesto de CoproSens.", "Viviendas y locales principales", "Miembros del consejo", "Días adicionales", "Panel del consejo", "Contrato de mantenimiento", "Oferta clientes fundadores", "Estimación mostrada en el sitio (1.er año)", "sí", "no"]
+        en: ["We would like a quote for CondoSens.", "Main units", "Owners’ council members", "Extra days", "Owners’ council dashboard", "Maintenance contract", "Founding-client offer", "Estimate shown on the site (first year)", "yes", "no"],
+        pt: ["Gostaríamos de receber um orçamento do CondoSens.", "Unidades principais", "Membros do conselho", "Dias adicionais", "Painel do conselho", "Contrato de manutenção", "Oferta clientes fundadores", "Estimativa exibida no site (1º ano)", "sim", "não"],
+        es: ["Nos gustaría recibir un presupuesto de CondoSens.", "Viviendas y locales principales", "Miembros del consejo", "Días adicionales", "Panel del consejo", "Contrato de mantenimiento", "Oferta clientes fundadores", "Estimación mostrada en el sitio (1.er año)", "sí", "no"]
       }[lg] || null;
       if (QL) {
         var yn = function (v) { return v === "1" ? QL[8] : QL[9]; }, lines = [QL[0], ""];

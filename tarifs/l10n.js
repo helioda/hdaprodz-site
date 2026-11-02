@@ -1,4 +1,4 @@
-/* CoproSens price estimator — English, Brazilian Portuguese and Spanish texts.
+/* CondoSens price estimator — English, Brazilian Portuguese and Spanish texts.
    Loaded by /en/pricing/, /pt/precos/ and /es/precios/ before tarifs.js.
    Prices are set in euros; tarifs.js converts them to the chosen currency (indicative). */
 (function () {
