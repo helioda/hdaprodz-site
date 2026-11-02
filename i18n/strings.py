@@ -576,7 +576,7 @@ TEXT["coprosens/index.html"] = {
  "Outils": T("Tools", "Ferramentas", "Herramientas"),
  "💶 Tarifs": T("💶 Pricing", "💶 Preços", "💶 Precios"),
  "Décrire mon projet →": T("Describe my project →", "Descrever meu projeto →", "Describir mi proyecto →"),
- "CoproSens · rôle par rôle": T("CondoSens · role by role", "CondoSens · papel por papel", "CondoSens · rol por rol"),
+ "rôle par rôle": T("role by role", "papel por papel", "rol por rol"),
  "Un assistant, trois façons de s’en servir.": T("One assistant, three ways to use it.", "Um assistente, três maneiras de usá-lo.", "Un asistente, tres formas de usarlo."),
  "Syndic, conseil syndical ou copropriétaire : chacun a ses propres questions. Voici ce que CoproSens fait pour chacun, avec les outils à essayer et des exemples de questions à poser.": T(
   "Property manager, owners’ board or owner: each has their own questions. Here is what CondoSens does for each of them, with the tools to try and example questions to ask.",
