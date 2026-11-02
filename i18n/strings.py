@@ -173,9 +173,9 @@ TEXT = {
   "Your browser can’t play this video.", "Seu navegador não consegue reproduzir este vídeo.", "Su navegador no puede reproducir este vídeo."),
  "Télécharger la présentation": T("Download the presentation", "Baixar a apresentação", "Descargar la presentación"),
  "CoproSens en 1 min 33 s": T(
-  "CondoSens in 1 min 22 s",
-  "CondoSens em 1 min 33 s",
-  "CondoSens en 1 min 31 s"),
+  "CondoSens in 1 min 26 s",
+  "CondoSens em 1 min 37 s",
+  "CondoSens en 1 min 35 s"),
  "Références": T("Credentials", "Referências", "Referencias"),
  "Membre du Microsoft AI Cloud Partner Program": T(
   "Member of the Microsoft AI Cloud Partner Program", "Membro do Microsoft AI Cloud Partner Program", "Miembro del Microsoft AI Cloud Partner Program"),
